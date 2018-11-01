@@ -14,7 +14,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -33,10 +32,8 @@
 		"supportedThemes": [
 			"sap_hcb",
 			"sap_belize"
-
 		]
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "Mobile.Mobilestore.view.app",
@@ -78,16 +75,116 @@
 				"clearControlAggregation": false
 			},
 			"routes": [{
-				"name": "Routeapp",
-				"pattern": "Routeapp",
-				"target": ["Targetapp"]
-			}],
+					"name": "Routeapp",
+					"pattern": "Routeapp",
+					"target": "Targetapp"
+
+				}, {
+					"name": "Login",
+					"pattern": "",
+					"target": "Login"
+				}, {
+					"name": "Home",
+					"pattern": "Home",
+					"target": "Home"
+				}, {
+					"name": "Billing",
+					"pattern": "Billing",
+					"target": "Billing"
+				}, {
+					"name": "serviceBilling",
+					"pattern": "serviceBilling",
+					"target": "serviceBilling"
+				}, {
+					"name": "Recharge",
+					"pattern": "Recharge",
+					"target": "Recharge"
+				}, {
+					"name": "Inventory",
+					"pattern": "Inventory",
+					"target": "Inventory"
+				}, {
+					"name": "Transaction",
+					"pattern": "Transaction",
+					"target": "Transaction"
+				}
+
+			],
 			"targets": {
 				"Targetapp": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": false,
-					"viewName": "app"
+					"viewName": "app",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "Mobile.Mobilestore.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl"
+				},
+				"Home": {
+					"viewType": "XML",
+					"viewName": "Home",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "Mobile.Mobilestore.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"Billing": {
+					"viewType": "XML",
+					"viewName": "Billing",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "Mobile.Mobilestore.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"serviceBilling": {
+					"viewType": "XML",
+					"viewName": "serviceBilling",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "Mobile.Mobilestore.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"Recharge": {
+					"viewType": "XML",
+					"viewName": "Recharge",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "Mobile.Mobilestore.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"Inventory": {
+					"viewType": "XML",
+					"viewName": "Inventory",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "Mobile.Mobilestore.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"Transaction": {
+					"viewType": "XML",
+					"viewName": "Transaction",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "Mobile.Mobilestore.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"Login": {
+					"viewType": "XML",
+					"viewName": "Login"
 				}
 			}
 		}
