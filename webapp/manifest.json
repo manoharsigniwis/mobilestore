@@ -29,10 +29,7 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-		]
+		"supportedThemes": ["sap_hcb", "sap_belize"]
 	},
 	"sap.ui5": {
 		"rootView": {
@@ -57,6 +54,12 @@
 				"settings": {
 					"bundleName": "Mobile.Mobilestore.i18n.i18n"
 				}
+
+			},
+			"data": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/data.json"
 			}
 		},
 		"resources": {
@@ -75,41 +78,38 @@
 				"clearControlAggregation": false
 			},
 			"routes": [{
-					"name": "Routeapp",
-					"pattern": "Routeapp",
-					"target": "Targetapp"
-
-				}, {
-					"name": "Login",
-					"pattern": "",
-					"target": "Login"
-				}, {
-					"name": "Home",
-					"pattern": "Home",
-					"target": "Home"
-				}, {
-					"name": "Billing",
-					"pattern": "Billing",
-					"target": "Billing"
-				}, {
-					"name": "serviceBilling",
-					"pattern": "serviceBilling",
-					"target": "serviceBilling"
-				}, {
-					"name": "Recharge",
-					"pattern": "Recharge",
-					"target": "Recharge"
-				}, {
-					"name": "Inventory",
-					"pattern": "Inventory",
-					"target": "Inventory"
-				}, {
-					"name": "Transaction",
-					"pattern": "Transaction",
-					"target": "Transaction"
-				}
-
-			],
+				"name": "Routeapp",
+				"pattern": "Routeapp",
+				"target": "Targetapp"
+			}, {
+				"name": "Login",
+				"pattern": "",
+				"target": "Login"
+			}, {
+				"name": "Home",
+				"pattern": "Home",
+				"target": "Home"
+			}, {
+				"name": "Billing",
+				"pattern": "Billing",
+				"target": "Billing"
+			}, {
+				"name": "serviceBilling",
+				"pattern": "serviceBilling",
+				"target": "serviceBilling"
+			}, {
+				"name": "Recharge",
+				"pattern": "Recharge",
+				"target": "Recharge"
+			}, {
+				"name": "Inventory",
+				"pattern": "Inventory",
+				"target": "Inventory"
+			}, {
+				"name": "Transaction",
+				"pattern": "Transaction",
+				"target": "Transaction"
+			}],
 			"targets": {
 				"Targetapp": {
 					"viewType": "XML",
@@ -184,7 +184,17 @@
 				},
 				"Login": {
 					"viewType": "XML",
-					"viewName": "Login"
+					"viewName": "Login",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "Mobile.Mobilestore.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"ag": {
+					"viewType": "XML",
+					"viewName": "ag"
 				}
 			}
 		}

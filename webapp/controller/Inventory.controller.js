@@ -39,6 +39,10 @@ sap.ui.define([
 		//	onExit: function() {
 		//
 		//	}
+	back: function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Home");
+		}
 
 	});
 
