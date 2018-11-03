@@ -14,8 +14,8 @@
 			<Button text="Nextb" press="onPress"></Button>
 		</tnt:ToolHeader>
 		<VBox class="sapUiSmallMargin">
-			<f:SimpleForm id="SimpleFormToolbar" title="Sales Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3"
-				labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2"
+			<f:SimpleForm id="SimpleFormToolbar" title="Sales Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+				labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="3" emptySpanM="0" emptySpanS="0" columnsXL="2"
 				columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
 				<f:content>
 					<Label text=" Customer Name"/>

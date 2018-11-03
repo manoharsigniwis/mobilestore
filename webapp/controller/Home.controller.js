@@ -16,14 +16,8 @@ sap.ui.define([
 		onPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("Billing");
-		},
-		onCollapseExpandPress: function () {
-			var oSideNavigation = this.byId('sideNavigation');
-			var bExpanded = oSideNavigation.getExpanded();
-
-			oSideNavigation.setExpanded(!bExpanded);
 		}
-
+	
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 		 * (NOT before the first rendering! onInit() is used for that one!).
