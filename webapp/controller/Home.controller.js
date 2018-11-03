@@ -11,11 +11,17 @@ sap.ui.define([
 		 * @memberOf Mobile.Mobilestore.view.Home
 		 */
 		onInit: function () {
-
+		
 		},
 		onPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("Billing");
+		},
+		onCollapseExpandPress: function () {
+			var oSideNavigation = this.byId('sideNavigation');
+			var bExpanded = oSideNavigation.getExpanded();
+
+			oSideNavigation.setExpanded(!bExpanded);
 		}
 
 		/**

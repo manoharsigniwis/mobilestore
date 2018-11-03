@@ -1,12 +1,73 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Mobile.Mobilestore.controller.Billing"
-	xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
-		<pages>
-			<Page title="Billing">
-				<content>
-					<Button text="Next" press="onPress"></Button>
-				</content>
-			</Page>
-		</pages>
-	</App>
+<mvc:View xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:l="sap.ui.layout" controllerName="Mobile.Mobilestore.controller.Billing" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<tnt:ToolHeader class="toolhaeader">
+			<Image src="./Images/margo.png" width="200px" height="95px"></Image>
+			<ToolbarSpacer></ToolbarSpacer>
+			<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+			<ToolbarSpacer></ToolbarSpacer>
+			<Button text="Logout" type="Transparent">
+				<layoutData>
+					<OverflowToolbarLayoutData priority="NeverOverflow"/>
+				</layoutData>
+			</Button>
+			<Button text="Nextb" press="onPress"></Button>
+		</tnt:ToolHeader>
+		<VBox class="sapUiSmallMargin">
+			<f:SimpleForm id="SimpleFormToolbar" title="Sales Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3"
+				labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2"
+				columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
+				<f:content>
+					<Label text=" Customer Name"/>
+					<Input value="Sindhu"/>
+					<Label text="Mobile No."/>
+					<Input value="9797979797"></Input>
+					<Label text="ZIP Code/City"/>
+					<Input value="572102">
+						<layoutData>
+							<l:GridData span="XL2 L1 M3 S4"/>
+						</layoutData>
+					</Input>
+					<Input value="Tumkur"/>
+					<Label text="Category"/>
+					<Input value="Mobile"/>
+					<Label text="Product No"/>
+					<Input value="SM999"/>
+					<Label text="Brand"/>
+					<Select id="brand" selectedKey="OnePlus">
+						<items>
+							<core:Item text="OnePlus" key="OnePlus"/>
+							<core:Item text="iPhone" key="iPhone"/>
+							<core:Item text="Lenovo" key="Lenovo"/>
+							<core:Item text="Samsung" key="Samsung"/>
+							<core:Item text="MI" key="MI"/>
+						</items>
+					</Select>
+					<Label text="Model"/>
+					<Input value="6T"/>
+					<Label text="Price"/>
+					<Input value="37999"/>
+					<Label text="Coupon Code"/>
+					<Input value="">
+						<layoutData>
+							<l:GridData span="XL3 L3 M5 S6"/>
+						</layoutData>
+					</Input>
+					<Button text="Apply Coupon"></Button>
+					<Label text="Total Amount"/>
+					<Input value="37999"/>
+					<Label text=""/>
+					<Button text="Submit"></Button>
+				</f:content>
+			</f:SimpleForm>
+		</VBox>
+		<footer>
+			<OverflowToolbar id="otbFooter">
+				<!--<Title text="Signiwis Mobiles" deccription="hi" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>-->
+				<ObjectIdentifier title="Signiwis Mobiles" text="The Mobile World"/>
+				<ToolbarSpacer/>
+				<ObjectIdentifier title="Designed by:" text="SM Web Tecchnologies"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
 </mvc:View>

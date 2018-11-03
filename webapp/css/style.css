@@ -1,1 +1,26 @@
 /* Enter your custom styles here */
+.side-navigation-demo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    max-width: 5rem;
+}
+.toolhaeader{
+	    width: 80rem;
+}
+
+
+.sapContrast .sapTntNavLIGroup{
+	height:120px ! important;
+}
+.class-sidenav{
+	width:10rem ! important;
+}

@@ -60,9 +60,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -74,41 +76,47 @@
 				"controlId": "idAppControl",
 				"clearControlAggregation": false
 			},
-			"routes": [{
+			"routes": [
+				{
 					"name": "Routeapp",
 					"pattern": "Routeapp",
 					"target": "Targetapp"
-
-				}, {
+				},
+				{
 					"name": "Login",
 					"pattern": "",
 					"target": "Login"
-				}, {
+				},
+				{
 					"name": "Home",
 					"pattern": "Home",
 					"target": "Home"
-				}, {
+				},
+				{
 					"name": "Billing",
 					"pattern": "Billing",
 					"target": "Billing"
-				}, {
+				},
+				{
 					"name": "serviceBilling",
 					"pattern": "serviceBilling",
 					"target": "serviceBilling"
-				}, {
+				},
+				{
 					"name": "Recharge",
 					"pattern": "Recharge",
 					"target": "Recharge"
-				}, {
+				},
+				{
 					"name": "Inventory",
 					"pattern": "Inventory",
 					"target": "Inventory"
-				}, {
+				},
+				{
 					"name": "Transaction",
 					"pattern": "Transaction",
 					"target": "Transaction"
 				}
-
 			],
 			"targets": {
 				"Targetapp": {
@@ -184,9 +192,23 @@
 				},
 				"Login": {
 					"viewType": "XML",
-					"viewName": "Login"
+					"viewName": "Login",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "Mobile.Mobilestore.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"nestedNavigation": {
+					"viewType": "XML",
+					"viewName": "nestedNavigation"
 				}
 			}
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

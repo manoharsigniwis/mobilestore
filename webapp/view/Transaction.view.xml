@@ -1,10 +1,10 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Mobile.Mobilestore.controller.Transaction"
-	xmlns:html="http://www.w3.org/1999/xhtml">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
 	<App>
 		<pages>
 			<Page title="Transaction">
 				<content>
-					<Button text="Next" press="onPress"></Button>
+			
 				</content>
 			</Page>
 		</pages>
