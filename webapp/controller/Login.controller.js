@@ -1,6 +1,7 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageToast"
+], function (Controller, MessageToast) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Login", {
@@ -13,9 +14,21 @@ sap.ui.define([
 		onInit: function () {
 
 		},
-		onPress: function (oEvent) {
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("Home");
+		onValidate: function (oEvent) {
+			var uName = this.getView().byId("uid").getValue();
+
+			var uPass = this.getView().byId("psw").getValue();
+
+			if (uName === "Admin" && uPass === "Admin@123" ) {
+				MessageToast.show("Login Sucessful");
+
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("Home");
+			} else if(uName !== " " && uPass !== " ") {
+				MessageToast.show("Wrong / Empty credentials");
+
+			}
+
 		}
 
 		/**

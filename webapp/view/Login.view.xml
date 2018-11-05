@@ -2,9 +2,15 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="Login">
+			<Page title="Login" backgroundDesign="Standard" class="background" showHeader="false">
 				<content>
-					<Button text="Next" press="onPress"></Button>
+					<VBox fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+						<Label text="{i18n>USERNAME}"></Label>
+						<Input id="uid" placeholder="User ID" required="true" width="350px" liveChange="onCheck"></Input>
+						<Label text="{i18n>PASSWORD}"></Label>
+						<Input id="psw" placeholder="Password" type="Password" required="true" width="350px" liveChange="onCheck"></Input>
+						<Button width="12rem" text="Login" type="Emphasized" press="onValidate"></Button>
+					</VBox>
 				</content>
 			</Page>
 		</pages>
