@@ -1,10 +1,61 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Mobile.Mobilestore.controller.Inventory"
-	xmlns:html="http://www.w3.org/1999/xhtml">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tnt="sap.tnt">
 	<App>
 		<pages>
-			<Page title="Inventory">
+			<Page title="Inventory" navButtonPress="back" showNavButton="true">
 				<content>
-					<Button text="Next" press="onPress"></Button>
+					<Table id="idProductsTable" inset="false" items="{data>/mobiles}">
+						<headerToolbar>
+							<Toolbar>
+								<content>
+									<Title text="Products" level="H2"/>
+									<ToolbarSpacer/>
+									<ComboBox id="idPopinLayout" placeholder="Select" change="onPopinLayoutChanged">
+										<items>
+											<core:Item text="Mobiles" key="mobile"/>
+											<core:Item text="Accessories" key="acessories"/>
+										</items>
+									</ComboBox>
+								</content>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column minScreenWidth="" demandPopin="false">
+								<Text text="Product"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Photo"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Product Id" wrapping="true"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Stock"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Availability"/>
+							</Column>
+							<Column minScreenWidth="Small" demandPopin="true">
+								<Text text="Price"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle" type="Active" visible="true">
+								<cells >
+									<ObjectIdentifier title="{data>brand}" text="{data>model}"/>
+									<Image src="{data>image}" width="100px" height="100px"></Image>
+									<Text text="{data>imei}"></Text>
+									<Text text="{data>stock}"></Text>
+									<tnt:InfoLabel text="{data>Status}" displayOnly="true" width="auto"
+										colorScheme="{ parts: [ {path: 'data>Status'} ], formatter: 'Mobile.Mobilestore.model.Formatter.availableState' }"/>
+									<!--<Text text="Rs.{data>price}"></Text>-->
+									<ObjectNumber
+										number="{ parts:[{path:'data>price'},{path:'data>CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+										unit="{data>CurrencyCode}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
 				</content>
 			</Page>
 		</pages>

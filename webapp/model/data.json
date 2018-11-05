@@ -6,7 +6,9 @@
 		"imei": 6928855,
 		"brand": "SAMSUNG",
 		"price": 45747,
-		"stock": 55
+		"stock": 55,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
 	}, {
 		"productid": 356,
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
@@ -14,7 +16,9 @@
 		"imei": 6869812,
 		"brand": "ONEPLUS",
 		"price": 48296,
-		"stock": 10
+		"stock": 10,
+		"CurrencyCode": "INR",
+		"Status": "Low Stock"
 	}, {
 		"productid": 995,
 		"model": "MP45",
@@ -22,7 +26,9 @@
 		"imei": 4679923,
 		"brand": "IPHONE",
 		"price": 18012,
-		"stock": 5
+		"stock": 5,
+		"CurrencyCode": "INR",
+		"Status": "Low Stock"
 	}, {
 		"productid": 935,
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
@@ -30,7 +36,9 @@
 		"imei": 5048956,
 		"brand": "MOTOROLA",
 		"price": 16405,
-		"stock": 49
+		"stock": 49,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
 	}, {
 		"productid": 130,
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
@@ -38,7 +46,9 @@
 		"imei": 4951914,
 		"brand": "ONEPLUS",
 		"price": 41921,
-		"stock": 19
+		"stock": 19,
+		"CurrencyCode": "INR",
+		"Status": "Fast Selling"
 	}, {
 		"productid": 234,
 		"model": "MP45",
@@ -46,7 +56,9 @@
 		"imei": 6070643,
 		"brand": "REDMI MI",
 		"price": 12227,
-		"stock": 11
+		"stock": 11,
+		"CurrencyCode": "INR",
+		"Status": "Low Stock"
 	}, {
 		"productid": 333,
 		"model": "MP67",
@@ -54,7 +66,9 @@
 		"imei": 6795707,
 		"brand": "MOTOROLA",
 		"price": 16560,
-		"stock": 18
+		"stock": 29,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
 	}, {
 		"productid": 238,
 		"model": "MP45",
@@ -62,7 +76,9 @@
 		"imei": 6507685,
 		"brand": "SAMSUNG",
 		"price": 19237,
-		"stock": 82
+		"stock": 82,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
 	}, {
 		"productid": 696,
 		"model": "MP83",
@@ -70,7 +86,9 @@
 		"imei": 4682594,
 		"brand": "IPHONE",
 		"price": 48314,
-		"stock": 7
+		"stock": 7,
+		"CurrencyCode": "INR",
+		"Status": "Low Stock"
 	}, {
 		"productid": 222,
 		"model": "MP45",
@@ -78,7 +96,9 @@
 		"imei": 6690696,
 		"brand": "REDMI MI",
 		"price": 23340,
-		"stock": 63
+		"stock": 63,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
 	}, {
 		"productid": 265,
 		"model": "MP99",
@@ -86,7 +106,9 @@
 		"imei": 6013475,
 		"brand": "MOTOROLA",
 		"price": 41504,
-		"stock": 51
+		"stock": 51,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
 	}, {
 		"productid": 271,
 		"model": "MP56",
@@ -94,7 +116,9 @@
 		"imei": 4939385,
 		"brand": "REDMI MI",
 		"price": 11447,
-		"stock": 49
+		"stock": 49,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
 	}, {
 		"productid": 644,
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
@@ -102,7 +126,9 @@
 		"imei": 6590712,
 		"brand": "ONEPLUS",
 		"price": 15102,
-		"stock": 89
+		"stock": 89,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
 	}, {
 		"productid": 595,
 		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
@@ -110,7 +136,10 @@
 		"imei": 6953822,
 		"brand": "ONEPLUS",
 		"price": 47718,
-		"stock": 2
+		"stock": 0,
+		"CurrencyCode": "INR",
+		"Status": "Out of Stock"
+		
 	}, {
 		"productid": 184,
 		"model": "MP56",
@@ -118,7 +147,9 @@
 		"imei": 4018709,
 		"brand": "MOTOROLA",
 		"price": 43543,
-		"stock": 8
+		"stock": 0,
+		"CurrencyCode": "INR",
+		"Status": "Out of Stock"
 	}, {
 		"productid": 807,
 		"model": "MP56",
@@ -126,7 +157,9 @@
 		"imei": 6579441,
 		"brand": "SAMSUNG",
 		"price": 16784,
-		"stock": 63
+		"stock": 63,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
 	}, {
 		"productid": 668,
 		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
@@ -134,16 +167,21 @@
 		"imei": 4274645,
 		"brand": "IPHONE",
 		"price": 26662,
-		"stock": 36
+		"stock": 36,
+		"CurrencyCode": "INR",
+		"Status": "Fast Selling"
 	}, {
 		"productid": 908,
 		"model": "MP83",
-		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
+		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
 		"imei": 5649754,
 		"brand": "ONEPLUS",
 		"price": 16174,
-		"stock": 18
+		"stock": 0,
+		"CurrencyCode": "INR",
+		"Status": "Out of Stock"
 	}],
+<<<<<<< Upstream, based on origin/master
 	"accessories": [{
 		"productid": 71,
 		"model": "AP65",
@@ -268,4 +306,160 @@
 
 	}]
 	
+=======
+
+  "accessories": [
+    {
+      "productid": 50,
+      "model": "AP73",
+      "brand": "JBL",
+      "price": 3957,
+      "stock": 34,
+      "Status": "Out of Stock"
+    },
+    {
+      "productid": 86,
+      "model": "AP73",
+      "brand": "SKULLCANDY",
+      "price": 6175,
+      "stock": 96,
+      "Status": "Out of Stock"
+    },
+    {
+      "productid": 75,
+      "model": "AP73",
+      "brand": "AMBRACE",
+      "price": 9323,
+      "stock": 99,
+      "Status": "Out of Stock"
+    },
+    {
+      "productid": 77,
+      "model": "AP73",
+      "brand": "BEATS",
+      "price": 6289,
+      "stock": 45,
+      "Status": "In Stock"
+    },
+    {
+      "productid": 92,
+      "model": "AP96",
+      "brand": "BEATS",
+      "price": 7282,
+      "stock": 28,
+      "Status": "In Stock"
+    },
+    {
+      "productid": 51,
+      "model": "AP99",
+      "brand": "MUVEACOUSTICS",
+      "price": 8680,
+      "stock": 43,
+      "Status": "Out of Stock"
+    },
+    {
+      "productid": 88,
+      "model": "AP73",
+      "brand": "BEATS",
+      "price": 4500,
+      "stock": 38,
+      "Status": "Fast Selling"
+    },
+    {
+      "productid": 99,
+      "model": "AP50",
+      "brand": "BEATS",
+      "price": 8320,
+      "stock": 71,
+      "Status": "Low Stock"
+    },
+    {
+      "productid": 83,
+      "model": "AP99",
+      "brand": "MUVEACOUSTICS",
+      "price": 2607,
+      "stock": 43,
+      "Status": "Out of Stock"
+    },
+    {
+      "productid": 65,
+      "model": "AP50",
+      "brand": "BEATS",
+      "price": 9399,
+      "stock": 53,
+      "Status": "Low Stock"
+    },
+    {
+      "productid": 59,
+      "model": "AP73",
+      "brand": "BEATS",
+      "price": 8800,
+      "stock": 64,
+      "Status": "Low Stock"
+    },
+    {
+      "productid": 97,
+      "model": "AP55",
+      "brand": "BOAT",
+      "price": 8469,
+      "stock": 56,
+      "Status": "Low Stock"
+    },
+    {
+      "productid": 75,
+      "model": "AP50",
+      "brand": "JBL",
+      "price": 5794,
+      "stock": 68,
+      "Status": "Out of Stock"
+    },
+    {
+      "productid": 71,
+      "model": "AP55",
+      "brand": "AMBRACE",
+      "price": 1495,
+      "stock": 50,
+      "Status": "Low Stock"
+    },
+    {
+      "productid": 91,
+      "model": "AP55",
+      "brand": "MUVEACOUSTICS",
+      "price": 7288,
+      "stock": 36,
+      "Status": "Fast Selling"
+    },
+    {
+      "productid": 51,
+      "model": "AP65",
+      "brand": "MUVEACOUSTICS",
+      "price": 8302,
+      "stock": 82,
+      "Status": "Fast Selling"
+    },
+    {
+      "productid": 100,
+      "model": "AP96",
+      "brand": "AMBRACE",
+      "price": 6766,
+      "stock": 2,
+      "Status": "Out of Stock"
+    },
+    {
+      "productid": 51,
+      "model": "AP73",
+      "brand": "BOAT",
+      "price": 9352,
+      "stock": 59,
+      "Status": "Out of Stock"
+    }
+  ],
+
+	"recharge": {
+		"airtel": 1000,
+		"jio": 2000,
+		"vodafone": 500,
+		"bsnl": 2000
+	}
+>>>>>>> b89a4f9 formatter added
 }

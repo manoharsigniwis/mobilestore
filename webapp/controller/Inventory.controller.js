@@ -1,9 +1,32 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"jquery.sap.global",
+	"Mobile/Mobilestore/model/Formatter",
+	"sap/ui/model/json/JSONModel"
+], function (Controller, jQuery, Formatter, JSONModel) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Inventory", {
+
+		formatter: Formatter,
+		onPopinLayoutChanged: function (event) {
+
+			var olist1 = event.getSource().getProperty("selectedKey");
+
+			var oModel = this.getView().getModel("data");
+
+			if (olist1 === "acessories") {
+
+				// var points = oModel.oData.accessories;
+				oModel.setProperty("/mobiles", oModel.oData.accessories);
+
+			} else if (olist1 === "mobile") {
+
+				// var points1 = oModel.oData.accessories;
+				oModel.setProperty("/mobiles", oModel.oData.mobiles);
+
+			}
+		},
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -42,7 +65,14 @@ sap.ui.define([
 		//	onExit: function() {
 		//
 		//	}
+<<<<<<< Upstream, based on origin/master
 			
+=======
+		back: function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Home");
+		}
+>>>>>>> b89a4f9 formatter added
 
 	});
 
