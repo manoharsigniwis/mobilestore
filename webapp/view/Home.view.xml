@@ -22,7 +22,6 @@
 						<l:BlockLayout background="Dashboard">
 							<l:BlockLayoutRow>
 								<l:BlockLayoutCell>
-									<!--<NumericContent value="Sales" valueColor="Good" class="sapUTinyMargin" truncateValueTo="8"/>-->
 									<Title text="Products Sold" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 									<NumericContent value="6666" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
@@ -52,28 +51,48 @@
 					<content>
 						<l:BlockLayout>
 							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB" title="Billing">
+								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
+									<l:titleLink>
+										<Link class="textcolor" subtle="true" text="Billing"
+											href="https://webidetesting0687364-p2000691080trial.dispatcher.hanatrial.ondemand.com/webapp/index.html?hc_orionpath=%2FDI_webide_di_workspace3uuuazn57vw5vy52%2Fmobilestore&neo-di-affinity=BIGipServer~jpaas_folder~disapwebide.hanatrial.ondemand.com+%21TxLmYhI%2BEH6zqLyn5pxGS30xvFkQ81eNJrkVo0H7aSUBUbiWhmGkLB7wXgJ2dEURj%2FOavPPNfKwV&origional-url=index.html&sap-ui-appCacheBuster=..%2F&sap-ui-xx-componentPreload=off#/Billing"/>
+									</l:titleLink>
 									<core:Icon src="sap-icon://sales-order" height="70px"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC" title="Recharge">
+								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
+									<l:titleLink>
+										<Link subtle="true" class="textcolor" text="Recharge"
+											href="https://webidetesting0687364-p2000691080trial.dispatcher.hanatrial.ondemand.com/webapp/index.html?hc_orionpath=%2FDI_webide_di_workspace3uuuazn57vw5vy52%2Fmobilestore&neo-di-affinity=BIGipServer~jpaas_folder~disapwebide.hanatrial.ondemand.com+%21TxLmYhI%2BEH6zqLyn5pxGS30xvFkQ81eNJrkVo0H7aSUBUbiWhmGkLB7wXgJ2dEURj%2FOavPPNfKwV&origional-url=index.html&sap-ui-appCacheBuster=..%2F&sap-ui-xx-componentPreload=off#/Recharge"/>
+									</l:titleLink>
 									<core:Icon src="sap-icon://lead" height="70px"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB" title="Service">
+								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
+									<l:titleLink>
+										<Link subtle="true" class="textcolor" text="Service"
+											href="https://webidetesting0687364-p2000691080trial.dispatcher.hanatrial.ondemand.com/webapp/index.html?hc_orionpath=%2FDI_webide_di_workspace3uuuazn57vw5vy52%2Fmobilestore&neo-di-affinity=BIGipServer~jpaas_folder~disapwebide.hanatrial.ondemand.com+%21TxLmYhI%2BEH6zqLyn5pxGS30xvFkQ81eNJrkVo0H7aSUBUbiWhmGkLB7wXgJ2dEURj%2FOavPPNfKwV&origional-url=index.html&sap-ui-appCacheBuster=..%2F&sap-ui-xx-componentPreload=off#/serviceBilling"/>
+									</l:titleLink>
 									<core:Icon src="sap-icon://crm-service-manager" height="70px"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC" title="Inventory">
+								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
+									<l:titleLink>
+										<Link subtle="true" class="textcolor" text="Inventory"
+											href="https://webidetesting0687364-p2000691080trial.dispatcher.hanatrial.ondemand.com/webapp/index.html?hc_orionpath=%2FDI_webide_di_workspace3uuuazn57vw5vy52%2Fmobilestore&neo-di-affinity=BIGipServer~jpaas_folder~disapwebide.hanatrial.ondemand.com+%21TxLmYhI%2BEH6zqLyn5pxGS30xvFkQ81eNJrkVo0H7aSUBUbiWhmGkLB7wXgJ2dEURj%2FOavPPNfKwV&origional-url=index.html&sap-ui-appCacheBuster=..%2F&sap-ui-xx-componentPreload=off#/Inventory"/>
+									</l:titleLink>
 									<core:Icon src="sap-icon://product" height="70px"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB" title="Transactions">
+								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
 									<!--<Title text="Products Sold" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>-->
+									<l:titleLink>
+										<Link subtle="true" class="textcolor" text="Transactions"
+											href="https://webidetesting0687364-p2000691080trial.dispatcher.hanatrial.ondemand.com/webapp/index.html?hc_orionpath=%2FDI_webide_di_workspace3uuuazn57vw5vy52%2Fmobilestore&neo-di-affinity=BIGipServer~jpaas_folder~disapwebide.hanatrial.ondemand.com+%21TxLmYhI%2BEH6zqLyn5pxGS30xvFkQ81eNJrkVo0H7aSUBUbiWhmGkLB7wXgJ2dEURj%2FOavPPNfKwV&origional-url=index.html&sap-ui-appCacheBuster=..%2F&sap-ui-xx-componentPreload=off#/Transaction"/>
+									</l:titleLink>
 									<core:Icon src="sap-icon://collections-insight" height="70px"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
@@ -85,10 +104,9 @@
 		<footer>
 			<OverflowToolbar id="otbFooter">
 				<!--<Title text="Signiwis Mobiles" deccription="hi" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>-->
-							<ObjectIdentifier title="Signiwis Mobiles" text="The Mobile World"  />
-
+				<ObjectIdentifier title="Signiwis Mobiles" text="The Mobile World"/>
 				<ToolbarSpacer/>
-							<ObjectIdentifier title="Designed by:" text="SM Web Tecchnologies"  />
+				<ObjectIdentifier title="Designed by:" text="SM Web Tecchnologies"/>
 			</OverflowToolbar>
 		</footer>
 	</Page>

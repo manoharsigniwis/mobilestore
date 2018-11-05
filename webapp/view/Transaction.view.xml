@@ -4,7 +4,8 @@
 		<pages>
 			<Page title="Transaction">
 				<content>
-			
+								<Button text="Next" press="onPress"></Button>
+
 				</content>
 			</Page>
 		</pages>
