@@ -2,7 +2,7 @@
 {
 	"mobiles": [{
 		"productid": 380,
-		"model": "S9",
+		"model": "SAMSUNG S9",
 		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
 		"imei": 6928855,
 		"brand": "SAMSUNG",
@@ -13,7 +13,7 @@
 	}, {
 		"productid": 356,
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
-		"model": "3T",
+		"model": "ONEPLUS 3T",
 		"imei": 6869812,
 		"brand": "ONEPLUS",
 		"price": 48296,
@@ -22,7 +22,7 @@
 		"Status": "Low Stock"
 	}, {
 		"productid": 995,
-		"model": "XS",
+		"model": "IPHONE XS",
 		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
 		"imei": 4679923,
 		"brand": "IPHONE",
@@ -33,7 +33,7 @@
 	}, {
 		"productid": 935,
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
-		"model": "Moto G6",
+		"model": "MOTOROLA G6",
 		"imei": 5048956,
 		"brand": "MOTOROLA",
 		"price": 16405,
@@ -43,7 +43,7 @@
 	}, {
 		"productid": 130,
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
-		"model": "6T",
+		"model": "ONEPLUS 6T",
 		"imei": 4951914,
 		"brand": "ONEPLUS",
 		"price": 41921,
@@ -52,7 +52,7 @@
 		"Status": "Fast Selling"
 	}, {
 		"productid": 234,
-		"model": "6A",
+		"model": "REDMI 6A",
 		"image": "https://www.gizmochina.com/wp-content/uploads/2018/02/Redmi-Note-5-Mi-India-600x553.png",
 		"imei": 6070643,
 		"brand": "REDMI MI",
@@ -62,7 +62,7 @@
 		"Status": "Low Stock"
 	}, {
 		"productid": 333,
-		"model": "MOTO E5",
+		"model": "MOTOrola E5",
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
 		"imei": 6795707,
 		"brand": "MOTOROLA",
@@ -72,7 +72,7 @@
 		"Status": "In Stock"
 	}, {
 		"productid": 238,
-		"model": "J8",
+		"model": "SAMSUNG J8",
 		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
 		"imei": 6507685,
 		"brand": "SAMSUNG",
@@ -82,7 +82,7 @@
 		"Status": "In Stock"
 	}, {
 		"productid": 696,
-		"model": "X",
+		"model": "IPHONE X",
 		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
 		"imei": 4682594,
 		"brand": "IPHONE",
@@ -92,7 +92,7 @@
 		"Status": "Low Stock"
 	}, {
 		"productid": 222,
-		"model": "6 Pro",
+		"model": "REDMI 6 Pro",
 		"image": "https://www.gizmochina.com/wp-content/uploads/2018/02/Redmi-Note-5-Mi-India-600x553.png",
 		"imei": 6690696,
 		"brand": "REDMI MI",
@@ -102,7 +102,7 @@
 		"Status": "In Stock"
 	}, {
 		"productid": 265,
-		"model": "G6 Plus",
+		"model": "MOTOROLA G6 Plus",
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
 		"imei": 6013475,
 		"brand": "MOTOROLA",
@@ -112,7 +112,7 @@
 		"Status": "In Stock"
 	}, {
 		"productid": 271,
-		"model": "MI A2",
+		"model": "REDMI MI A2",
 		"image": "https://www.gizmochina.com/wp-content/uploads/2018/02/Redmi-Note-5-Mi-India-600x553.png",
 		"imei": 4939385,
 		"brand": "REDMI MI",
@@ -123,7 +123,7 @@
 	}, {
 		"productid": 644,
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
-		"model": "6",
+		"model": "ONEPLUS 6",
 		"imei": 6590712,
 		"brand": "ONEPLUS",
 		"price": 15102,
@@ -133,7 +133,7 @@
 	}, {
 		"productid": 595,
 		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
-		"model": "5T",
+		"model": "ONEPLUS 5T",
 		"imei": 6953822,
 		"brand": "ONEPLUS",
 		"price": 47718,
@@ -143,7 +143,7 @@
 
 	}, {
 		"productid": 184,
-		"model": "G6",
+		"model": "MOTOROLA G6",
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
 		"imei": 4018709,
 		"brand": "MOTOROLA",
@@ -153,7 +153,7 @@
 		"Status": "Out of Stock"
 	}, {
 		"productid": 807,
-		"model": "Galaxy S8",
+		"model": "SAMSUNG Galaxy S8",
 		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
 		"imei": 6579441,
 		"brand": "SAMSUNG",
@@ -164,7 +164,7 @@
 	}, {
 		"productid": 668,
 		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
-		"model": "8 Plus",
+		"model": "IPHONE 8 Plus",
 		"imei": 4274645,
 		"brand": "IPHONE",
 		"price": 26662,
@@ -173,7 +173,7 @@
 		"Status": "Fast Selling"
 	}, {
 		"productid": 908,
-		"model": "5",
+		"model": "ONEPLUS 5",
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
 		"imei": 5649754,
 		"brand": "ONEPLUS",
@@ -183,7 +183,7 @@
 		"Status": "Out of Stock"
 	}, {
 		"productid": 343,
-		"model": "A7 Turbo",
+		"model": "LENOVO A7 Turbo",
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
 		"imei": 4042709,
 		"brand": "LENOVO",
@@ -193,7 +193,7 @@
 		"Status": "Out of Stock"
 	}, {
 		"productid": 857,
-		"model": "K5 Note",
+		"model": "LENOVO K5 Note",
 		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
 		"imei": 6543441,
 		"brand": "LENOVO",
@@ -204,7 +204,7 @@
 	}, {
 		"productid": 698,
 		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
-		"model": "K8 Note",
+		"model": "LENOVO K8 Note",
 		"imei": 48765645,
 		"brand": "LENOVO",
 		"price": 26662,
@@ -213,7 +213,7 @@
 		"Status": "Fast Selling"
 	}, {
 		"productid": 958,
-		"model": "A6000",
+		"model": "LENOVO A6000",
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
 		"imei": 5345754,
 		"brand": "LENOVO",
