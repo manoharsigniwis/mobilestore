@@ -229,8 +229,8 @@
 	}, {
 		"productid": 64,
 		"model": "AP99",
-		"brand": "AMBRACE",
-		"image":"",
+		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"brand": "MUVEACOUSTICS",
 		"price": 4853,
 		"stock": 48,
 		"imei": 6145,
@@ -246,7 +246,8 @@
 	}, {
 		"productid": 68,
 		"model": "AP55",
-		"brand": "BEATS",
+		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"brand": "MUVEACOUSTICS",
 		"price": 6106,
 		"stock": 90,
 		"imei": 8752,
@@ -285,7 +286,8 @@
 		"Status": "Low Stock"
 	}, {
 		"productid": 56,
-		"model": "AP99",
+		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
+	
 		"brand": "BOAT",
 		"price": 9447,
 		"stock": 99,
