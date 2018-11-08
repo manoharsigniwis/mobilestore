@@ -65,14 +65,6 @@ sap.ui.define([
 		//	onExit: function() {
 		//
 		//	}
-<<<<<<< Upstream, based on origin/master
-			
-=======
-		back: function (oEvent) {
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("Home");
-		}
->>>>>>> b89a4f9 formatter added
 
 	});
 
