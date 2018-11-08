@@ -1,8 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
 	<ViewSettingsDialog confirm="handleConfirm">
 		<sortItems>
-			<ViewSettingsItem text="Price" key="price" press="onSort"  selected="true"/>
-			
+			<ViewSettingsItem text="Price" key="price" selected="true"/>
 		</sortItems>
 		<!--<groupItems>-->
 		<!--	<ViewSettingsItem text="Field 1" key="1" selected="true"/>-->

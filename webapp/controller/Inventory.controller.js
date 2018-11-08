@@ -3,9 +3,9 @@ sap.ui.define([
 	"jquery.sap.global",
 	"Mobile/Mobilestore/model/Formatter",
 	"sap/ui/model/json/JSONModel",
-	'sap/m/MessageToast',
-	'sap/ui/core/Fragment'
-], function (Controller, jQuery, Formatter, JSONModel,MessageToast,Fragment) {
+	"sap/ui/core/Fragment"
+
+], function (Controller, jQuery, Formatter, JSONModel, Fragment) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Inventory", {
@@ -29,9 +29,8 @@ sap.ui.define([
 
 			}
 		},
-		onSort : function(){
-			prompt("hi");
-			
+		onSort: function () {
+
 		},
 		_getDialog: function () {
 			if (!this._oDialog) {
@@ -47,8 +46,20 @@ sap.ui.define([
 			this._getDialog().open("filter");
 		},
 		handleConfirm: function (oEvent) {
-			if (oEvent.getParameters().filterString) {
-				MessageToast.show(oEvent.getParameters().filterString);
+			var oTable = this.getView().byId("idProductsTable"),
+				aSort = [],
+				SORTKEY = oEvent.getParameters(SORTKEY).sortItem.getKey(),
+				des = oEvent.getParameters(SORTKEY).sortDescending;
+			if (des === true) {
+				var obinding = oTable.getBinding("items"),
+					DESCENDING = true;
+				aSort.push(new sap.ui.model.Sorter(SORTKEY, DESCENDING));
+				obinding.sort(aSort);
+			} else if (des === false) {
+
+				obinding = oTable.getBinding("items");
+				aSort.push(new sap.ui.model.Sorter(SORTKEY, DESCENDING));
+				obinding.sort(aSort);
 			}
 		},
 

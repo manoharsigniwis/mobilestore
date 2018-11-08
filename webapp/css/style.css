@@ -27,3 +27,13 @@
 .textcolor{
 	color:white ! important;
 }
+.equalColumns .columns {
+	height: 100%;
+}
+
+.equalColumns .columns .sapMFlexItem {
+	background-color: #d1dbbd;
+	width: 0;
+	margin: 0 5px 0 0;
+	padding: 10px;
+}
