@@ -17,6 +17,8 @@
 										</items>
 									</ComboBox>
 								</content>
+								
+								<core:Icon src="sap-icon://filter" press="handleOpenDialog"></core:Icon>
 							</Toolbar>
 						</headerToolbar>
 						<columns>
