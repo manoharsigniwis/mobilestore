@@ -139,7 +139,7 @@
 		"stock": 0,
 		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
-		
+
 	}, {
 		"productid": 184,
 		"model": "MP56",
@@ -181,285 +181,170 @@
 		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
 	}],
-<<<<<<< Upstream, based on origin/master
+
 	"accessories": [{
-		"productid": 71,
-		"model": "AP65",
-		"brand": "MUVEACOUSTICS",
-		"price": 9222,
-		"stock": 26
+		"productid": 93,
+		"image":"http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png"
+	,	"model": "AP55",
+		"brand": "SKULLCANDY",
+		"price": 1072,
+		"stock": 29,
+		"imei": 8357,
+		"Status": "Fast Selling"
 	}, {
-		"productid": 91,
-		"model": "AP73",
-		"brand": "BEATS",
-		"price": 9511,
-		"stock": 63
-	}, {
-		"productid": 63,
-		"model": "AP65",
-		"brand": "JBL",
-		"price": 4982,
-		"stock": 36
-	}, {
-		"productid": 99,
-		"model": "AP99",
-		"brand": "JBL",
-		"price": 3454,
-		"stock": 87
-	}, {
-		"productid": 71,
-		"model": "AP96",
-		"brand": "BEATS",
-		"price": 9527,
-		"stock": 83
-	}, {
-		"productid": 98,
-		"model": "AP99",
-		"brand": "JBL",
-		"price": 9303,
-		"stock": 89
-	}, {
-		"productid": 86,
-		"model": "AP96",
-		"brand": "JBL",
-		"price": 8591,
-		"stock": 11
-	}, {
-		"productid": 80,
-		"model": "AP55",
-		"brand": "MUVEACOUSTICS",
-		"price": 9227,
-		"stock": 99
-	}, {
-		"productid": 98,
-		"model": "AP65",
-		"brand": "JBL",
-		"price": 4201,
-		"stock": 31
-	}, {
-		"productid": 55,
-		"model": "AP73",
-		"brand": "BOAT",
-		"price": 6108,
-		"stock": 59
-	}, {
-		"productid": 50,
-		"model": "AP65",
-		"brand": "MUVEACOUSTICS",
-		"price": 4264,
-		"stock": 26
-	}, {
-		"productid": 51,
-		"model": "AP99",
-		"brand": "MUVEACOUSTICS",
-		"price": 8794,
-		"stock": 41
-	}, {
-		"productid": 63,
-		"model": "AP55",
-		"brand": "BOAT",
-		"price": 1570,
-		"stock": 41
-	}, {
-		"productid": 56,
+		"productid": 82,
 		"model": "AP50",
-		"brand": "AMBRACE",
-		"price": 1994,
-		"stock": 45
+		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"brand": "MUVEACOUSTICS",
+		"price": 4923,
+		"stock": 9,
+		"imei": 8859,
+		"Status": "Fast Selling"
 	}, {
 		"productid": 92,
 		"model": "AP96",
-		"brand": "BOAT",
-		"price": 6429,
-		"stock": 59
+		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"brand": "MUVEACOUSTICS",
+		"price": 9337,
+		"stock": 54,
+		"imei": 4557,
+		"Status": "Low Stock"
 	}, {
-		"productid": 80,
-		"model": "AP99",
-		"brand": "BOAT",
-		"price": 2757,
-		"stock": 84
+		"productid": 99,
+		"model": "AP65",
+		"image":"https://mbtskoudsalg.com/images/green-headphones-png-8.png",
+		"brand": "BEATS",
+		"price": 7457,
+		"stock": 83,
+		"imei": 9966,
+		"Status": "Low Stock"
 	}, {
-		"productid": 98,
+		"productid": 86,
 		"model": "AP65",
 		"brand": "AMBRACE",
-		"price": 3690,
-		"stock": 51
+		"price": 9734,
+		"stock": 10,
+		"imei": 4012,
+		"Status": "Fast Selling"
 	}, {
-		"productid": 50,
-		"model": "AP73",
+		"productid": 64,
+		"model": "AP99",
+		"brand": "AMBRACE",
+		"image":"",
+		"price": 4853,
+		"stock": 48,
+		"imei": 6145,
+		"Status": "Out of Stock"
+	}, {
+		"productid": 52,
+		"model": "AP96",
+		"brand": "SKULLCANDY",
+		"price": 1607,
+		"stock": 22,
+		"imei": 1788,
+		"Status": "Fast Selling"
+	}, {
+		"productid": 68,
+		"model": "AP55",
+		"brand": "BEATS",
+		"price": 6106,
+		"stock": 90,
+		"imei": 8752,
+		"Status": "Fast Selling"
+	}, {
+		"productid": 98,
+		"model": "AP55",
 		"brand": "BOAT",
-		"price": 9782,
-		"stock": 12
+		"price": 1765,
+		"stock": 63,
+		"imei": 1633,
+		"Status": "In Stock"
+	}, {
+		"productid": 61,
+		"model": "AP65",
+		"brand": "JBL",
+		"price": 3283,
+		"stock": 1,
+		"imei": 3344,
+		"Status": "Out of Stock"
+	}, {
+		"productid": 99,
+		"model": "AP96",
+		"brand": "JBL",
+		"price": 2768,
+		"stock": 83,
+		"imei": 4721,
+		"Status": "Out of Stock"
+	}, {
+		"productid": 65,
+		"model": "AP73",
+		"brand": "SKULLCANDY",
+		"price": 4666,
+		"stock": 85,
+		"imei": 3500,
+		"Status": "Low Stock"
+	}, {
+		"productid": 56,
+		"model": "AP99",
+		"brand": "BOAT",
+		"price": 9447,
+		"stock": 99,
+		"imei": 2067,
+		"Status": "Low Stock"
+	}, {
+		"productid": 62,
+		"model": "AP55",
+		"brand": "BOAT",
+		"price": 2548,
+		"stock": 87,
+		"imei": 5435,
+		"Status": "Fast Selling"
+	}, {
+		"productid": 76,
+		"model": "AP55",
+		"brand": "JBL",
+		"price": 1850,
+		"stock": 79,
+		"imei": 6328,
+		"Status": "Fast Selling"
+	}, {
+		"productid": 53,
+		"model": "AP96",
+		"brand": "BEATS",
+		"price": 9314,
+		"stock": 75,
+		"imei": 6782,
+		"Status": "In Stock"
+	}, {
+		"productid": 78,
+		"model": "AP73",
+		"brand": "BEATS",
+		"price": 5272,
+		"stock": 96,
+		"imei": 6160,
+		"Status": "Out of Stock"
+	}, {
+		"productid": 74,
+		"model": "AP55",
+		"brand": "AMBRACE",
+		"price": 8969,
+		"stock": 62,
+		"imei": 1153,
+		"Status": "In Stock"
 	}],
 	"recharge": [{
 		"operator": "airtel",
-		"balabce": 1000
+		"balance": 1000
 	}, {
 		"operator": "jio",
-		"balabce": 2000
+		"balance": 2000
 	}, {
 		"operator": "vodafone",
-		"balabce": 500
+		"balance": 500
 	}, {
 		"operator": "bsnl",
-		"balabce": 1000
+		"balance": 1000
 
 	}]
-	
-=======
 
-  "accessories": [
-    {
-      "productid": 50,
-      "model": "AP73",
-      "brand": "JBL",
-      "price": 3957,
-      "stock": 34,
-      "Status": "Out of Stock"
-    },
-    {
-      "productid": 86,
-      "model": "AP73",
-      "brand": "SKULLCANDY",
-      "price": 6175,
-      "stock": 96,
-      "Status": "Out of Stock"
-    },
-    {
-      "productid": 75,
-      "model": "AP73",
-      "brand": "AMBRACE",
-      "price": 9323,
-      "stock": 99,
-      "Status": "Out of Stock"
-    },
-    {
-      "productid": 77,
-      "model": "AP73",
-      "brand": "BEATS",
-      "price": 6289,
-      "stock": 45,
-      "Status": "In Stock"
-    },
-    {
-      "productid": 92,
-      "model": "AP96",
-      "brand": "BEATS",
-      "price": 7282,
-      "stock": 28,
-      "Status": "In Stock"
-    },
-    {
-      "productid": 51,
-      "model": "AP99",
-      "brand": "MUVEACOUSTICS",
-      "price": 8680,
-      "stock": 43,
-      "Status": "Out of Stock"
-    },
-    {
-      "productid": 88,
-      "model": "AP73",
-      "brand": "BEATS",
-      "price": 4500,
-      "stock": 38,
-      "Status": "Fast Selling"
-    },
-    {
-      "productid": 99,
-      "model": "AP50",
-      "brand": "BEATS",
-      "price": 8320,
-      "stock": 71,
-      "Status": "Low Stock"
-    },
-    {
-      "productid": 83,
-      "model": "AP99",
-      "brand": "MUVEACOUSTICS",
-      "price": 2607,
-      "stock": 43,
-      "Status": "Out of Stock"
-    },
-    {
-      "productid": 65,
-      "model": "AP50",
-      "brand": "BEATS",
-      "price": 9399,
-      "stock": 53,
-      "Status": "Low Stock"
-    },
-    {
-      "productid": 59,
-      "model": "AP73",
-      "brand": "BEATS",
-      "price": 8800,
-      "stock": 64,
-      "Status": "Low Stock"
-    },
-    {
-      "productid": 97,
-      "model": "AP55",
-      "brand": "BOAT",
-      "price": 8469,
-      "stock": 56,
-      "Status": "Low Stock"
-    },
-    {
-      "productid": 75,
-      "model": "AP50",
-      "brand": "JBL",
-      "price": 5794,
-      "stock": 68,
-      "Status": "Out of Stock"
-    },
-    {
-      "productid": 71,
-      "model": "AP55",
-      "brand": "AMBRACE",
-      "price": 1495,
-      "stock": 50,
-      "Status": "Low Stock"
-    },
-    {
-      "productid": 91,
-      "model": "AP55",
-      "brand": "MUVEACOUSTICS",
-      "price": 7288,
-      "stock": 36,
-      "Status": "Fast Selling"
-    },
-    {
-      "productid": 51,
-      "model": "AP65",
-      "brand": "MUVEACOUSTICS",
-      "price": 8302,
-      "stock": 82,
-      "Status": "Fast Selling"
-    },
-    {
-      "productid": 100,
-      "model": "AP96",
-      "brand": "AMBRACE",
-      "price": 6766,
-      "stock": 2,
-      "Status": "Out of Stock"
-    },
-    {
-      "productid": 51,
-      "model": "AP73",
-      "brand": "BOAT",
-      "price": 9352,
-      "stock": 59,
-      "Status": "Out of Stock"
-    }
-  ],
-
-	"recharge": {
-		"airtel": 1000,
-		"jio": 2000,
-		"vodafone": 500,
-		"bsnl": 2000
-	}
->>>>>>> b89a4f9 formatter added
 }
