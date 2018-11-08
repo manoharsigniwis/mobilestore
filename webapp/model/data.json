@@ -184,8 +184,8 @@
 
 	"accessories": [{
 		"productid": 93,
-		"image":"http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png"
-	,	"model": "AP55",
+		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
+		"model": "AP55",
 		"brand": "SKULLCANDY",
 		"price": 1072,
 		"stock": 29,
@@ -194,7 +194,7 @@
 	}, {
 		"productid": 82,
 		"model": "AP50",
-		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
 		"brand": "MUVEACOUSTICS",
 		"price": 4923,
 		"stock": 9,
@@ -203,7 +203,7 @@
 	}, {
 		"productid": 92,
 		"model": "AP96",
-		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
 		"brand": "MUVEACOUSTICS",
 		"price": 9337,
 		"stock": 54,
@@ -212,32 +212,34 @@
 	}, {
 		"productid": 99,
 		"model": "AP65",
-		"image":"https://mbtskoudsalg.com/images/green-headphones-png-8.png",
+		"image": "https://mbtskoudsalg.com/images/green-headphones-png-8.png",
 		"brand": "BEATS",
 		"price": 7457,
 		"stock": 83,
 		"imei": 9966,
-		"Status": "Low Stock"
+		"Status": "In Stock"
 	}, {
 		"productid": 86,
 		"model": "AP65",
-		"brand": "AMBRACE",
+		"brand": "AMBRANE",
+		"image": "https://n3.sdlcdn.com/imgs/e/a/x/Ambrane-Plush-PP-2000-20000-SDL240914658-1-0c419.png",
 		"price": 9734,
 		"stock": 10,
 		"imei": 4012,
-		"Status": "Fast Selling"
+		"Status": "In Stock"
 	}, {
 		"productid": 64,
 		"model": "AP99",
-		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
 		"brand": "MUVEACOUSTICS",
 		"price": 4853,
-		"stock": 48,
+		"stock": 0,
 		"imei": 6145,
 		"Status": "Out of Stock"
 	}, {
 		"productid": 52,
 		"model": "AP96",
+		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
 		"brand": "SKULLCANDY",
 		"price": 1607,
 		"stock": 22,
@@ -246,7 +248,7 @@
 	}, {
 		"productid": 68,
 		"model": "AP55",
-		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
 		"brand": "MUVEACOUSTICS",
 		"price": 6106,
 		"stock": 90,
@@ -256,6 +258,7 @@
 		"productid": 98,
 		"model": "AP55",
 		"brand": "BOAT",
+		"image": "https://i0.wp.com/gaaminx.com/wp-content/uploads/2017/06/Boat-Rockerz-400-Bluetooth-On-Ear-Headphone_0002_51PjCRR9KbL.png?fit=500%2C600&ssl=1",
 		"price": 1765,
 		"stock": 63,
 		"imei": 1633,
@@ -264,14 +267,16 @@
 		"productid": 61,
 		"model": "AP65",
 		"brand": "JBL",
+		"image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5effd755/JBL-Everest-300BT_RED_Front-1606x1606px.png",
 		"price": 3283,
-		"stock": 1,
+		"stock": 0,
 		"imei": 3344,
 		"Status": "Out of Stock"
 	}, {
 		"productid": 99,
 		"model": "AP96",
 		"brand": "JBL",
+		"image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5effd755/JBL-Everest-300BT_RED_Front-1606x1606px.png",
 		"price": 2768,
 		"stock": 83,
 		"imei": 4721,
@@ -279,24 +284,26 @@
 	}, {
 		"productid": 65,
 		"model": "AP73",
+		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
 		"brand": "SKULLCANDY",
 		"price": 4666,
-		"stock": 85,
+		"stock": 4,
 		"imei": 3500,
 		"Status": "Low Stock"
 	}, {
 		"productid": 56,
-		"image":"https://www.muveacoustics.com/images/About%20Us/about-us.png",
-	
+		"image": "https://i0.wp.com/gaaminx.com/wp-content/uploads/2017/06/Boat-Rockerz-400-Bluetooth-On-Ear-Headphone_0002_51PjCRR9KbL.png?fit=500%2C600&ssl=1",
+
 		"brand": "BOAT",
 		"price": 9447,
-		"stock": 99,
+		"stock": 5,
 		"imei": 2067,
 		"Status": "Low Stock"
 	}, {
 		"productid": 62,
 		"model": "AP55",
 		"brand": "BOAT",
+		"image": "https://i0.wp.com/gaaminx.com/wp-content/uploads/2017/06/Boat-Rockerz-400-Bluetooth-On-Ear-Headphone_0002_51PjCRR9KbL.png?fit=500%2C600&ssl=1",
 		"price": 2548,
 		"stock": 87,
 		"imei": 5435,
@@ -304,6 +311,7 @@
 	}, {
 		"productid": 76,
 		"model": "AP55",
+		"image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5effd755/JBL-Everest-300BT_RED_Front-1606x1606px.png",
 		"brand": "JBL",
 		"price": 1850,
 		"stock": 79,
@@ -313,6 +321,7 @@
 		"productid": 53,
 		"model": "AP96",
 		"brand": "BEATS",
+		"image": "https://mbtskoudsalg.com/images/green-headphones-png-8.png",
 		"price": 9314,
 		"stock": 75,
 		"imei": 6782,
@@ -320,15 +329,17 @@
 	}, {
 		"productid": 78,
 		"model": "AP73",
+		"image": "https://mbtskoudsalg.com/images/green-headphones-png-8.png",
 		"brand": "BEATS",
 		"price": 5272,
-		"stock": 96,
+		"stock": 0,
 		"imei": 6160,
 		"Status": "Out of Stock"
 	}, {
 		"productid": 74,
 		"model": "AP55",
-		"brand": "AMBRACE",
+		"brand": "AMBRANE",
+		"image": "https://n3.sdlcdn.com/imgs/e/a/x/Ambrane-Plush-PP-2000-20000-SDL240914658-1-0c419.png",
 		"price": 8969,
 		"stock": 62,
 		"imei": 1153,
