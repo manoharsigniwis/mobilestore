@@ -2,8 +2,10 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"jquery.sap.global",
 	"Mobile/Mobilestore/model/Formatter",
-	"sap/ui/model/json/JSONModel"
-], function (Controller, jQuery, Formatter, JSONModel) {
+	"sap/ui/model/json/JSONModel",
+	'sap/m/MessageToast',
+	'sap/ui/core/Fragment'
+], function (Controller, jQuery, Formatter, JSONModel,MessageToast,Fragment) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Inventory", {
@@ -20,11 +22,33 @@ sap.ui.define([
 				// var points = oModel.oData.accessories;
 				oModel.setProperty("/mobiles", oModel.oData.accessories);
 
-			} else if (olist1 === "mobile") {
+			} else {
 
 				// var points1 = oModel.oData.accessories;
 				oModel.setProperty("/mobiles", oModel.oData.mobiles);
 
+			}
+		},
+		onSort : function(){
+			prompt("hi");
+			
+		},
+		_getDialog: function () {
+			if (!this._oDialog) {
+				this._oDialog = sap.ui.xmlfragment("Mobile.Mobilestore.fragments.filter", this);
+				this.getView().addDependent(this._oDialog);
+			}
+			return this._oDialog;
+		},
+		handleOpenDialog: function () {
+			this._getDialog().open();
+		},
+		handleOpenDialogFilter: function () {
+			this._getDialog().open("filter");
+		},
+		handleConfirm: function (oEvent) {
+			if (oEvent.getParameters().filterString) {
+				MessageToast.show(oEvent.getParameters().filterString);
 			}
 		},
 
@@ -36,9 +60,9 @@ sap.ui.define([
 		onInit: function () {
 
 		},
-		onPress: function (oEvent) {
+		back: function (oEvent) {
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				oRouter.navTo("Billing");
+				oRouter.navTo("Home");
 			}
 			/**
 			 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

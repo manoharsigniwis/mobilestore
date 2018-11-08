@@ -13,14 +13,16 @@ sap.ui.define([
 		 * @memberOf Mobile.Mobilestore.view.Billing
 		 */
 		onInit: function () {
-			// var rand = Math.floor((Math.random() * 100000) + 1);
-			// this.getView().byId("oid").setValue(rand);
+			var rand = Math.floor((Math.random() * 100000) + 1);
+			this.getView().byId("oid").setValue(rand);
+			var currentDate = new Date();
+			this.byId("date").setDateValue(currentDate);
 		},
 		onPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("serviceBilling");
 		},
-				onNavBack: function (oEvent) {
+		onNavBack: function (oEvent) {
 			var oHistory, sPreviousHash;
 			oHistory = History.getInstance();
 			sPreviousHash = oHistory.getPreviousHash();
@@ -49,6 +51,8 @@ sap.ui.define([
 			var price = this.getView().byId("price").getValue();
 			var tprice = this.getView().byId("tprice").getValue();
 			var model = this.getView().byId("model").getValue();
+			var date = this.getView().byId("date").getValue();
+
 			var brand = this.getView().byId("brand").getProperty("selectedKey");
 
 			var imgdata =
@@ -59,51 +63,52 @@ sap.ui.define([
 			doc.setFontType("normal");
 			doc.setFontSize(15);
 			doc.setTextColor(0, 0, 0);
+			doc.text('INVOICE', 140, 50);
+			doc.text('Customer Name:', 20, 60);
+			doc.text(name, 70, 60);
 
-			doc.text('Customer Name:', 20, 50);
-			doc.text(name, 70, 50);
+			doc.text('Mobile No:', 20, 70);
+			doc.text(mobile, 70, 70);
 
-			doc.text('Mobile No:', 20, 60);
-			doc.text(mobile, 70, 60);
+			doc.text('Date:', 200, 60);
+			doc.text(date, 240, 60);
 
-			doc.text('Date:', 200, 50);
-			doc.text('21/21/21:', 240, 50);
-
-			doc.text('Order ID:', 200, 60);
-			doc.text(oid, 240, 60);
+			doc.text('Order ID:', 200, 70);
+			doc.text(oid, 240, 70);
 
 			doc.setFillColor(255, 255, 255);
-			doc.rect(16, 70, 263, 90, "FD");
+			doc.rect(16, 80, 263, 90, "FD");
 
 			doc.setFillColor(51, 51, 51);
-			doc.rect(16, 70, 263, 18, "FD");
+			doc.rect(16, 80, 263, 18, "FD");
 			doc.setTextColor(255, 255, 255);
 
-			doc.text('Product No', 23, 80);
+			doc.text('Product No', 23, 90);
 
-			doc.line(60, 70, 60, 160);
-			doc.text('Description', 90, 80);
+			doc.line(60, 80, 60, 170);
+			doc.text('Description', 90, 90);
 
-			doc.line(150, 70, 150, 160);
-			doc.text('Price', 165, 80);
+			
+			doc.line(150, 80, 150, 170);
+			doc.text('Price', 165, 90);
 
-			doc.line(190, 70, 190, 160);
-			doc.text('Discount', 198, 80);
+			doc.line(190, 80, 190, 170);
+			doc.text('Discount', 198, 90);
 
-			doc.line(230, 70, 230, 160);
-			doc.text('Total Amount', 235, 80);
+			doc.line(230, 80, 230, 170);
+			doc.text('Total Amount', 235, 90);
 
-			doc.line(16, 88, 279, 88);
+		//	doc.line(16, 88, 279, 88);
 			doc.setFontType("normal");
 			doc.setFontSize(15);
 			doc.setTextColor(0, 0, 0);
 
-			doc.text(pno, 23, 100);
-			doc.text(brand, 90, 100);
-			doc.text(model, 90, 110);
-			doc.text(price, 165, 100);
-			doc.text('Discount', 198, 100);
-			doc.text(tprice, 235, 100);
+			doc.text(pno, 23, 110);
+			doc.text(brand, 90, 110);
+			doc.text(model, 90, 120);
+			doc.text(price, 165, 110);
+			doc.text('Discount', 198, 110);
+			doc.text(tprice, 245, 110);
 
 			doc.setFontType("bold");
 			doc.setFontSize(18);
@@ -119,32 +124,6 @@ sap.ui.define([
 			doc.save('a4.pdf');
 			//	console.log(this.getView().byId("name").getValue());
 		}
-
-		/**
-		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-		 * (NOT before the first rendering! onInit() is used for that one!).
-		 * @memberOf Mobile.Mobilestore.view.Billing
-		 */
-		//	onBeforeRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-		 * This hook is the same one that SAPUI5 controls get after being rendered.
-		 * @memberOf Mobile.Mobilestore.view.Billing
-		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-		 * @memberOf Mobile.Mobilestore.view.Billing
-		 */
-		//	onExit: function() {
-		//
-		//	}
 
 	});
 

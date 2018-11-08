@@ -11,6 +11,7 @@
 					<OverflowToolbarLayoutData priority="NeverOverflow"/>
 				</layoutData>
 			</Button>
+			<Button text="back" press="onNavBack" type="Transparent"></Button>
 			<Button text="Nextb" press="onPress"></Button>
 		</tnt:ToolHeader>
 		<VBox class="sapUiSmallMargin">
@@ -18,56 +19,57 @@
 				labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="3" emptySpanM="0" emptySpanS="0" columnsXL="2"
 				columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
 				<f:content>
+					<Label text=" Order ID"/>
+					<Input id="oid" value="Sindhu" editable="false"/>
+					<Label text="Date:"/>
+					<DatePicker id="date" displayFormat="long" editable="false"/>
 					<Label text=" Customer Name"/>
-					<Input value="Sindhu"/>
+					<Input id="name" value="Sindhu"/>
 					<Label text="Mobile No."/>
-					<Input value="9797979797"></Input>
-					<Label text="ZIP Code/City"/>
-					<Input value="572102">
-						<layoutData>
-							<l:GridData span="XL2 L1 M3 S4"/>
-						</layoutData>
-					</Input>
-					<Input value="Tumkur"/>
+					<Input id="mobile" type="Number" value="9797979797"></Input>
 					<Label text="Category"/>
 					<Input value="Mobile"/>
 					<Label text="Product No"/>
-					<Input value="SM999"/>
+					<Input id="pno" value="SM999"/>
 					<Label text="Brand"/>
-					<Select id="brand" selectedKey="OnePlus">
-						<items>
-							<core:Item text="OnePlus" key="OnePlus"/>
-							<core:Item text="iPhone" key="iPhone"/>
-							<core:Item text="Lenovo" key="Lenovo"/>
-							<core:Item text="Samsung" key="Samsung"/>
-							<core:Item text="MI" key="MI"/>
-						</items>
-					</Select>
+					<ComboBox id="brand" selectedKey="OnePlus">
+						<!--<items>-->
+						<core:Item text="OnePlus" key="OnePlus"/>
+						<core:Item text="iPhone" key="iPhone"/>
+						<core:Item text="Lenovo" key="Lenovo"/>
+						<core:Item text="Samsung" key="Samsung"/>
+						<core:Item text="MI" key="MI"/>
+						<!--</items>-->
+					</ComboBox>
 					<Label text="Model"/>
-					<Input value="6T"/>
+					<ComboBox id="model" items="{data>/mobiles}">
+						<items>
+							<core:Item text="{data>model}"/>
+						</items>
+					</ComboBox>
 					<Label text="Price"/>
-					<Input value="37999"/>
+					<Input id="price"  value="37999"/>
 					<Label text="Coupon Code"/>
-					<Input value="">
+					<ComboBox id="coupon" >
+						<!--<items>-->
+						<core:Item text="Save@20" />
+						<core:Item text="iPhone" />
+						<core:Item text="Lenovo" />
+						<core:Item text="Samsung" />
+						<core:Item text="MI" />
+						<!--</items>-->
+					
 						<layoutData>
-							<l:GridData span="XL3 L3 M5 S6"/>
+							<l:GridData span="XL3 L3 M5 S12"/>
 						</layoutData>
-					</Input>
+				</ComboBox>
 					<Button text="Apply Coupon"></Button>
 					<Label text="Total Amount"/>
-					<Input value="37999"/>
+					<Input id="tprice"   value="37999"/>
 					<Label text=""/>
-					<Button text="Submit"></Button>
+					<Button text="Submit" press="onSubmit"></Button>
 				</f:content>
 			</f:SimpleForm>
 		</VBox>
-		<footer>
-			<OverflowToolbar id="otbFooter">
-				<!--<Title text="Signiwis Mobiles" deccription="hi" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>-->
-				<ObjectIdentifier title="Signiwis Mobiles" text="The Mobile World"/>
-				<ToolbarSpacer/>
-				<ObjectIdentifier title="Designed by:" text="SM Web Tecchnologies"/>
-			</OverflowToolbar>
-		</footer>
 	</Page>
 </mvc:View>
