@@ -2,9 +2,8 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tnt="sap.tnt">
 	<App>
 		<pages>
-			<Page title="Inventory">
+			<Page title="Inventory" navButtonPress="back" showNavButton="true">
 				<content>
-					<Button text="back" press="onNavBack" type="Transparent"></Button>
 					<Table id="idProductsTable" inset="false" items="{data>/mobiles}">
 						<headerToolbar>
 							<Toolbar>

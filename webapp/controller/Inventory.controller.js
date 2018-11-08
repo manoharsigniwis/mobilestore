@@ -36,16 +36,6 @@ sap.ui.define([
 		onInit: function () {
 
 		},
-			onNavBack: function (oEvent) {
-			var oHistory, sPreviousHash;
-			oHistory = History.getInstance();
-			sPreviousHash = oHistory.getPreviousHash();
-			if (sPreviousHash !== undefined) {
-				window.history.go(-1);
-			} else {
-				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
-			}
-		},
 		onPress: function (oEvent) {
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("Billing");
@@ -55,29 +45,26 @@ sap.ui.define([
 			 * (NOT before the first rendering! onInit() is used for that one!).
 			 * @memberOf Mobile.Mobilestore.view.Inventory
 			 */
-			//	onBeforeRendering: function() {
+			//          onBeforeRendering: function() {
 			//
-			//	},
+			//          },
 
 		/**
 		 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
 		 * This hook is the same one that SAPUI5 controls get after being rendered.
 		 * @memberOf Mobile.Mobilestore.view.Inventory
 		 */
-		//	onAfterRendering: function() {
+		//          onAfterRendering: function() {
 		//
-		//	},
+		//          },
 
 		/**
 		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
 		 * @memberOf Mobile.Mobilestore.view.Inventory
 		 */
-		//	onExit: function() {
+		//          onExit: function() {
 		//
-		//	}
-
-	
-
+		//          }
 
 	});
 
