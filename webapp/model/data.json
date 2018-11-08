@@ -1,4 +1,3 @@
-
 {
 	"mobiles": [{
 		"productid": 380,
@@ -191,6 +190,7 @@
 		"price": 1072,
 		"stock": 29,
 		"imei": 8357,
+		"CurrencyCode": "INR",
 		"Status": "Fast Selling"
 	}, {
 		"productid": 82,
@@ -200,6 +200,7 @@
 		"price": 4923,
 		"stock": 9,
 		"imei": 8859,
+		"CurrencyCode": "INR",
 		"Status": "Fast Selling"
 	}, {
 		"productid": 92,
@@ -209,6 +210,7 @@
 		"price": 9337,
 		"stock": 54,
 		"imei": 4557,
+		"CurrencyCode": "INR",
 		"Status": "Low Stock"
 	}, {
 		"productid": 99,
@@ -218,6 +220,7 @@
 		"price": 7457,
 		"stock": 83,
 		"imei": 9966,
+		"CurrencyCode": "INR",
 		"Status": "In Stock"
 	}, {
 		"productid": 86,
@@ -227,7 +230,8 @@
 		"price": 9734,
 		"stock": 10,
 		"imei": 4012,
-		"Status": "In Stock"
+		"Status": "In Stock",
+		"CurrencyCode": "INR"
 	}, {
 		"productid": 64,
 		"model": "AP99",
@@ -236,6 +240,7 @@
 		"price": 4853,
 		"stock": 0,
 		"imei": 6145,
+		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
 	}, {
 		"productid": 52,
@@ -243,12 +248,14 @@
 		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
 		"brand": "SKULLCANDY",
 		"price": 1607,
+		"CurrencyCode": "INR",
 		"stock": 22,
 		"imei": 1788,
 		"Status": "Fast Selling"
 	}, {
 		"productid": 68,
 		"model": "AP55",
+		"CurrencyCode": "INR",
 		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
 		"brand": "MUVEACOUSTICS",
 		"price": 6106,
@@ -261,6 +268,7 @@
 		"brand": "BOAT",
 		"image": "https://i0.wp.com/gaaminx.com/wp-content/uploads/2017/06/Boat-Rockerz-400-Bluetooth-On-Ear-Headphone_0002_51PjCRR9KbL.png?fit=500%2C600&ssl=1",
 		"price": 1765,
+		"CurrencyCode": "INR",
 		"stock": 63,
 		"imei": 1633,
 		"Status": "In Stock"
@@ -270,6 +278,7 @@
 		"brand": "JBL",
 		"image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5effd755/JBL-Everest-300BT_RED_Front-1606x1606px.png",
 		"price": 3283,
+		"CurrencyCode": "INR",
 		"stock": 0,
 		"imei": 3344,
 		"Status": "Out of Stock"
@@ -279,7 +288,8 @@
 		"brand": "JBL",
 		"image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5effd755/JBL-Everest-300BT_RED_Front-1606x1606px.png",
 		"price": 2768,
-		"stock": 83,
+		"CurrencyCode": "INR",
+		"stock": 0,
 		"imei": 4721,
 		"Status": "Out of Stock"
 	}, {
@@ -288,13 +298,14 @@
 		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
 		"brand": "SKULLCANDY",
 		"price": 4666,
+		"CurrencyCode": "INR",
 		"stock": 4,
 		"imei": 3500,
 		"Status": "Low Stock"
 	}, {
 		"productid": 56,
 		"image": "https://i0.wp.com/gaaminx.com/wp-content/uploads/2017/06/Boat-Rockerz-400-Bluetooth-On-Ear-Headphone_0002_51PjCRR9KbL.png?fit=500%2C600&ssl=1",
-
+		"CurrencyCode": "INR",
 		"brand": "BOAT",
 		"price": 9447,
 		"stock": 5,
@@ -306,6 +317,7 @@
 		"brand": "BOAT",
 		"image": "https://i0.wp.com/gaaminx.com/wp-content/uploads/2017/06/Boat-Rockerz-400-Bluetooth-On-Ear-Headphone_0002_51PjCRR9KbL.png?fit=500%2C600&ssl=1",
 		"price": 2548,
+		"CurrencyCode": "INR",
 		"stock": 87,
 		"imei": 5435,
 		"Status": "Fast Selling"
@@ -315,6 +327,7 @@
 		"image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5effd755/JBL-Everest-300BT_RED_Front-1606x1606px.png",
 		"brand": "JBL",
 		"price": 1850,
+		"CurrencyCode": "INR",
 		"stock": 79,
 		"imei": 6328,
 		"Status": "Fast Selling"
@@ -322,6 +335,7 @@
 		"productid": 53,
 		"model": "AP96",
 		"brand": "BEATS",
+		"CurrencyCode": "INR",
 		"image": "https://mbtskoudsalg.com/images/green-headphones-png-8.png",
 		"price": 9314,
 		"stock": 75,
@@ -333,6 +347,7 @@
 		"image": "https://mbtskoudsalg.com/images/green-headphones-png-8.png",
 		"brand": "BEATS",
 		"price": 5272,
+		"CurrencyCode": "INR",
 		"stock": 0,
 		"imei": 6160,
 		"Status": "Out of Stock"
@@ -343,6 +358,7 @@
 		"image": "https://n3.sdlcdn.com/imgs/e/a/x/Ambrane-Plush-PP-2000-20000-SDL240914658-1-0c419.png",
 		"price": 8969,
 		"stock": 62,
+		"CurrencyCode": "INR",
 		"imei": 1153,
 		"Status": "In Stock"
 	}],

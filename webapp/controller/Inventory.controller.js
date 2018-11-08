@@ -36,9 +36,9 @@ sap.ui.define([
 		onInit: function () {
 
 		},
-		onPress: function (oEvent) {
+		back: function (oEvent) {
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				oRouter.navTo("Billing");
+				oRouter.navTo("Home");
 			}
 			/**
 			 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
