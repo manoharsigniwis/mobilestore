@@ -36,6 +36,16 @@ sap.ui.define([
 		onInit: function () {
 
 		},
+			onNavBack: function (oEvent) {
+			var oHistory, sPreviousHash;
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+			}
+		},
 		onPress: function (oEvent) {
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("Billing");
@@ -65,14 +75,9 @@ sap.ui.define([
 		//	onExit: function() {
 		//
 		//	}
-<<<<<<< Upstream, based on origin/master
-			
-=======
-		back: function (oEvent) {
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("Home");
-		}
->>>>>>> b89a4f9 formatter added
+
+	
+
 
 	});
 
