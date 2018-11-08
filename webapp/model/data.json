@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> refs/heads/master
 {
 	"mobiles": [{
 		"productid": 380,
@@ -180,6 +177,46 @@
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
 		"imei": 5649754,
 		"brand": "ONEPLUS",
+		"price": 16174,
+		"stock": 0,
+		"CurrencyCode": "INR",
+		"Status": "Out of Stock"
+	}, {
+		"productid": 343,
+		"model": "A7 Turbo",
+		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
+		"imei": 4042709,
+		"brand": "LENOVO",
+		"price": 43543,
+		"stock": 0,
+		"CurrencyCode": "INR",
+		"Status": "Out of Stock"
+	}, {
+		"productid": 857,
+		"model": "K5 Note",
+		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
+		"imei": 6543441,
+		"brand": "LENOVO",
+		"price": 16784,
+		"stock": 63,
+		"CurrencyCode": "INR",
+		"Status": "In Stock"
+	}, {
+		"productid": 698,
+		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
+		"model": "K8 Note",
+		"imei": 48765645,
+		"brand": "LENOVO",
+		"price": 26662,
+		"stock": 36,
+		"CurrencyCode": "INR",
+		"Status": "Fast Selling"
+	}, {
+		"productid": 958,
+		"model": "A6000",
+		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
+		"imei": 5345754,
+		"brand": "LENOVO",
 		"price": 16174,
 		"stock": 0,
 		"CurrencyCode": "INR",
