@@ -1,24 +1,68 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Mobile.Mobilestore.controller.Recharge"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:f="sap.ui.layout.form"
+	xmlns:tnt="sap.tnt" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data">
 	<App>
-		<l:VerticalLayout class="sapUiContentPadding equalColumns" width="100%">
-			<l:content>
-				<FlexBox width="100%" class="columns" alignItems="Stretch">
-					<items>
-						<Text class="column1" text="Although they have different amounts of text, both columns are of equal height.">
-							<layoutData>
-								<FlexItemData growFactor="1"/>
-							</layoutData>
-						</Text>
-						<Text class="column2"
-							text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo hey nonny no duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
-							<layoutData>
-								<FlexItemData growFactor="1"/>
-							</layoutData>
-						</Text>
-					</items>
-				</FlexBox>
-			</l:content>
-		</l:VerticalLayout>
+		<pages>
+			<Page showNavButton="true" title="RECHARGE" navButtonPress="onBack">
+				<l:FixFlex class="fixFlexHorizontal" vertical="false">
+					<l:fixContent>
+						<f:Form id="FormDisplay" editable="false">
+							<f:layout>
+								<f:ResponsiveGridLayout/>
+							</f:layout>
+							<f:formContainers>
+								<f:FormContainer>
+									<f:formElements>
+										<f:FormElement>
+											<f:fields>
+												<tnt:InfoLabel id="il1" text="Mobile Number" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
+												<Input type="Number" editable="true" placeholder="Mobile Number"></Input>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement>
+											<f:fields>
+												<tnt:InfoLabel id="i" text="Mobile Operator" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
+												<ComboBox items="{data>/recharge}" placeholder="Mobile Operator">
+													<core:Item key="{data>operator}" text="{data>operator}"/>
+												</ComboBox>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement>
+											<f:fields>
+												<tnt:InfoLabel id="i1" text="Amount" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
+												<Input type="Number" editable="true" placeholder="Amount"></Input>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement>
+											<f:fields>
+												<Button text="Recharge" type="Emphasized"></Button>
+											</f:fields>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+							</f:formContainers>
+						</f:Form>
+					</l:fixContent>
+					<l:flexContent class="">
+						<viz:VizFrame id="idVizFrame1" height='405px' width="600px" vizType='donut'>
+							<viz:dataset>
+								<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">
+									<viz.data:dimensions>
+										<viz.data:DimensionDefinition name="operator" value="{data>operator}"/>
+									</viz.data:dimensions>
+									<viz.data:measures>
+										<viz.data:MeasureDefinition name="balance" value="{data>balance}"/>
+									</viz.data:measures>
+								</viz.data:FlattenedDataset>
+							</viz:dataset>
+							<viz:feeds>
+								<viz.feeds:FeedItem id='valueAxisFeed' uid="size" type="Measure" name="balance" values="balance"/>
+								<viz.feeds:FeedItem id='categoryAxisFeed' uid="color" type="Dimension" name="operator" values="operator"/>
+							</viz:feeds>
+						</viz:VizFrame>
+					</l:flexContent>
+				</l:FixFlex>
+			</Page>
+		</pages>
 	</App>
 </mvc:View>

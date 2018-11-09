@@ -2,6 +2,7 @@
 	<ViewSettingsDialog confirm="handleConfirm">
 		<sortItems>
 			<ViewSettingsItem text="Price" key="price" selected="true"/>
+			<ViewSettingsItem text="Stocks" key="stock"/>
 		</sortItems>
 		<!--<groupItems>-->
 		<!--	<ViewSettingsItem text="Field 1" key="1" selected="true"/>-->
