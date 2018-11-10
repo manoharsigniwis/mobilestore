@@ -37,7 +37,7 @@
 								<NotificationListItem title="Notification 2" description="My Notification"></NotificationListItem>
 								<NotificationListItem title="Notification 3" description="My Notification"></NotificationListItem>
 							</List>
-							<viz:VizFrame id="idVizFrame" height='300px' width="500px" vizType='donut'>
+							<viz:VizFrame id="idVizFrame" height='300px' width="500px" vizType='pie'>
 								<viz:dataset>
 									<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">
 										<viz.data:dimensions>
@@ -81,7 +81,7 @@
 								<l:BlockLayoutCell  backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
 									<core:Icon src="sap-icon://sales-order" id="ib" press="OnIconPress" height="70px"/>
 									<l:titleLink>
-										<Link class="textcolor" id="ibl" text="Billing" press="OnPress"/>
+										<Link class="textcolor" id="ibl" text="Sales Billing" press="OnPress"/>
 									</l:titleLink>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
@@ -97,7 +97,7 @@
 								<l:BlockLayoutCell  backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
 									<core:Icon src="sap-icon://crm-service-manager" id="is" press="OnIconPress" height="70px"/>
 									<l:titleLink>
-										<Link class="textcolor" id="isl" text="Service" press="OnPress"/>
+										<Link class="textcolor" id="isl" text="Service Billing" press="OnPress"/>
 									</l:titleLink>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>

@@ -1,8 +1,8 @@
-
 {
 	"mobiles": [{
 		"productid": 380,
 		"model": "SAMSUNG S9",
+		"key":"s9",
 		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
 		"imei": 6928855,
 		"brand": "SAMSUNG",
@@ -222,7 +222,19 @@
 		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
 	}],
-
+	"brands": [{
+		"brand": "SAMSUNG"
+	}, {
+		"brand": "ONEPLUS"
+	}, {
+		"brand": "iPHONE"
+	}, {
+		"brand": "REDMI MI"
+	}, {
+		"brand": "MOTOROLA"
+	}, {
+		"brand": "LENOVO"
+	}],
 	"accessories": [{
 		"productid": 93,
 		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
