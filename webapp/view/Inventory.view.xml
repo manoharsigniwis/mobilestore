@@ -2,7 +2,15 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tnt="sap.tnt">
 	<App>
 		<pages>
-			<Page title="Inventory" navButtonPress="back" showNavButton="true">
+			<Page title="Inventory" navButtonPress="back" showHeader="false" showNavButton="true">
+				<tnt:ToolHeader class="toolhaeader">
+					<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
+					<ToolbarSpacer></ToolbarSpacer>
+					<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
+					<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+					<ToolbarSpacer></ToolbarSpacer>
+					<Button text="Logout" type="Transparent"></Button>
+				</tnt:ToolHeader>
 				<content>
 					<Table id="idProductsTable" inset="false" items="{data>/mobiles}">
 						<headerToolbar>
@@ -17,7 +25,6 @@
 										</items>
 									</ComboBox>
 								</content>
-								
 								<core:Icon src="sap-icon://filter" press="handleOpenDialog"></core:Icon>
 							</Toolbar>
 						</headerToolbar>

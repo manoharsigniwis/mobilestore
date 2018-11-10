@@ -32,6 +32,16 @@ sap.ui.define([
 		onSort: function () {
 
 		},
+		onNavBack: function (oEvent) {
+			var oHistory, sPreviousHash;
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+			}
+		},
 		_getDialog: function () {
 			if (!this._oDialog) {
 				this._oDialog = sap.ui.xmlfragment("Mobile.Mobilestore.fragments.filter", this);

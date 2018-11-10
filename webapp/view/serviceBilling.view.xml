@@ -2,17 +2,12 @@
 	xmlns:tnt="sap.tnt" controllerName="Mobile.Mobilestore.controller.serviceBilling" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page showHeader="false">
 		<tnt:ToolHeader class="toolhaeader">
-			<Image src="./Images/margo.png" width="200px" height="95px"></Image>
+			<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
 			<ToolbarSpacer></ToolbarSpacer>
+			<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
 			<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 			<ToolbarSpacer></ToolbarSpacer>
-			<Button text="Logout" type="Transparent">
-				<layoutData>
-					<OverflowToolbarLayoutData priority="NeverOverflow"/>
-				</layoutData>
-			</Button>
-			<Button text="back" press="onNavBack" type="Transparent"></Button>
-			<Button text="Nextb" press="onPress"></Button>
+			<Button text="Logout" type="Transparent"></Button>
 		</tnt:ToolHeader>
 		<VBox class="sapUiSmallMargin">
 			<f:SimpleForm id="SimpleFormToolbar" title="Service Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
@@ -28,13 +23,13 @@
 					<Label text="Mobile No."/>
 					<Input id="mobile" type="Number" value="" placeholder="Number"></Input>
 					<Label text="Brand"/>
-					<ComboBox id="brand" items="{data>/mobiles}" change="onBrandChange">
+					<ComboBox id="brand" items="{data>/brands}" change="onBrandChange">
 						<items>
 							<core:Item text="{data>brand}" key="{data>brand}"/>
 						</items>
 					</ComboBox>
 					<Label text="Model"/>
-					<ComboBox id="model" change="onModelChange">
+					<ComboBox id="model" items="{data>/mobiles}" change="onModelChange">
 						<items>
 							<core:Item text="{data>model}" key="{data>model}"/>
 						</items>
@@ -46,23 +41,19 @@
 					<Label text="Issue"/>
 					<Input id="issue" value=""/>
 					<Label text="Accesories:"/>
-					<ComboBox id="accesories">
-						<!--<items>-->
-						<core:Item text="Save@200"/>
-						<core:Item text="FestiveOffer"/>
-						<core:Item text="BigSale"/>
-						<core:Item text="Offer@30"/>
-						<core:Item text="Flat@50"/>
-						<!--</items>-->
+					<ComboBox id="accesories" items="{data>/accessories}">
+						<items>
+							<core:Item text="{data>/model}" key="{data>/model}"/>
+						</items>
 					</ComboBox>
 					<Label text="Accesories Price"/>
-					<Input id="aprice" value="0"/>
+					<Input id="aprice" value=""/>
 					<Label text="Service Charge"/>
-					<Input id="sprice" value=""/>
+					<Input id="sprice" liveChange="onlivechange" value=""/>
 					<Label text="Total Amount"/>
 					<Input id="tprice" value=""/>
 					<Label text="Estimated Issue Date"/>
-					<Input id="edate" value=""/>
+					<DatePicker id="edate" displayFormat="long"/>
 					<Label text=""/>
 					<Button text="Submit" press="onSubmit"></Button>
 				</f:content>

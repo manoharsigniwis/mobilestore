@@ -1,6 +1,8 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/model/Filter",
+	"sap/ui/core/routing/History"
+], function (Controller, Filter, History) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.serviceBilling", {
@@ -11,13 +13,58 @@ sap.ui.define([
 		 * @memberOf Mobile.Mobilestore.view.serviceBilling
 		 */
 		onInit: function () {
-			// var rand = Math.floor((Math.random() * 100000) + 1);
-			// this.getView().byId("oid").setValue(rand);
-
+			var rand = Math.floor((Math.random() * 100000) + 1);
+			this.getView().byId("sid").setValue(rand);
+			var currentDate = new Date();
+			this.byId("date").setDateValue(currentDate);
 		},
 		onPress: function (oEvent) {
 			// var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			// oRouter.navTo("Transaction");
+		},
+		onNavBack: function (oEvent) {
+			var oHistory, sPreviousHash;
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+			}
+		},
+		onBrandChange: function (oevent) {
+
+			var afilter = [];
+			var sQuery = oevent.getParameters().value;
+			if (sQuery && sQuery.length > 0) {
+				var filter = new Filter("model", sap.ui.model.FilterOperator.Contains, sQuery);
+				afilter.push(filter);
+			}
+			var otable = this.byId("model");
+			var binding = otable.getBinding("items");
+			binding.filter(afilter);
+
+		},
+		onModelChange: function (oevent) {
+			var model = oevent.getSource().getProperty("selectedKey"),
+				odataModel = this.getView().getModel("data");
+
+			var comp = oevent.getSource().getBinding("items").oList;
+			for (var i = 0; i < comp.length; i++) {
+				if (comp[i].model === model) {
+					odataModel.setProperty("/newValue", comp[i].price);
+					// var price = comp[i].price;
+					// this.getView().byId("price").setValue = price;
+
+				}
+			}
+		},
+		onlivechange: function () {
+			var ap = Number(this.getView().byId("aprice").getValue());
+			var sp = Number(this.getView().byId("sprice").getValue());
+			var tprice = ap + sp;
+			this.getView().byId("tprice").setValue(tprice);
+			console.log("comedy");
 		},
 		onSubmit: function (oevent) {
 
@@ -35,11 +82,14 @@ sap.ui.define([
 			var mobile = this.getView().byId("mobile").getValue();
 			var sid = this.getView().byId("sid").getValue();
 			var imei = this.getView().byId("imei").getValue();
-			var aprice = this.getView().byId("aprice").getValue();
-			var sprice = this.getView().byId("sprice").getValue();
+			var ap = Number(this.getView().byId("aprice").getValue());
+			var sp = Number(this.getView().byId("sprice").getValue());
 			var issue = this.getView().byId("issue").getValue();
 			var accesories = this.getView().byId("accesories").getValue();
-			var tprice = aprice + sprice;
+			var price = ap + sp;
+			var tprice = price.toString();
+			var aprice = ap.toString();
+			var sprice = sp.toString();
 			// var model = this.getView().byId("model").getValue();
 			var date = this.getView().byId("date").getValue();
 			var edate = this.getView().byId("edate").getValue();
@@ -54,7 +104,7 @@ sap.ui.define([
 			doc.setFontType("normal");
 			doc.setFontSize(15);
 			doc.setTextColor(0, 0, 0);
-			doc.text('SERVICE INVOICE', 140, 50);
+			doc.text('SERVICE INVOICE', 125, 50);
 			doc.text('Customer Name:', 20, 60);
 			doc.text(name, 70, 60);
 

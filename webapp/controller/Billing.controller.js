@@ -19,11 +19,23 @@ sap.ui.define([
 			var currentDate = new Date();
 			this.byId("date").setDateValue(currentDate);
 		},
+		onNavBack: function (oEvent) {
+			var oHistory, sPreviousHash;
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+			}
+		},
+
 		onCoupon: function (oevent) {
-			var randc = Math.floor((Math.random() * 100) + 1);
+			var randc = Math.floor((Math.random() * 100) + 1),
+				couponPrice = "";
 
 			var coupon = this.getView().byId("coupon").getValue();
-			var couponPrice;
+
 			if (coupon === "Save@200") {
 				couponPrice = 200;
 			} else if (coupon === "FestiveOffer") {
@@ -35,9 +47,10 @@ sap.ui.define([
 			} else {
 				couponPrice = randc;
 			}
-			var amount=this.getView().byId("price").getValue();
+			var amount = this.getView().byId("price").getValue();
 			var discount = amount - couponPrice;
 			this.getView().byId("tprice").setValue(discount);
+			this.couponPrice = couponPrice;
 
 		},
 		onBrandChange: function (oevent) {
@@ -59,11 +72,11 @@ sap.ui.define([
 
 			var comp = oevent.getSource().getBinding("items").oList;
 			for (var i = 0; i < comp.length; i++) {
-				if (comp[i].key === model) {
+				if (comp[i].model === model) {
 					odataModel.setProperty("/newValue", comp[i].price);
 					// var price = comp[i].price;
 					// this.getView().byId("price").setValue = price;
-					
+
 				}
 			}
 		},
@@ -102,6 +115,7 @@ sap.ui.define([
 			var tprice = this.getView().byId("tprice").getValue();
 			var model = this.getView().byId("model").getValue();
 			var date = this.getView().byId("date").getValue();
+			var coupon = this.couponPrice.toString();
 
 			var brand = this.getView().byId("brand").getProperty("selectedKey");
 
@@ -156,7 +170,7 @@ sap.ui.define([
 			doc.text(brand, 90, 110);
 			doc.text(model, 90, 120);
 			doc.text(price, 165, 110);
-			doc.text('Discount', 198, 110);
+			doc.text(coupon, 198, 110);
 			doc.text(tprice, 245, 110);
 
 			doc.setFontType("bold");

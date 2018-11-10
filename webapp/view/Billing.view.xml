@@ -2,17 +2,12 @@
 	xmlns:l="sap.ui.layout" controllerName="Mobile.Mobilestore.controller.Billing" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page showHeader="false">
 		<tnt:ToolHeader class="toolhaeader">
-			<Image src="./Images/margo.png" width="200px" height="95px"></Image>
+			<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
 			<ToolbarSpacer></ToolbarSpacer>
+			<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
 			<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 			<ToolbarSpacer></ToolbarSpacer>
-			<Button text="Logout" type="Transparent">
-				<layoutData>
-					<OverflowToolbarLayoutData priority="NeverOverflow"/>
-				</layoutData>
-			</Button>
-			<Button text="back" press="onNavBack" type="Transparent"></Button>
-			<Button text="Nextb" press="onPress"></Button>
+			<Button text="Logout" type="Transparent"></Button>
 		</tnt:ToolHeader>
 		<VBox class="sapUiSmallMargin">
 			<f:SimpleForm id="SimpleFormToolbar" title="Sales Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"

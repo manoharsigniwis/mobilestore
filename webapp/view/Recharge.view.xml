@@ -3,7 +3,15 @@
 	xmlns:tnt="sap.tnt" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data">
 	<App>
 		<pages>
-			<Page showNavButton="true" title="RECHARGE" navButtonPress="onBack">
+			<Page showNavButton="true" title="RECHARGE" showHeader="false" navButtonPress="onBack">
+				<tnt:ToolHeader class="toolhaeader">
+					<core:Icon src="sap-icon://nav-back"  size="2rem" press="onNavBack"></core:Icon>
+					<ToolbarSpacer></ToolbarSpacer>
+					<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
+					<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+					<ToolbarSpacer></ToolbarSpacer>
+					<Button text="Logout" type="Transparent"></Button>
+					</tnt:ToolHeader>
 				<l:FixFlex class="fixFlexHorizontal" vertical="false">
 					<l:fixContent>
 						<f:Form id="FormDisplay" editable="false">

@@ -2,27 +2,22 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	'sap/ui/model/json/JSONModel',
 	'sap/viz/ui5/format/ChartFormatter',
-	"sap/ui/core/routing/History"
+	"sap/ui/core/routing/History",
+		'sap/m/MessageToast'
 
-], function (Controller, JSONModel, ChartFormatter, History) {
+], function (Controller, JSONModel, ChartFormatter, History, MessageToast) {
 	"use strict";
 	return Controller.extend("Mobile.Mobilestore.controller.Home", {
 		onInit: function () {},
 		onPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("Inventory");
+		},	onOrientationChange: function(oEvent) {
+			var bLandscapeOrientation = oEvent.getParameter("landscape"),
+				sMsg = "Orientation now is: " + (bLandscapeOrientation ? "Landscape" : "Portrait");
+			MessageToast.show(sMsg, {duration: 5000});
 		},
 
-		onNavBack: function (oEvent) {
-			var oHistory, sPreviousHash;
-			oHistory = History.getInstance();
-			sPreviousHash = oHistory.getPreviousHash();
-			if (sPreviousHash !== undefined) {
-				window.history.go(-1);
-			} else {
-				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
-			}
-		},
 		OnIconPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			var iconId = oEvent.getParameters().id.substr(12);
