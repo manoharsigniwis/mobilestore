@@ -13,20 +13,22 @@ sap.ui.define([
 
 		formatter: Formatter,
 		onPopinLayoutChanged: function (event) {
+			// this.setModel(new JSONModel(), "newModel");
 
 			var olist1 = event.getSource().getProperty("selectedKey");
 
-			var oModel = this.getView().getModel("data");
+			var oModel = this.getView().getModel("data"),
+				NewJsonModel = this.getView().getModel("newModel");
 
 			if (olist1 === "acessories") {
 
 				// var points = oModel.oData.accessories;
-				oModel.setProperty("/mobiles", oModel.oData.accessories);
+				NewJsonModel.setProperty("/mobiles", oModel.oData.accessories);
 
 			} else {
 
 				// var points1 = oModel.oData.accessories;
-				oModel.setProperty("/mobiles", oModel.oData.mobiles);
+				NewJsonModel.setProperty("/mobiles", oModel.oData.mobiles);
 
 			}
 		},
@@ -80,7 +82,11 @@ sap.ui.define([
 		 * @memberOf Mobile.Mobilestore.view.Inventory
 		 */
 		onInit: function () {
-
+			// debugger;
+			this.getView().setModel(new sap.ui.model.json.JSONModel(), "newModel");
+			var oModel = this.getOwnerComponent().getModel("data").oData.mobiles;
+				this.getView().getModel("newModel").setProperty("/mobiles", oModel);
+			
 		},
 		back: function (oEvent) {
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
