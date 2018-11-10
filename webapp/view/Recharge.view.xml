@@ -3,7 +3,7 @@
 	xmlns:tnt="sap.tnt" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data">
 	<App>
 		<pages>
-			<Page showNavButton="true" title="RECHARGE" showHeader="false" navButtonPress="onBack">
+			<Page  showHeader="false" >
 				<tnt:ToolHeader class="toolhaeader">
 					<core:Icon src="sap-icon://nav-back"  size="2rem" press="onNavBack"></core:Icon>
 					<ToolbarSpacer></ToolbarSpacer>
