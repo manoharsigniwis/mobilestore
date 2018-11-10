@@ -61,7 +61,7 @@
 								</GenericTile>
 								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="AIRTEL" press="press">
 									<TileContent footer="Remaining Currency">
-										<NumericContent value="{data>/recharge/1/balance}" icon="https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png"/>
+										<NumericContent value="{data>/recharge/0/balance}" icon="https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png"/>
 									</TileContent>
 								</GenericTile>
 								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="VODAFONE" press="press">
