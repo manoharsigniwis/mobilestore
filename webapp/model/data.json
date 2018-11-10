@@ -62,7 +62,7 @@
 		"Status": "Low Stock"
 	}, {
 		"productid": 333,
-		"model": "MOTOrola E5",
+		"model": "MOTOROLA E5",
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
 		"imei": 6795707,
 		"brand": "MOTOROLA",
@@ -416,16 +416,16 @@
 		"Status": "In Stock"
 	}],
 	"recharge": [{
-		"operator": "airtel",
+		"operator": "AIRTEL",
 		"balance": 1000
 	}, {
-		"operator": "jio",
+		"operator": "JIO",
 		"balance": 2000
 	}, {
-		"operator": "vodafone",
+		"operator": "VODAFONE",
 		"balance": 500
 	}, {
-		"operator": "bsnl",
+		"operator": "BSNL",
 		"balance": 1000
 
 	}]
