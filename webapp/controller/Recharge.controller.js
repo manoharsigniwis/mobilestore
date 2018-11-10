@@ -21,7 +21,45 @@ sap.ui.define([
 		onPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("detail");
-		}
+		},
+		onRecharge: function (event) {
+			var oModel = this.getView().getModel("data"),
+				bal = oModel.oData.recharge,
+				op = this.getView().byId("i").getValue(),
+				inp = this.getView().byId("i1").getValue();
+
+			switch (op) {
+			case "JIO":
+
+				var orginal = oModel.oData.recharge[1].balance;
+
+				var ded = orginal - inp;
+				var j = oModel.setProperty("/recharge/1/balance", ded);
+
+				break;
+			case "AIRTEL":
+				var orginal1 = oModel.oData.recharge[0].balance;
+
+				var ded1 = orginal1 - inp;
+				var j1 = oModel.setProperty("/recharge/0/balance", ded1);
+				break;
+			case "VODAFONE":
+				var orginal2 = oModel.oData.recharge[2].balance;
+
+				var ded2 = orginal2 - inp;
+				var j2 = oModel.setProperty("/recharge/2/balance", ded2);
+				break;
+			case "BSNL":
+				var orginal3 = oModel.oData.recharge[3].balance;
+
+				var ded3 = orginal3 - inp;
+				var j3 = oModel.setProperty("/recharge/3/balance", ded3);
+				break;
+
+			}
+
+			// oModel.setProperty("/balance", bal);
+		},
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
