@@ -1,4 +1,4 @@
-<mvc:View controllerName="Mobile.Mobilestore.controller.app" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View controllerName="Mobile.Mobilestore.controller.app" xmlns:tnt="sap.tnt"  xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true" xmlns="sap.m">
 	<App id="idAppControl">
 		<pages>

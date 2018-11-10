@@ -1,19 +1,18 @@
 <mvc:View controllerName="Mobile.Mobilestore.controller.Home" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns="sap.m" xmlns:viz.data="sap.viz.ui5.data"
 	xmlns:tnt="sap.tnt" height="100%" class="side-navigation-demo">
-	<Page showHeader="false" floatingFooter="true" enableScrolling="false">
+	<Page showHeader="false" enableScrolling="false">
 		<tnt:ToolHeader class="toolhaeader">
-			<Image src="./Images/margo.png" width="200px" height="95px"></Image>
+			<!--<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>-->
 			<ToolbarSpacer></ToolbarSpacer>
+			<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
 			<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 			<ToolbarSpacer></ToolbarSpacer>
 			<Button text="Logout" type="Transparent"></Button>
-			<Button text="back" press="onNavBack" type="Transparent"></Button>
-			<Button text="next" press="onPress" type="Transparent"></Button>
-		</tnt:ToolHeader>
+			</tnt:ToolHeader>
 		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 			<detailPages>
-				<Page id="detail" showHeader="false">
+				<Page id="detail" showHeader="true">
 					<content>
 						<l:BlockLayout background="Dashboard">
 							<l:BlockLayoutRow>
@@ -37,7 +36,7 @@
 								<NotificationListItem title="Notification 2" description="My Notification"></NotificationListItem>
 								<NotificationListItem title="Notification 3" description="My Notification"></NotificationListItem>
 							</List>
-							<viz:VizFrame id="idVizFrame" height='300px' width="500px" vizType='donut'>
+							<viz:VizFrame id="idVizFrame" height='300px' width="500px" vizType='pie'>
 								<viz:dataset>
 									<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">
 										<viz.data:dimensions>
@@ -78,15 +77,15 @@
 					<content>
 						<l:BlockLayout>
 							<l:BlockLayoutRow>
-								<l:BlockLayoutCell  backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
+								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
 									<core:Icon src="sap-icon://sales-order" id="ib" press="OnIconPress" height="70px"/>
 									<l:titleLink>
-										<Link class="textcolor" id="ibl" text="Billing" press="OnPress"/>
+										<Link class="textcolor" id="ibl" text="Sales Billing" press="OnPress"/>
 									</l:titleLink>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
-								<l:BlockLayoutCell  backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
+								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
 									<core:Icon src="sap-icon://lead" id="ir" press="OnIconPress" height="70px"/>
 									<l:titleLink>
 										<Link class="textcolor" id="irl" text="Recharge" press="OnPress"/>
@@ -94,15 +93,15 @@
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
-								<l:BlockLayoutCell  backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
+								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
 									<core:Icon src="sap-icon://crm-service-manager" id="is" press="OnIconPress" height="70px"/>
 									<l:titleLink>
-										<Link class="textcolor" id="isl" text="Service" press="OnPress"/>
+										<Link class="textcolor" id="isl" text="Service Billing" press="OnPress"/>
 									</l:titleLink>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
-								<l:BlockLayoutCell  backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
+								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
 									<l:titleLink>
 										<Link class="textcolor" id="iil" text="Inventory" press="OnPress"/>
 									</l:titleLink><core:Icon src="sap-icon://product" press="OnIconPress" id="ii" height="70px"/>

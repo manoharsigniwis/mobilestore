@@ -1,11 +1,18 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Mobile.Mobilestore.controller.Transaction"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt"
+	controllerName="Mobile.Mobilestore.controller.Transaction" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
 	<App>
 		<pages>
-			<Page title="Transaction">
+			<Page showHeader="false" title="Transaction">
+				<tnt:ToolHeader class="toolhaeader">
+					<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
+					<ToolbarSpacer></ToolbarSpacer>
+					<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
+					<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+					<ToolbarSpacer></ToolbarSpacer>
+					<Button text="Logout" type="Transparent"></Button>
+				</tnt:ToolHeader>
 				<content>
-								<Button text="Next" press="onPress"></Button>
-
+					<Button text="Next" press="onPress"></Button>
 				</content>
 			</Page>
 		</pages>

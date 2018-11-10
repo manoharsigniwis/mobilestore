@@ -1,12 +1,63 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Mobile.Mobilestore.controller.serviceBilling"
-	xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
-		<pages>
-			<Page title="Service">
-				<content>
-					<Button text="Next" press="onPress"></Button>
-				</content>
-			</Page>
-		</pages>
-	</App>
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:tnt="sap.tnt" controllerName="Mobile.Mobilestore.controller.serviceBilling" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<tnt:ToolHeader class="toolhaeader">
+			<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
+			<ToolbarSpacer></ToolbarSpacer>
+			<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
+			<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+			<ToolbarSpacer></ToolbarSpacer>
+			<Button text="Logout" type="Transparent"></Button>
+		</tnt:ToolHeader>
+		<VBox class="sapUiSmallMargin">
+			<f:SimpleForm id="SimpleFormToolbar" title="Service Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+				labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="3" emptySpanM="0" emptySpanS="0" columnsXL="2"
+				columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
+				<f:content>
+					<Label text=" Service ID"/>
+					<Input id="sid" value="" editable="false"/>
+					<Label text="Date:"/>
+					<DatePicker id="date" displayFormat="long" editable="false"/>
+					<Label text=" Customer Name"/>
+					<Input id="name" value="" placeholder="Name"/>
+					<Label text="Mobile No."/>
+					<Input id="mobile" type="Number" value="" placeholder="Number"></Input>
+					<Label text="Brand"/>
+					<ComboBox id="brand" items="{data>/brands}" change="onBrandChange">
+						<items>
+							<core:Item text="{data>brand}" key="{data>brand}"/>
+						</items>
+					</ComboBox>
+					<Label text="Model"/>
+					<ComboBox id="model" items="{data>/mobiles}" change="onModelChange">
+						<items>
+							<core:Item text="{data>model}" key="{data>model}"/>
+						</items>
+					</ComboBox>
+					<Label text="IMEI No"/>
+					<Input id="imei" value="" placeholder="IMEI "/>
+					<Label text="Under Warranty"/>
+					<Input id="warranty" value=""/>
+					<Label text="Issue"/>
+					<Input id="issue" value=""/>
+					<Label text="Accesories:"/>
+					<ComboBox id="accesories" items="{data>/accessories}">
+						<items>
+							<core:Item text="{data>/model}" key="{data>/model}"/>
+						</items>
+					</ComboBox>
+					<Label text="Accesories Price"/>
+					<Input id="aprice" value=""/>
+					<Label text="Service Charge"/>
+					<Input id="sprice" liveChange="onlivechange" value=""/>
+					<Label text="Total Amount"/>
+					<Input id="tprice" value=""/>
+					<Label text="Estimated Issue Date"/>
+					<DatePicker id="edate" displayFormat="long"/>
+					<Label text=""/>
+					<Button text="Submit" press="onSubmit"></Button>
+				</f:content>
+			</f:SimpleForm>
+		</VBox>
+	</Page>
 </mvc:View>

@@ -1,12 +1,12 @@
-
 {
 	"mobiles": [{
 		"productid": 380,
 		"model": "SAMSUNG S9",
+		"key":"s9",
 		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
 		"imei": 6928855,
 		"brand": "SAMSUNG",
-		"price": 45747,
+		"price": 55747,
 		"stock": 55,
 		"CurrencyCode": "INR",
 		"Status": "In Stock"
@@ -16,7 +16,7 @@
 		"model": "ONEPLUS 3T",
 		"imei": 6869812,
 		"brand": "ONEPLUS",
-		"price": 48296,
+		"price": 28296,
 		"stock": 10,
 		"CurrencyCode": "INR",
 		"Status": "Low Stock"
@@ -26,7 +26,7 @@
 		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
 		"imei": 4679923,
 		"brand": "IPHONE",
-		"price": 18012,
+		"price": 114900,
 		"stock": 5,
 		"CurrencyCode": "INR",
 		"Status": "Low Stock"
@@ -46,7 +46,7 @@
 		"model": "ONEPLUS 6T",
 		"imei": 4951914,
 		"brand": "ONEPLUS",
-		"price": 41921,
+		"price": 37999,
 		"stock": 19,
 		"CurrencyCode": "INR",
 		"Status": "Fast Selling"
@@ -66,7 +66,7 @@
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
 		"imei": 6795707,
 		"brand": "MOTOROLA",
-		"price": 16560,
+		"price": 15560,
 		"stock": 29,
 		"CurrencyCode": "INR",
 		"Status": "In Stock"
@@ -86,17 +86,17 @@
 		"image": "https://clipart.info/images/ccovers/1505918647iphone-x-png.png",
 		"imei": 4682594,
 		"brand": "IPHONE",
-		"price": 48314,
+		"price": 80314,
 		"stock": 7,
 		"CurrencyCode": "INR",
 		"Status": "Low Stock"
 	}, {
 		"productid": 222,
-		"model": "REDMI 6 Pro",
+		"model": "REDMI MI 6 Pro",
 		"image": "https://www.gizmochina.com/wp-content/uploads/2018/02/Redmi-Note-5-Mi-India-600x553.png",
 		"imei": 6690696,
 		"brand": "REDMI MI",
-		"price": 23340,
+		"price": 13340,
 		"stock": 63,
 		"CurrencyCode": "INR",
 		"Status": "In Stock"
@@ -106,7 +106,7 @@
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
 		"imei": 6013475,
 		"brand": "MOTOROLA",
-		"price": 41504,
+		"price": 20504,
 		"stock": 51,
 		"CurrencyCode": "INR",
 		"Status": "In Stock"
@@ -116,7 +116,7 @@
 		"image": "https://www.gizmochina.com/wp-content/uploads/2018/02/Redmi-Note-5-Mi-India-600x553.png",
 		"imei": 4939385,
 		"brand": "REDMI MI",
-		"price": 11447,
+		"price": 17447,
 		"stock": 49,
 		"CurrencyCode": "INR",
 		"Status": "In Stock"
@@ -126,7 +126,7 @@
 		"model": "ONEPLUS 6",
 		"imei": 6590712,
 		"brand": "ONEPLUS",
-		"price": 15102,
+		"price": 35102,
 		"stock": 89,
 		"CurrencyCode": "INR",
 		"Status": "In Stock"
@@ -136,7 +136,7 @@
 		"model": "ONEPLUS 5T",
 		"imei": 6953822,
 		"brand": "ONEPLUS",
-		"price": 47718,
+		"price": 32718,
 		"stock": 0,
 		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
@@ -147,7 +147,7 @@
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
 		"imei": 4018709,
 		"brand": "MOTOROLA",
-		"price": 43543,
+		"price": 15543,
 		"stock": 0,
 		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
@@ -157,7 +157,7 @@
 		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
 		"imei": 6579441,
 		"brand": "SAMSUNG",
-		"price": 16784,
+		"price": 26784,
 		"stock": 63,
 		"CurrencyCode": "INR",
 		"Status": "In Stock"
@@ -167,7 +167,7 @@
 		"model": "IPHONE 8 Plus",
 		"imei": 4274645,
 		"brand": "IPHONE",
-		"price": 26662,
+		"price": 56662,
 		"stock": 36,
 		"CurrencyCode": "INR",
 		"Status": "Fast Selling"
@@ -177,7 +177,7 @@
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
 		"imei": 5649754,
 		"brand": "ONEPLUS",
-		"price": 16174,
+		"price": 30174,
 		"stock": 0,
 		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
@@ -187,7 +187,7 @@
 		"image": "https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-g4-blk-1000.png",
 		"imei": 4042709,
 		"brand": "LENOVO",
-		"price": 43543,
+		"price": 11543,
 		"stock": 0,
 		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
@@ -197,7 +197,7 @@
 		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
 		"imei": 6543441,
 		"brand": "LENOVO",
-		"price": 16784,
+		"price": 12784,
 		"stock": 63,
 		"CurrencyCode": "INR",
 		"Status": "In Stock"
@@ -207,7 +207,7 @@
 		"model": "LENOVO K8 Note",
 		"imei": 48765645,
 		"brand": "LENOVO",
-		"price": 26662,
+		"price": 14662,
 		"stock": 36,
 		"CurrencyCode": "INR",
 		"Status": "Fast Selling"
@@ -217,16 +217,28 @@
 		"image": "https://staticshop.o2.co.uk/product/images/bau-33174-oneplus-5sku-header-master-midnight-black-090617.png?cb=d80fdf71fc912162777108eec9ba4c86",
 		"imei": 5345754,
 		"brand": "LENOVO",
-		"price": 16174,
+		"price": 10174,
 		"stock": 0,
 		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
 	}],
-
+	"brands": [{
+		"brand": "SAMSUNG"
+	}, {
+		"brand": "ONEPLUS"
+	}, {
+		"brand": "iPHONE"
+	}, {
+		"brand": "REDMI MI"
+	}, {
+		"brand": "MOTOROLA"
+	}, {
+		"brand": "LENOVO"
+	}],
 	"accessories": [{
 		"productid": 93,
 		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
-		"model": "AP55",
+		"model": " Ear Phone (SKULLCANDY AP55)",
 		"brand": "SKULLCANDY",
 		"price": 1072,
 		"stock": 29,
@@ -235,7 +247,7 @@
 		"Status": "Fast Selling"
 	}, {
 		"productid": 82,
-		"model": "AP50",
+		"model": "Ear Phone(MUVEACOUSTICS AP50)",
 		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
 		"brand": "MUVEACOUSTICS",
 		"price": 4923,
@@ -245,7 +257,7 @@
 		"Status": "Fast Selling"
 	}, {
 		"productid": 92,
-		"model": "AP96",
+		"model": "Ear Phone(MUVEACOUSTICS AP96)",
 		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
 		"brand": "MUVEACOUSTICS",
 		"price": 9337,
@@ -255,7 +267,7 @@
 		"Status": "Low Stock"
 	}, {
 		"productid": 99,
-		"model": "AP65",
+		"model": "Ear Phone(BEATS AP65)",
 		"image": "https://mbtskoudsalg.com/images/green-headphones-png-8.png",
 		"brand": "BEATS",
 		"price": 7457,
@@ -265,7 +277,7 @@
 		"Status": "In Stock"
 	}, {
 		"productid": 86,
-		"model": "AP65",
+		"model": "Ear Phone(AMBRANE AP65)",
 		"brand": "AMBRANE",
 		"image": "https://n3.sdlcdn.com/imgs/e/a/x/Ambrane-Plush-PP-2000-20000-SDL240914658-1-0c419.png",
 		"price": 9734,
@@ -275,18 +287,18 @@
 		"CurrencyCode": "INR"
 	}, {
 		"productid": 64,
-		"model": "AP99",
-		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"model": "Tempered Glass(Bloopro)",
+		"image": "data:image/jpeg;base64,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",
 		"brand": "MUVEACOUSTICS",
-		"price": 4853,
-		"stock": 0,
+		"price": 483,
+		"stock": 100,
 		"imei": 6145,
 		"CurrencyCode": "INR",
 		"Status": "Out of Stock"
 	}, {
 		"productid": 52,
-		"model": "AP96",
-		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
+		"model": "Internal Battery",
+		"image": "https://5.imimg.com/data5/MQ/MR/MY-3109442/mobile-battery-500x500.png",
 		"brand": "SKULLCANDY",
 		"price": 1607,
 		"CurrencyCode": "INR",
@@ -295,55 +307,45 @@
 		"Status": "Fast Selling"
 	}, {
 		"productid": 68,
-		"model": "AP55",
+		"model": "Display",
 		"CurrencyCode": "INR",
-		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
+		"image": "http://smartphoneservicecenter.in/images/mobile-display.png",
 		"brand": "MUVEACOUSTICS",
-		"price": 6106,
+		"price": 4106,
 		"stock": 90,
 		"imei": 8752,
 		"Status": "Fast Selling"
 	}, {
 		"productid": 98,
-		"model": "AP55",
+		"model": "Case",
 		"brand": "BOAT",
-		"image": "https://i0.wp.com/gaaminx.com/wp-content/uploads/2017/06/Boat-Rockerz-400-Bluetooth-On-Ear-Headphone_0002_51PjCRR9KbL.png?fit=500%2C600&ssl=1",
-		"price": 1765,
+		"image": "data:image/jpeg;base64,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",
+		"price": 365,
 		"CurrencyCode": "INR",
 		"stock": 63,
 		"imei": 1633,
 		"Status": "In Stock"
 	}, {
 		"productid": 61,
-		"model": "AP65",
+		"model": "Case (iPhone)",
 		"brand": "JBL",
-		"image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5effd755/JBL-Everest-300BT_RED_Front-1606x1606px.png",
-		"price": 3283,
+		"image": "data:image/jpeg;base64,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",
+		"price": 883,
 		"CurrencyCode": "INR",
-		"stock": 0,
+		"stock": 10,
 		"imei": 3344,
 		"Status": "Out of Stock"
 	}, {
 		"productid": 99,
-		"model": "AP96",
-		"brand": "JBL",
-		"image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5effd755/JBL-Everest-300BT_RED_Front-1606x1606px.png",
-		"price": 2768,
+		"model": "Data cable",
+		"brand": "Oneplus",
+		"image": "https://cdn.vox-cdn.com/thumbor/vHAmjUt60oZl2jzyqwOnJV8PdwU=/67x75:1015x707/1200x800/filters:focal(67x75:1015x707)/cdn.vox-cdn.com/uploads/chorus_image/image/47672637/oneplus_usb_typec.0.0.png",
+		"price": 1068,
 		"CurrencyCode": "INR",
-		"stock": 0,
+		"stock": 10,
 		"imei": 4721,
 		"Status": "Out of Stock"
-	}, {
-		"productid": 65,
-		"model": "AP73",
-		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
-		"brand": "SKULLCANDY",
-		"price": 4666,
-		"CurrencyCode": "INR",
-		"stock": 4,
-		"imei": 3500,
-		"Status": "Low Stock"
-	}, {
+	},  {
 		"productid": 56,
 		"image": "https://i0.wp.com/gaaminx.com/wp-content/uploads/2017/06/Boat-Rockerz-400-Bluetooth-On-Ear-Headphone_0002_51PjCRR9KbL.png?fit=500%2C600&ssl=1",
 		"CurrencyCode": "INR",
@@ -362,26 +364,6 @@
 		"stock": 87,
 		"imei": 5435,
 		"Status": "Fast Selling"
-	}, {
-		"productid": 76,
-		"model": "AP55",
-		"image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5effd755/JBL-Everest-300BT_RED_Front-1606x1606px.png",
-		"brand": "JBL",
-		"price": 1850,
-		"CurrencyCode": "INR",
-		"stock": 79,
-		"imei": 6328,
-		"Status": "Fast Selling"
-	}, {
-		"productid": 53,
-		"model": "AP96",
-		"brand": "BEATS",
-		"CurrencyCode": "INR",
-		"image": "https://mbtskoudsalg.com/images/green-headphones-png-8.png",
-		"price": 9314,
-		"stock": 75,
-		"imei": 6782,
-		"Status": "In Stock"
 	}, {
 		"productid": 78,
 		"model": "AP73",

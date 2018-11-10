@@ -3,9 +3,10 @@ sap.ui.define([
 	"jquery.sap.global",
 	"Mobile/Mobilestore/model/Formatter",
 	"sap/ui/model/json/JSONModel",
-	"sap/ui/core/Fragment"
+	"sap/ui/core/Fragment",
+	"sap/ui/core/routing/History"
 
-], function (Controller, jQuery, Formatter, JSONModel, Fragment) {
+], function (Controller, jQuery, Formatter, JSONModel, Fragment, History) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Inventory", {
@@ -31,6 +32,16 @@ sap.ui.define([
 		},
 		onSort: function () {
 
+		},
+		onNavBack: function (oEvent) {
+			var oHistory, sPreviousHash;
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+			}
 		},
 		_getDialog: function () {
 			if (!this._oDialog) {

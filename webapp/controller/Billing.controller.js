@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/routing/History"
+	"sap/ui/core/routing/History",
+	"sap/ui/model/Filter"
 
-], function (Controller, History) {
+], function (Controller, History, Filter) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Billing", {
@@ -18,6 +19,68 @@ sap.ui.define([
 			var currentDate = new Date();
 			this.byId("date").setDateValue(currentDate);
 		},
+		onNavBack: function (oEvent) {
+			var oHistory, sPreviousHash;
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+			}
+		},
+
+		onCoupon: function (oevent) {
+			var randc = Math.floor((Math.random() * 100) + 1),
+				couponPrice = "";
+
+			var coupon = this.getView().byId("coupon").getValue();
+
+			if (coupon === "Save@200") {
+				couponPrice = 200;
+			} else if (coupon === "FestiveOffer") {
+				couponPrice = randc;
+			} else if (coupon === "BigSale") {
+				couponPrice = randc;
+			} else if (coupon === "Offer@30") {
+				couponPrice = 300;
+			} else {
+				couponPrice = randc;
+			}
+			var amount = this.getView().byId("price").getValue();
+			var discount = amount - couponPrice;
+			this.getView().byId("tprice").setValue(discount);
+			this.couponPrice = couponPrice;
+
+		},
+		onBrandChange: function (oevent) {
+
+			var afilter = [];
+			var sQuery = oevent.getParameters().value;
+			if (sQuery && sQuery.length > 0) {
+				var filter = new Filter("model", sap.ui.model.FilterOperator.Contains, sQuery);
+				afilter.push(filter);
+			}
+			var otable = this.byId("model");
+			var binding = otable.getBinding("items");
+			binding.filter(afilter);
+
+		},
+		onModelChange: function (oevent) {
+			var model = oevent.getSource().getProperty("selectedKey"),
+				odataModel = this.getView().getModel("data");
+
+			var comp = oevent.getSource().getBinding("items").oList;
+			for (var i = 0; i < comp.length; i++) {
+				if (comp[i].model === model) {
+					odataModel.setProperty("/newValue", comp[i].price);
+					// var price = comp[i].price;
+					// this.getView().byId("price").setValue = price;
+
+				}
+			}
+		},
+
 		onPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("serviceBilling");
@@ -52,6 +115,7 @@ sap.ui.define([
 			var tprice = this.getView().byId("tprice").getValue();
 			var model = this.getView().byId("model").getValue();
 			var date = this.getView().byId("date").getValue();
+			var coupon = this.couponPrice.toString();
 
 			var brand = this.getView().byId("brand").getProperty("selectedKey");
 
@@ -88,7 +152,6 @@ sap.ui.define([
 			doc.line(60, 80, 60, 170);
 			doc.text('Description', 90, 90);
 
-			
 			doc.line(150, 80, 150, 170);
 			doc.text('Price', 165, 90);
 
@@ -98,7 +161,7 @@ sap.ui.define([
 			doc.line(230, 80, 230, 170);
 			doc.text('Total Amount', 235, 90);
 
-		//	doc.line(16, 88, 279, 88);
+			//	doc.line(16, 88, 279, 88);
 			doc.setFontType("normal");
 			doc.setFontSize(15);
 			doc.setTextColor(0, 0, 0);
@@ -107,7 +170,7 @@ sap.ui.define([
 			doc.text(brand, 90, 110);
 			doc.text(model, 90, 120);
 			doc.text(price, 165, 110);
-			doc.text('Discount', 198, 110);
+			doc.text(coupon, 198, 110);
 			doc.text(tprice, 245, 110);
 
 			doc.setFontType("bold");

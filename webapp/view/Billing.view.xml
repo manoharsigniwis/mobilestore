@@ -2,17 +2,12 @@
 	xmlns:l="sap.ui.layout" controllerName="Mobile.Mobilestore.controller.Billing" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page showHeader="false">
 		<tnt:ToolHeader class="toolhaeader">
-			<Image src="./Images/margo.png" width="200px" height="95px"></Image>
+			<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
 			<ToolbarSpacer></ToolbarSpacer>
+			<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
 			<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 			<ToolbarSpacer></ToolbarSpacer>
-			<Button text="Logout" type="Transparent">
-				<layoutData>
-					<OverflowToolbarLayoutData priority="NeverOverflow"/>
-				</layoutData>
-			</Button>
-			<Button text="back" press="onNavBack" type="Transparent"></Button>
-			<Button text="Nextb" press="onPress"></Button>
+			<Button text="Logout" type="Transparent"></Button>
 		</tnt:ToolHeader>
 		<VBox class="sapUiSmallMargin">
 			<f:SimpleForm id="SimpleFormToolbar" title="Sales Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
@@ -20,52 +15,47 @@
 				columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
 				<f:content>
 					<Label text=" Order ID"/>
-					<Input id="oid" value="Sindhu" editable="false"/>
+					<Input id="oid" value="" editable="false"/>
 					<Label text="Date:"/>
 					<DatePicker id="date" displayFormat="long" editable="false"/>
 					<Label text=" Customer Name"/>
-					<Input id="name" value="Sindhu"/>
+					<Input id="name" value="" placeholder="Name"/>
 					<Label text="Mobile No."/>
-					<Input id="mobile" type="Number" value="9797979797"></Input>
+					<Input id="mobile" type="Number" value="" placeholder="Number"></Input>
 					<Label text="Category"/>
-					<Input value="Mobile"/>
+					<Input value="" placeholder="Category"/>
 					<Label text="Product No"/>
-					<Input id="pno" value="SM999"/>
+					<Input id="pno" value="" placeholder="Product No"/>
 					<Label text="Brand"/>
-					<ComboBox id="brand" selectedKey="OnePlus">
-						<!--<items>-->
-						<core:Item text="OnePlus" key="OnePlus"/>
-						<core:Item text="iPhone" key="iPhone"/>
-						<core:Item text="Lenovo" key="Lenovo"/>
-						<core:Item text="Samsung" key="Samsung"/>
-						<core:Item text="MI" key="MI"/>
-						<!--</items>-->
+					<ComboBox id="brand" items="{data>/brands}" change="onBrandChange">
+						<items>
+							<core:Item text="{data>brand}" key="{data>brand}"/>
+						</items>
 					</ComboBox>
 					<Label text="Model"/>
-					<ComboBox id="model" items="{data>/mobiles}">
+					<ComboBox id="model" items="{data>/mobiles}" change="onModelChange">
 						<items>
-							<core:Item text="{data>model}"/>
+							<core:Item text="{data>model}" key="{data>model}"/>
 						</items>
 					</ComboBox>
 					<Label text="Price"/>
-					<Input id="price"  value="37999"/>
+					<Input id="price" value="{data>/newValue}"/>
 					<Label text="Coupon Code"/>
-					<ComboBox id="coupon" >
+					<ComboBox id="coupon">
 						<!--<items>-->
-						<core:Item text="Save@20" />
-						<core:Item text="iPhone" />
-						<core:Item text="Lenovo" />
-						<core:Item text="Samsung" />
-						<core:Item text="MI" />
+						<core:Item text="Save@200"/>
+						<core:Item text="FestiveOffer"/>
+						<core:Item text="BigSale"/>
+						<core:Item text="Offer@30"/>
+						<core:Item text="Flat@50"/>
 						<!--</items>-->
-					
 						<layoutData>
 							<l:GridData span="XL3 L3 M5 S12"/>
 						</layoutData>
-				</ComboBox>
-					<Button text="Apply Coupon"></Button>
+					</ComboBox>
+					<Button text="Apply Coupon" press="onCoupon"></Button>
 					<Label text="Total Amount"/>
-					<Input id="tprice"   value="37999"/>
+					<Input id="tprice" value="37999"/>
 					<Label text=""/>
 					<Button text="Submit" press="onSubmit"></Button>
 				</f:content>
