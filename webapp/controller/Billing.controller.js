@@ -9,12 +9,18 @@ sap.ui.define([
 	"sap/ui/core/routing/History",
 	"sap/ui/model/Filter",
 	'sap/m/MessageToast'
+<<<<<<< HEAD
+>>>>>>> refs/heads/master
+=======
 >>>>>>> refs/heads/master
 
+<<<<<<< HEAD
 <<<<<<< HEAD
  ], function (Controller, History, Filter) {
  	"use strict";
 =======
+=======
+>>>>>>> refs/heads/master
 ], function (Controller, History, Filter, MessageToast) {
 	"use strict";
 >>>>>>> refs/heads/master
