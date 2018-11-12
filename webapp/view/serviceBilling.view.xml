@@ -41,13 +41,13 @@
 					<Label text="Issue"/>
 					<Input id="issue" value=""/>
 					<Label text="Accesories:"/>
-					<ComboBox id="accesories" items="{data>/accessories}">
+					<ComboBox id="accesories" items="{data>/accessories}" change="onaccesories">
 						<items>
 							<core:Item text="{data>model}" key="{data>model}"/>
 						</items>
 					</ComboBox>
 					<Label text="Accesories Price"/>
-					<Input id="aprice" value="{data>/newValue}"/>
+					<Input id="aprice" value="{data>/newPrice}"/>
 					<Label text="Service Charge"/>
 					<Input id="sprice" liveChange="onlivechange" value=""/>
 					<Label text="Total Amount"/>

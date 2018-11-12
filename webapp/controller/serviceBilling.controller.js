@@ -18,6 +18,20 @@ sap.ui.define([
 			var currentDate = new Date();
 			this.byId("date").setDateValue(currentDate);
 		},
+		onaccesories: function (oevent) {
+			var model = oevent.getSource().getProperty("selectedKey"),
+				odataModel = this.getView().getModel("data");
+
+			var comp = oevent.getSource().getBinding("items").oList;
+			for (var i = 0; i < comp.length; i++) {
+				if (comp[i].model === model) {
+					odataModel.setProperty("/newPrice", comp[i].price);
+					// var price = comp[i].price;
+					// this.getView().byId("price").setValue = price;
+
+				}
+			}
+		},
 		onPress: function (oEvent) {
 			// var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			// oRouter.navTo("Transaction");

@@ -13,7 +13,12 @@ sap.ui.define([
 		 * @memberOf Mobile.Mobilestore.view.Transaction
 		 */
 		onInit: function () {
-
+			var obj = {
+				title: {
+					text: "SALES STATISTICS"
+				}
+			};
+			this.getView().byId("idVizFrame1").setVizProperties(obj);
 		},
 		onNavBack: function (oEvent) {
 			var oHistory, sPreviousHash;

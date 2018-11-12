@@ -18,7 +18,6 @@ sap.ui.define([
 		 * @memberOf Mobile.Mobilestore.view.Recharge
 		 */
 		onInit: function () {
-
 		},
 		onNavBack: function (oEvent) {
 			var oHistory, sPreviousHash;

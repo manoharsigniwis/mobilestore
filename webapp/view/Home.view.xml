@@ -18,23 +18,22 @@
 							<l:BlockLayoutRow>
 								<l:BlockLayoutCell>
 									<Title text="Products Sold" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-									<NumericContent value="6666" valueColor="Critical" class="sapUiTinyMargin"/>
+									<NumericContent value="45" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
 									<Title text="Recharge Done" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-									<NumericContent value="6666" valueColor="Critical" class="sapUiTinyMargin"/>
+									<NumericContent value="2430" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
 									<Title text="Transactions" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-									<NumericContent value="6666" valueColor="Critical" class="sapUiTinyMargin"/>
+									<NumericContent value="134430" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>
 						<l:Grid defaultSpan="XL5 L5 M5 S12">
-							<List id="notificationList">
-								<NotificationListItem title="Notification 1" description="My Notification"></NotificationListItem>
-								<NotificationListItem title="Notification 2" description="My Notification"></NotificationListItem>
-								<NotificationListItem title="Notification 3" description="My Notification"></NotificationListItem>
+							<List id="NotificationList" items="{data>/customers}" width="400px">
+								<NotificationListItem title="{data>name}" description="{data>product}" showCloseButton="true" unread="false" priority="High"
+									close="onItemClose" press="onListItemPress"></NotificationListItem>
 							</List>
 							<viz:VizFrame id="idVizFrame" height='300px' width="500px" vizType='pie'>
 								<viz:dataset>

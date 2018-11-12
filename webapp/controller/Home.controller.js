@@ -8,7 +8,20 @@ sap.ui.define([
 ], function (Controller, JSONModel, ChartFormatter, History, MessageToast) {
 	"use strict";
 	return Controller.extend("Mobile.Mobilestore.controller.Home", {
-		onInit: function () {},
+		onInit: function () {
+			var obj = {
+				title: {
+					text: "RECHARGE STATISTICS"
+				}
+			};	var obj1 = {
+				title: {
+					text: "STOCK STATISTICS"
+				}
+			};
+			this.getView().byId("idVizFrame").setVizProperties(obj);
+			this.getView().byId("idVizFrame1").setVizProperties(obj1);
+
+		},
 		onPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("Inventory");
