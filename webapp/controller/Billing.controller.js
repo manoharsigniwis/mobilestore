@@ -1,13 +1,27 @@
+<<<<<<< HEAD
  sap.ui.define([
  	"sap/ui/core/mvc/Controller",
  	"sap/ui/core/routing/History",
  	"sap/ui/model/Filter"
+=======
+sap.ui.define([
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/core/routing/History",
+	"sap/ui/model/Filter",
+	'sap/m/MessageToast'
+>>>>>>> refs/heads/master
 
+<<<<<<< HEAD
  ], function (Controller, History, Filter) {
  	"use strict";
+=======
+], function (Controller, History, Filter, MessageToast) {
+	"use strict";
+>>>>>>> refs/heads/master
 
  	return Controller.extend("Mobile.Mobilestore.controller.Billing", {
 
+<<<<<<< HEAD
  		/**
  		 * Called when a controller is instantiated and its View controls (if available) are already created.
  		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
@@ -29,6 +43,35 @@
  				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
  			}
  		},
+=======
+		/**
+		 * Called when a controller is instantiated and its View controls (if available) are already created.
+		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
+		 * @memberOf Mobile.Mobilestore.view.Billing
+		 */
+		onInit: function () {
+			var rand = Math.floor((Math.random() * 100000) + 1);
+			this.getView().byId("oid").setValue(rand);
+			var currentDate = new Date();
+			this.byId("date").setDateValue(currentDate);
+		},
+		onLogout: function (event) {
+			MessageToast.show("You Have Been Logged Out");
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Login");
+
+		},
+		onNavBack: function (oEvent) {
+			var oHistory, sPreviousHash;
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+			}
+		},
+>>>>>>> refs/heads/master
 
  		onCoupon: function (oevent) {
  			var randc = Math.floor((Math.random() * 100) + 1),
@@ -81,7 +124,16 @@
  			}
  		},
 
+<<<<<<< HEAD
  		onSubmit: function (oevent) {
+=======
+		onPress: function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("serviceBilling");
+		},
+
+		onSubmit: function (oevent) {
+>>>>>>> refs/heads/master
 
  			var doc = new jsPDF("landscape");
  			doc.setFillColor(51, 51, 51);

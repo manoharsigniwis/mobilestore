@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/Filter",
-	"sap/ui/core/routing/History"
-], function (Controller, Filter, History) {
+	"sap/ui/core/routing/History",
+	'sap/m/MessageToast'
+], function (Controller, Filter, History,MessageToast) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.serviceBilling", {
@@ -73,12 +74,18 @@ sap.ui.define([
 				}
 			}
 		},
+			onLogout: function (event) {
+			MessageToast.show("You Have Been Logged Out");
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Login");
+
+		},
 		onlivechange: function () {
 			var ap = Number(this.getView().byId("aprice").getValue());
 			var sp = Number(this.getView().byId("sprice").getValue());
 			var tprice = ap + sp;
 			this.getView().byId("tprice").setValue(tprice);
-			console.log("comedy");
+		
 		},
 		onSubmit: function (oevent) {
 
