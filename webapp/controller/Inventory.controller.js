@@ -41,7 +41,8 @@ sap.ui.define([
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {
-				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("Home");
 			}
 		},
 		_getDialog: function () {

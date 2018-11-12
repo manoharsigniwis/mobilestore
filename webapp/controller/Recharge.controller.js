@@ -18,14 +18,8 @@ sap.ui.define([
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 		 * @memberOf Mobile.Mobilestore.view.Recharge
 		 */
-		onInit: function () {
-		},
-		onLogout: function (event) {
-			MessageToast.show("You Have Been Logged Out");
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("Login");
+		onInit: function () {},
 
-		},
 		onLogout: function (event) {
 			MessageToast.show("You Have Been Logged Out");
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
@@ -39,7 +33,8 @@ sap.ui.define([
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {
-				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("Home");
 			}
 		},
 

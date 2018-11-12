@@ -21,12 +21,7 @@ sap.ui.define([
 			};
 			this.getView().byId("idVizFrame1").setVizProperties(obj);
 		},
-		onLogout: function (event) {
-			MessageToast.show("You Have Been Logged Out");
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("Login");
 
-		},
 		onLogout: function (event) {
 			MessageToast.show("You Have Been Logged Out");
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
@@ -40,7 +35,8 @@ sap.ui.define([
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {
-				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("Home");
 			}
 		},
 
