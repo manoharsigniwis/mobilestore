@@ -1,5 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
 	xmlns:l="sap.ui.layout" controllerName="Mobile.Mobilestore.controller.Billing" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
 	<Page showHeader="false">
 		<tnt:ToolHeader class="toolhaeader">
 			<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
@@ -62,4 +63,5 @@
 			</f:SimpleForm>
 		</VBox>
 	</Page>
+	</App>
 </mvc:View>

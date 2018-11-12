@@ -1,6 +1,62 @@
 <mvc:View controllerName="Mobile.Mobilestore.controller.Home" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns="sap.m" xmlns:viz.data="sap.viz.ui5.data"
 	xmlns:tnt="sap.tnt" height="100%" class="side-navigation-demo">
+<<<<<<< HEAD
+	<App>
+		<Page showHeader="false" enableScrolling="false">
+			<tnt:ToolHeader class="toolhaeader">
+				<!--<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>-->
+				<ToolbarSpacer></ToolbarSpacer>
+				<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
+				<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button text="Logout" type="Transparent" press="onLogout"></Button>
+			</tnt:ToolHeader>
+			<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+				<detailPages>
+					<Page id="detail" showHeader="true">
+						<content>
+							<l:BlockLayout background="Dashboard">
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell>
+										<Title text="Products Sold" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+										<NumericContent value="6666" valueColor="Critical" class="sapUiTinyMargin"/>
+									</l:BlockLayoutCell>
+									<l:BlockLayoutCell>
+										<Title text="Recharge Done" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+										<NumericContent value="6666" valueColor="Critical" class="sapUiTinyMargin"/>
+									</l:BlockLayoutCell>
+									<l:BlockLayoutCell>
+										<Title text="Transactions" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+										<NumericContent value="6666" valueColor="Critical" class="sapUiTinyMargin"/>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+							</l:BlockLayout>
+							<l:Grid defaultSpan="XL5 L5 M5 S12">
+								<List id="notificationList">
+									<NotificationListItem title="Notification 1" description="My Notification"></NotificationListItem>
+									<NotificationListItem title="Notification 2" description="My Notification"></NotificationListItem>
+									<NotificationListItem title="Notification 3" description="My Notification"></NotificationListItem>
+								</List>
+								<viz:VizFrame id="idVizFrame" height='300px' width="500px" vizType='pie'>
+									<viz:dataset>
+										<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">
+											<viz.data:dimensions>
+												<viz.data:DimensionDefinition name="operator" value="{data>operator}"/>
+											</viz.data:dimensions>
+											<viz.data:measures>
+												<viz.data:MeasureDefinition name="balance" value="{data>balance}"/>
+											</viz.data:measures>
+										</viz.data:FlattenedDataset>
+									</viz:dataset>
+									<viz:feeds>
+										<viz.feeds:FeedItem id='valueAxisFeed' uid="size" type="Measure" name="balance" values="balance"/>
+										<viz.feeds:FeedItem id='categoryAxisFeed' uid="color" type="Dimension" name="operator" values="operator"/>
+									</viz:feeds>
+								</viz:VizFrame>
+							</l:Grid>
+							<viz:VizFrame id="idVizFrame1" width="100%" vizType='column'>
+=======
 	<Page showHeader="false" enableScrolling="false">
 		<tnt:ToolHeader class="toolhaeader">
 			<!--<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>-->
@@ -37,88 +93,73 @@
 								<NotificationListItem title="Notification 3" description="My Notification"></NotificationListItem>
 							</List>
 							<viz:VizFrame id="idVizFrame" height='300px' width="500px" vizType='pie'>
+>>>>>>> refs/heads/master
 								<viz:dataset>
-									<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">
+									<viz.data:FlattenedDataset id="idGraph1" data="{data>/mobiles}">
 										<viz.data:dimensions>
-											<viz.data:DimensionDefinition name="operator" value="{data>operator}"/>
+											<viz.data:DimensionDefinition name="Brand" value="{data>brand}"/>
 										</viz.data:dimensions>
 										<viz.data:measures>
-											<viz.data:MeasureDefinition name="balance" value="{data>balance}"/>
+											<viz.data:MeasureDefinition name="In Stock" value="{data>stock}"/>
 										</viz.data:measures>
 									</viz.data:FlattenedDataset>
 								</viz:dataset>
 								<viz:feeds>
-									<viz.feeds:FeedItem id='valueAxisFeed' uid="size" type="Measure" name="balance" values="balance"/>
-									<viz.feeds:FeedItem id='categoryAxisFeed' uid="color" type="Dimension" name="operator" values="operator"/>
+									<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="In Stock"/>
+									<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Brand"/>
 								</viz:feeds>
 							</viz:VizFrame>
-						</l:Grid>
-						<viz:VizFrame id="idVizFrame1" width="100%" vizType='column'>
-							<viz:dataset>
-								<viz.data:FlattenedDataset id="idGraph1" data="{data>/mobiles}">
-									<viz.data:dimensions>
-										<viz.data:DimensionDefinition name="Brand" value="{data>brand}"/>
-									</viz.data:dimensions>
-									<viz.data:measures>
-										<viz.data:MeasureDefinition name="In Stock" value="{data>stock}"/>
-									</viz.data:measures>
-								</viz.data:FlattenedDataset>
-							</viz:dataset>
-							<viz:feeds>
-								<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="In Stock"/>
-								<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Brand"/>
-							</viz:feeds>
-						</viz:VizFrame>
-					</content>
-				</Page>
-			</detailPages>
-			<masterPages>
-				<Page id="master" showHeader="false" enableScrolling="false">
-					<content>
-						<l:BlockLayout>
-							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
-									<core:Icon src="sap-icon://sales-order" id="ib" press="OnIconPress" height="70px"/>
-									<l:titleLink>
-										<Link class="textcolor" id="ibl" text="Sales Billing" press="OnPress"/>
-									</l:titleLink>
-								</l:BlockLayoutCell>
-							</l:BlockLayoutRow>
-							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
-									<core:Icon src="sap-icon://lead" id="ir" press="OnIconPress" height="70px"/>
-									<l:titleLink>
-										<Link class="textcolor" id="irl" text="Recharge" press="OnPress"/>
-									</l:titleLink>
-								</l:BlockLayoutCell>
-							</l:BlockLayoutRow>
-							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
-									<core:Icon src="sap-icon://crm-service-manager" id="is" press="OnIconPress" height="70px"/>
-									<l:titleLink>
-										<Link class="textcolor" id="isl" text="Service Billing" press="OnPress"/>
-									</l:titleLink>
-								</l:BlockLayoutCell>
-							</l:BlockLayoutRow>
-							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
-									<l:titleLink>
-										<Link class="textcolor" id="iil" text="Inventory" press="OnPress"/>
-									</l:titleLink><core:Icon src="sap-icon://product" press="OnIconPress" id="ii" height="70px"/>
-								</l:BlockLayoutCell>
-							</l:BlockLayoutRow>
-							<l:BlockLayoutRow>
-								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
-									<l:titleLink>
-										<Link class="textcolor" id="itl" text="Transactions" press="OnPress"/>
-									</l:titleLink>
-									<core:Icon src="sap-icon://collections-insight" id="it" press="OnIconPress" height="70px"/>
-								</l:BlockLayoutCell>
-							</l:BlockLayoutRow>
-						</l:BlockLayout>
-					</content>
-				</Page>
-			</masterPages>
-		</SplitApp>
-	</Page>
+						</content>
+					</Page>
+				</detailPages>
+				<masterPages>
+					<Page id="master" showHeader="false" enableScrolling="false">
+						<content>
+							<l:BlockLayout>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
+										<core:Icon src="sap-icon://sales-order" id="ib" press="OnIconPress" height="70px"/>
+										<l:titleLink>
+											<Link class="textcolor" id="ibl" text="Sales Billing" press="OnPress"/>
+										</l:titleLink>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
+										<core:Icon src="sap-icon://lead" id="ir" press="OnIconPress" height="70px"/>
+										<l:titleLink>
+											<Link class="textcolor" id="irl" text="Recharge" press="OnPress"/>
+										</l:titleLink>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
+										<core:Icon src="sap-icon://crm-service-manager" id="is" press="OnIconPress" height="70px"/>
+										<l:titleLink>
+											<Link class="textcolor" id="isl" text="Service Billing" press="OnPress"/>
+										</l:titleLink>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
+										<l:titleLink>
+											<Link class="textcolor" id="iil" text="Inventory" press="OnPress"/>
+										</l:titleLink><core:Icon src="sap-icon://product" press="OnIconPress" id="ii" height="70px"/>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
+										<l:titleLink>
+											<Link class="textcolor" id="itl" text="Transactions" press="OnPress"/>
+										</l:titleLink>
+										<core:Icon src="sap-icon://collections-insight" id="it" press="OnIconPress" height="70px"/>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+							</l:BlockLayout>
+						</content>
+					</Page>
+				</masterPages>
+			</SplitApp>
+		</Page>
+	</App>
 </mvc:View>

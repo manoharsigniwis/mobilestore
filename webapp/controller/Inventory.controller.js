@@ -4,9 +4,10 @@ sap.ui.define([
 	"Mobile/Mobilestore/model/Formatter",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/Fragment",
-	"sap/ui/core/routing/History"
+	"sap/ui/core/routing/History",
+	"sap/m/MessageToast"
 
-], function (Controller, jQuery, Formatter, JSONModel, Fragment, History) {
+], function (Controller, jQuery, Formatter, JSONModel, Fragment, History, MessageToast) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Inventory", {
@@ -32,9 +33,7 @@ sap.ui.define([
 
 			}
 		},
-		onSort: function () {
 
-		},
 		onNavBack: function (oEvent) {
 			var oHistory, sPreviousHash;
 			oHistory = History.getInstance();
@@ -75,6 +74,12 @@ sap.ui.define([
 				obinding.sort(aSort);
 			}
 		},
+		onLogout: function (event) {
+			MessageToast.show("You Have Been Logged Out");
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Login");
+
+		},
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -85,8 +90,8 @@ sap.ui.define([
 			// debugger;
 			this.getView().setModel(new sap.ui.model.json.JSONModel(), "newModel");
 			var oModel = this.getOwnerComponent().getModel("data").oData.mobiles;
-				this.getView().getModel("newModel").setProperty("/mobiles", oModel);
-			
+			this.getView().getModel("newModel").setProperty("/mobiles", oModel);
+
 		},
 		back: function (oEvent) {
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);

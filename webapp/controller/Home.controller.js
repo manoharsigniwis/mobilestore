@@ -3,7 +3,7 @@ sap.ui.define([
 	'sap/ui/model/json/JSONModel',
 	'sap/viz/ui5/format/ChartFormatter',
 	"sap/ui/core/routing/History",
-		'sap/m/MessageToast'
+	'sap/m/MessageToast'
 
 ], function (Controller, JSONModel, ChartFormatter, History, MessageToast) {
 	"use strict";
@@ -12,16 +12,24 @@ sap.ui.define([
 		onPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("Inventory");
-		},	onOrientationChange: function(oEvent) {
+		},
+		onOrientationChange: function (oEvent) {
 			var bLandscapeOrientation = oEvent.getParameter("landscape"),
 				sMsg = "Orientation now is: " + (bLandscapeOrientation ? "Landscape" : "Portrait");
-			MessageToast.show(sMsg, {duration: 5000});
+			MessageToast.show(sMsg, {
+				duration: 5000
+			});
 		},
+		onLogout: function (event) {
+			MessageToast.show("You Have Been Logged Out");
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Login");
 
+		},
 		OnIconPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			var iconId = oEvent.getParameters().id.substr(12);
-			
+
 			var rout;
 			switch (iconId) {
 			case "ib":
@@ -42,11 +50,11 @@ sap.ui.define([
 			}
 			oRouter.navTo(rout);
 		},
-		
-			OnPress: function (oEvent) {
+
+		OnPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			var iconIdl = oEvent.getParameters().id.substr(12);
-			
+
 			var routl;
 			switch (iconIdl) {
 			case "ibl":
@@ -67,7 +75,6 @@ sap.ui.define([
 			}
 			oRouter.navTo(routl);
 		}
-
 
 	});
 });
