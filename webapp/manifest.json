@@ -29,7 +29,10 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": ["sap_hcb", "sap_belize"]
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
 	},
 	"sap.ui5": {
 		"rootView": {
@@ -67,9 +70,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -81,39 +86,48 @@
 				"controlId": "idAppControl",
 				"clearControlAggregation": false
 			},
-			"routes": [{
-				"name": "Routeapp",
-				"pattern": "Routeapp",
-				"target": "Targetapp"
-			}, {
-				"name": "Login",
-				"pattern": "",
-				"target": "Login"
-			}, {
-				"name": "Home",
-				"pattern": "Home",
-				"target": "Home"
-			}, {
-				"name": "Billing",
-				"pattern": "Billing",
-				"target": "Billing"
-			}, {
-				"name": "serviceBilling",
-				"pattern": "serviceBilling",
-				"target": "serviceBilling"
-			}, {
-				"name": "Recharge",
-				"pattern": "Recharge",
-				"target": "Recharge"
-			}, {
-				"name": "Inventory",
-				"pattern": "Inventory",
-				"target": "Inventory"
-			}, {
-				"name": "Transaction",
-				"pattern": "Transaction",
-				"target": "Transaction"
-			}],
+			"routes": [
+				{
+					"name": "Routeapp",
+					"pattern": "Routeapp",
+					"target": "Targetapp"
+				},
+				{
+					"name": "Login",
+					"pattern": "",
+					"target": "Login"
+				},
+				{
+					"name": "Home",
+					"pattern": "Home",
+					"target": "Home"
+				},
+				{
+					"name": "Billing",
+					"pattern": "Billing",
+					"target": "Billing"
+				},
+				{
+					"name": "serviceBilling",
+					"pattern": "serviceBilling",
+					"target": "serviceBilling"
+				},
+				{
+					"name": "Recharge",
+					"pattern": "Recharge",
+					"target": "Recharge"
+				},
+				{
+					"name": "Inventory",
+					"pattern": "Inventory",
+					"target": "Inventory"
+				},
+				{
+					"name": "Transaction",
+					"pattern": "Transaction",
+					"target": "Transaction"
+				}
+			],
 			"targets": {
 				"Targetapp": {
 					"viewType": "XML",
@@ -198,5 +212,9 @@
 				}
 			}
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

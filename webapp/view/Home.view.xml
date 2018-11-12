@@ -9,7 +9,7 @@
 			<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 			<ToolbarSpacer></ToolbarSpacer>
 			<Button text="Logout" type="Transparent"></Button>
-			</tnt:ToolHeader>
+		</tnt:ToolHeader>
 		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 			<detailPages>
 				<Page id="detail" showHeader="true">

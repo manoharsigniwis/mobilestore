@@ -42,7 +42,7 @@ sap.ui.define([
 				couponPrice = randc;
 			} else if (coupon === "BigSale") {
 				couponPrice = randc;
-			} else if (coupon === "Offer@30") {
+			} else if (coupon === "Offer@300") {
 				couponPrice = 300;
 			} else {
 				couponPrice = randc;

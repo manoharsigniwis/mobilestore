@@ -46,8 +46,8 @@
 						<core:Item text="Save@200"/>
 						<core:Item text="FestiveOffer"/>
 						<core:Item text="BigSale"/>
-						<core:Item text="Offer@30"/>
-						<core:Item text="Flat@50"/>
+						<core:Item text="Offer@300"/>
+						<core:Item text="FlatOffer"/>
 						<!--</items>-->
 						<layoutData>
 							<l:GridData span="XL3 L3 M5 S12"/>
