@@ -30,7 +30,7 @@
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>
-						<l:Grid defaultSpan="XL5 L5 M5 S12">
+						<l:Grid defaultSpan="XL6 L5 M5 S12">
 							<List id="NotificationList" items="{data>/customers}" width="400px">
 								<NotificationListItem title="{data>name}" description="{data>product}" showCloseButton="true" unread="false" priority="High"
 									close="onItemClose" press="onListItemPress"></NotificationListItem>

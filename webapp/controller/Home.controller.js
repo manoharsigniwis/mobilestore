@@ -9,7 +9,7 @@ sap.ui.define([
 	"use strict";
 	return Controller.extend("Mobile.Mobilestore.controller.Home", {
 		onInit: function () {
-			var obj = {
+			var obj2 = {
 				title: {
 					text: "RECHARGE STATISTICS"
 				}
@@ -18,7 +18,7 @@ sap.ui.define([
 					text: "STOCK STATISTICS"
 				}
 			};
-			this.getView().byId("idVizFrame").setVizProperties(obj);
+			this.getView().byId("idVizFrame").setVizProperties(obj2);
 			this.getView().byId("idVizFrame1").setVizProperties(obj1);
 
 		},
