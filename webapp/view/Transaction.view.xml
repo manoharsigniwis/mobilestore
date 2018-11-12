@@ -1,5 +1,6 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt"
-	controllerName="Mobile.Mobilestore.controller.Transaction" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns="sap.m" xmlns:viz.data="sap.viz.ui5.data" xmlns:tnt="sap.tnt"
+	controllerName="Mobile.Mobilestore.controller.Transaction" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
 			<Page showHeader="false" title="Transaction">
@@ -12,7 +13,28 @@
 					<Button text="Logout" type="Transparent"></Button>
 				</tnt:ToolHeader>
 				<content>
-					<Button text="Next" press="onPress"></Button>
+					<l:Grid defaultSpan="XL5 L5 M5 S12">
+						<List id="NotificationList" items="{data>/customers}" width="500px">
+							<NotificationListItem title="{data>name}" description="{data>product}" showCloseButton="true" unread="false" priority="High"
+								close="onItemClose" press="onListItemPress"></NotificationListItem>
+						</List>
+						<viz:VizFrame id="idVizFrame1" vizType='column'>
+							<viz:dataset>
+								<viz.data:FlattenedDataset id="idGraph1" data="{data>/customers}">
+									<viz.data:dimensions>
+										<viz.data:DimensionDefinition name="Month" value="{data>month}"/>
+									</viz.data:dimensions>
+									<viz.data:measures>
+										<viz.data:MeasureDefinition name="Amount" value="{data>amount}"/>
+									</viz.data:measures>
+								</viz.data:FlattenedDataset>
+							</viz:dataset>
+							<viz:feeds>
+								<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Amount"/>
+								<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Month"/>
+							</viz:feeds>
+						</viz:VizFrame>
+					</l:Grid>
 				</content>
 			</Page>
 		</pages>

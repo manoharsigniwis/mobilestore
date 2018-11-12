@@ -2,7 +2,7 @@
 	"mobiles": [{
 		"productid": 380,
 		"model": "SAMSUNG S9",
-		"key":"s9",
+		"key": "s9",
 		"image": "https://clipart.info/images/ccovers/1503496394samsung-s8-mobile-png.png",
 		"imei": 6928855,
 		"brand": "SAMSUNG",
@@ -345,7 +345,7 @@
 		"stock": 10,
 		"imei": 4721,
 		"Status": "Out of Stock"
-	},  {
+	}, {
 		"productid": 56,
 		"image": "https://i0.wp.com/gaaminx.com/wp-content/uploads/2017/06/Boat-Rockerz-400-Bluetooth-On-Ear-Headphone_0002_51PjCRR9KbL.png?fit=500%2C600&ssl=1",
 		"CurrencyCode": "INR",
@@ -398,6 +398,99 @@
 		"operator": "BSNL",
 		"balance": 1000
 
+	}],
+	"customers": [{
+		"name": "Sindhu",
+		"date": "08/12/2018",
+		"month": "Aug",
+		"amount": "40000",
+		"product": "Purchased Oneplus 6 on Aug 12 for 40000 INR"
+	}, {
+		"name": "Manu",
+		"date": "11/11/2018",
+		"month": "Nov",
+		"amount": "70000",
+		"product": "Purchased iPhone XS on Nov 11 for 70000 INR"
+
+	}, {
+		"name": "Sneha",
+		"date": "01/11/2018",
+		"month": "Jan",
+		"amount": "25000",
+		"product": "Purchased RedMI A2 on jan 11 for 25000 INR"
+	}, {
+		"name": "Deepika",
+		"date": "10/10/2018",
+		"month": "Oct",
+		"amount": "45000",
+		"product": "Purchased RedMI 6 Pro on Oct 10 for 45000 INR"
+	}, {
+		"name": "Arun",
+		"date": "03/03/2018",
+		"month": "Mar",
+		"amount": "50000",
+		"product": "Purchased Samsung S9 on Mar 03 for 50000 INR"
+	}, {
+		"name": "Sindhu",
+		"date": "01/01/2018",
+		"month": "Jan",
+		"amount": "20000",
+		"product": "Purchased Moto G6 on Jan 01 for 20000 INR"
+	}, {
+		"name": "Sneha",
+		"date": "08/08/2018",
+		"month": "Aug",
+		"amount": "15000",
+		"product": "Purchased Moto E6 on Aug 08 for 15000 INR"
+
+	}, {
+		"name": "Sindhu",
+		"date": "09/09/2018",
+		"month": "Sap",
+		"amount": "30000",
+		"product": "Purchased Oneplus 5 on Sep 09 for 30000 INR"
+	}, {
+		"name": "Manu",
+		"date": "02/02/2018",
+		"month": "Feb",
+		"amount": "35000",
+		"product": "Purchased Oneplus 3T on Feb 02 for 35000 INR"
+	}, {
+		"name": "Sindhu",
+		"date": "04/12/2018",
+		"month": "Apr",
+		"amount": "22000",
+		"product": "Purchased Oneplus 3T on Apr 12 for 22000 INR"
+	}, {
+		"name": "Sindhu",
+		"date": "05/12/2018",
+		"month": "May",
+		"amount": "45000",
+		"product": "Purchased Oneplus 5 on May 12 for 45000 INR"
+	}, {
+		"name": "Manu",
+		"date": "06/12/2018",
+		"month": "June",
+		"amount": "39000",
+		"product": "Purchased Samsung J8 on June 12 for 39000 INR"
+	}, {
+		"name": "Sindhu",
+		"date": "08/12/2018",
+		"month": "July",
+		"amount": "40000",
+		"product": "Purchased Oneplus 5T on Aug 12 for 40000 INR"
+	}, {
+		"name": "Sindhu",
+		"date": "02/12/2018",
+		"month": "Feb",
+		"amount": "40000",
+		"product": "Purchased Oneplus 5 on Feb 12 for 40000 INR"
+	}, {
+		"name": "Manu",
+		"date": "01/12/2018",
+		"month": "Jan",
+		"amount": "45000",
+		"product": "Purchased Oneplus 6 on Jan 01 for 45000 INR"
 	}]
 
 }
