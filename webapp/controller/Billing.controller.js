@@ -1,9 +1,10 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History",
-	"sap/ui/model/Filter"
+	"sap/ui/model/Filter",
+	'sap/m/MessageToast'
 
-], function (Controller, History, Filter) {
+], function (Controller, History, Filter, MessageToast) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Billing", {
@@ -18,6 +19,12 @@ sap.ui.define([
 			this.getView().byId("oid").setValue(rand);
 			var currentDate = new Date();
 			this.byId("date").setDateValue(currentDate);
+		},
+		onLogout: function (event) {
+			MessageToast.show("You Have Been Logged Out");
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Login");
+
 		},
 		onNavBack: function (oEvent) {
 			var oHistory, sPreviousHash;
@@ -85,16 +92,7 @@ sap.ui.define([
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("serviceBilling");
 		},
-		onNavBack: function (oEvent) {
-			var oHistory, sPreviousHash;
-			oHistory = History.getInstance();
-			sPreviousHash = oHistory.getPreviousHash();
-			if (sPreviousHash !== undefined) {
-				window.history.go(-1);
-			} else {
-				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
-			}
-		},
+
 		onSubmit: function (oevent) {
 
 			var doc = new jsPDF("landscape");

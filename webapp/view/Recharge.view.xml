@@ -3,15 +3,15 @@
 	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data">
 	<App>
 		<pages>
-			<Page  showHeader="false" >
+			<Page showHeader="false">
 				<tnt:ToolHeader class="toolhaeader">
-					<core:Icon src="sap-icon://nav-back"  size="2rem" press="onNavBack"></core:Icon>
+					<core:Icon src="sap-icon://nav-back" size="2rem" press="onNavBack"></core:Icon>
 					<ToolbarSpacer></ToolbarSpacer>
 					<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
 					<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 					<ToolbarSpacer></ToolbarSpacer>
-					<Button text="Logout" type="Transparent"></Button>
-					</tnt:ToolHeader>
+					<Button text="Logout" type="Transparent" press="onLogout"></Button>
+				</tnt:ToolHeader>
 				<l:FixFlex class="fixFlexHorizontal" vertical="false">
 					<l:fixContent>
 						<f:Form id="FormDisplay" editable="false">
@@ -54,49 +54,36 @@
 					<l:flexContent>
 						<FlexBox alignItems="Start">
 							<items>
-								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="JIO" press="press">
-									<TileContent footer="Remaining Currency">
-										<NumericContent value="{data>/recharge/1/balance}" icon="Images/download.png"/>
-									</TileContent>
-								</GenericTile>
-								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="AIRTEL" press="press">
-									<TileContent footer="Remaining Currency">
-										<NumericContent value="{data>/recharge/0/balance}" icon="https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png"/>
-									</TileContent>
-								</GenericTile>
-								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="VODAFONE" press="press">
-									<TileContent footer="Remaining Currency">
-										<NumericContent value="{data>/recharge/2/balance}"
-											icon="https://diylogodesigns.com/wp-content/uploads/2016/05/Vodafone-Logo-png-download-768x552.png"/>
-									</TileContent>
-								</GenericTile>
-								<!--<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="BSNL" press="press">-->
-								<!--	<TileContent footer="Remaining Currency">-->
-								<!--		<NumericContent value="{data>/recharge/3/balance}"-->
-								<!--			icon="http://www.logosvectorfree.com/wp-content/uploads/2017/12/bsnl-Logo-Icon-Vector-Free-Download-964x1024.png"/>-->
-								<!--	</TileContent>-->
-								<!--</GenericTile>-->
+								<VBox>
+									<HBox>
+										<GenericTile class="sapUiMediumMarginBegin sapUiMediumMarginTop tileLayout" header="JIO" press="press">
+											<TileContent footer="Remaining Currency">
+												<NumericContent value="{data>/recharge/1/balance}" icon="Images/download.png"/>
+											</TileContent>
+										</GenericTile>
+										<GenericTile class="sapUiMediumMarginBegin sapUiMediumMarginTop tileLayout" header="AIRTEL" press="press">
+											<TileContent footer="Remaining Currency">
+												<NumericContent value="{data>/recharge/0/balance}" icon="https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png"/>
+											</TileContent>
+										</GenericTile>
+									</HBox>
+									<HBox>
+										<GenericTile class="sapUiMediumMarginBegin sapUiMediumMarginTop tileLayout" header="VODAFONE" press="press">
+											<TileContent footer="Remaining Currency">
+												<NumericContent value="{data>/recharge/2/balance}"
+													icon="https://diylogodesigns.com/wp-content/uploads/2016/05/Vodafone-Logo-png-download-768x552.png"/>
+											</TileContent>
+										</GenericTile>
+										<GenericTile class="sapUiMediumMarginBegin sapUiMediumMarginTop tileLayout" header="BSNL" press="press">
+											<TileContent footer="Remaining Currency">
+												<NumericContent value="{data>/recharge/3/balance}"
+													icon="http://www.logosvectorfree.com/wp-content/uploads/2017/12/bsnl-Logo-Icon-Vector-Free-Download-964x1024.png"/>
+											</TileContent>
+										</GenericTile>
+									</HBox>
+								</VBox>
 							</items>
 						</FlexBox>
-						<!--<NumericContent value="{data>/recharge/1/balance}" scale="MM"-->
-						<!--	icon="data:image/png;base64,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"-->
-						<!--	valueColor="Good"  class="sapUiSmallMargin" press="press"/>-->
-						<!--<viz:VizFrame id="idVizFrame1" height='405px' width="600px" vizType='donut'>-->
-						<!--	<viz:dataset>-->
-						<!--		<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">-->
-						<!--			<viz.data:dimensions>-->
-						<!--				<viz.data:DimensionDefinition name="operator" value="{data>operator}"/>-->
-						<!--			</viz.data:dimensions>-->
-						<!--			<viz.data:measures>-->
-						<!--				<viz.data:MeasureDefinition name="balance" value="{data>balance}"/>-->
-						<!--			</viz.data:measures>-->
-						<!--		</viz.data:FlattenedDataset>-->
-						<!--	</viz:dataset>-->
-						<!--	<viz:feeds>-->
-						<!--		<viz.feeds:FeedItem id='valueAxisFeed' uid="size" type="Measure" name="balance" values="balance"/>-->
-						<!--		<viz.feeds:FeedItem id='categoryAxisFeed' uid="color" type="Dimension" name="operator" values="operator"/>-->
-						<!--	</viz:feeds>-->
-						<!--</viz:VizFrame>-->
 					</l:flexContent>
 				</l:FixFlex>
 			</Page>

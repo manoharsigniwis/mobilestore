@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/routing/History"
+	"sap/ui/core/routing/History",
+	'sap/m/MessageToast'
 
-], function (Controller, History) {
+], function (Controller, History, MessageToast) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Transaction", {
@@ -15,6 +16,12 @@ sap.ui.define([
 		onInit: function () {
 
 		},
+		onLogout: function (event) {
+			MessageToast.show("You Have Been Logged Out");
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Login");
+
+		},
 		onNavBack: function (oEvent) {
 			var oHistory, sPreviousHash;
 			oHistory = History.getInstance();
@@ -25,6 +32,7 @@ sap.ui.define([
 				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
 			}
 		},
+
 		onPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("Recharge");
