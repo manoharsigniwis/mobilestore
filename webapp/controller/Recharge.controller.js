@@ -18,7 +18,10 @@ sap.ui.define([
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 		 * @memberOf Mobile.Mobilestore.view.Recharge
 		 */
-		onInit: function () {},
+		onInit: function () {
+
+			this._aArray = [];
+		},
 
 		onLogout: function (event) {
 			MessageToast.show("You Have Been Logged Out");
@@ -43,6 +46,8 @@ sap.ui.define([
 			oRouter.navTo("detail");
 		},
 		onRecharge: function (event) {
+			var mod = this._aArray;
+
 			var oModel = this.getView().getModel("data"),
 				bal = oModel.oData.recharge,
 				op = this.getView().byId("i").getValue(),
@@ -77,7 +82,8 @@ sap.ui.define([
 				break;
 
 			}
-
+			mod.push(inp);
+			oModel.setProperty("/rech", mod.length);
 			// oModel.setProperty("/balance", bal);
 		},
 

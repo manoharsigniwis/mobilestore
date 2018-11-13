@@ -18,15 +18,15 @@
 							<l:BlockLayoutRow>
 								<l:BlockLayoutCell>
 									<Title text="{i18n>Products Sold}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-									<NumericContent value="45" valueColor="Critical" class="sapUiTinyMargin"/>
+									<NumericContent value="{data>/count}" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
 									<Title text="{i18n>Recharge Done}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-									<NumericContent value="2430" valueColor="Critical" class="sapUiTinyMargin"/>
+									<NumericContent value="{data>/rech}" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
 									<Title text="{i18n>Transactions}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-									<NumericContent value="134430" valueColor="Critical" class="sapUiTinyMargin"/>
+									<NumericContent value="{data>/trans}" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>

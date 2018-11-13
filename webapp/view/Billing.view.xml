@@ -1,67 +1,67 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
 	xmlns:l="sap.ui.layout" controllerName="Mobile.Mobilestore.controller.Billing" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
-	<Page showHeader="false">
-		<tnt:ToolHeader class="toolhaeader">
-			<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
-			<ToolbarSpacer></ToolbarSpacer>
-			<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
-			<Title text="{i18n>Signiwis Mobiles}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-			<ToolbarSpacer></ToolbarSpacer>
-			<Button text="{i18n>Logout}" type="Transparent"></Button>
-		</tnt:ToolHeader>
-		<VBox class="sapUiSmallMargin">
-			<f:SimpleForm id="SimpleFormToolbar" title="Sales Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
-				labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="3" emptySpanM="0" emptySpanS="0" columnsXL="2"
-				columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
-				<f:content>
-					<Label text="{i18n>Order ID}"/>
-					<Input id="oid" value="" editable="false"/>
-					<Label text="{i18n>Date}:"/>
-					<DatePicker id="date" displayFormat="long" editable="false"/>
-					<Label text="{i18n>Customer Name}"/>
-					<Input id="name" value="" placeholder="Name"/>
-					<Label text="{i18n>Mobile No}."/>
-					<Input id="mobile" type="Number" value="" placeholder="Number"></Input>
-					<Label text="{i18n>Category}"/>
-					<Input value="" placeholder="Category"/>
-					<Label text="{i18n>Product No}"/>
-					<Input id="pno" value="" placeholder="Product No"/>
-					<Label text="{i18n>Brand}"/>
-					<ComboBox id="brand" items="{data>/brands}" change="onBrandChange">
-						<items>
-							<core:Item text="{data>brand}" key="{data>brand}"/>
-						</items>
-					</ComboBox>
-					<Label text="{i18n>Model}"/>
-					<ComboBox id="model" items="{data>/mobiles}" change="onModelChange">
-						<items>
-							<core:Item text="{data>model}" key="{data>model}"/>
-						</items>
-					</ComboBox>
-					<Label text="{i18n>Price}"/>
-					<Input id="price" value="{data>/newValue}"/>
-					<Label text="{i18n>Coupon Code}"/>
-					<ComboBox id="coupon">
-						<!--<items>-->
-						<core:Item text="{i18n>Save@200}"/>
-						<core:Item text="{i18n>FestiveOffer}"/>
-						<core:Item text="{i18n>BigSale}"/>
-						<core:Item text="{i18n>Offer@300}"/>
-						<core:Item text="{i18n>FlatOffer}"/>
-						<!--</items>-->
-						<layoutData>
-							<l:GridData span="XL3 L3 M5 S12"/>
-						</layoutData>
-					</ComboBox>
-					<Button text="{i18n>Apply Coupon}" press="onCoupon"></Button>
-					<Label text="{i18n>Total Amount}"/>
-					<Input id="tprice" value="37999"/>
-					<Label text=""/>
-					<Button text="{i18n>Submit}" press="onSubmit"></Button>
-				</f:content>
-			</f:SimpleForm>
-		</VBox>
-	</Page>
+		<Page showHeader="false">
+			<tnt:ToolHeader class="toolhaeader">
+				<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
+				<Title text="{i18n>Signiwis Mobiles}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button text="{i18n>Logout}" type="Transparent" press="onLogout"></Button>
+			</tnt:ToolHeader>
+			<VBox class="sapUiSmallMargin">
+				<f:SimpleForm id="SimpleFormToolbar" title="Sales Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+					labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="3" emptySpanM="0" emptySpanS="0" columnsXL="2"
+					columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
+					<f:content>
+						<Label text="{i18n>Order ID}"/>
+						<Input id="oid" value="" editable="false"/>
+						<Label text="{i18n>Date}:"/>
+						<DatePicker id="date" displayFormat="long" editable="false"/>
+						<Label text="{i18n>Customer Name}"/>
+						<Input id="name" value="" placeholder="Name"/>
+						<Label text="{i18n>Mobile No}."/>
+						<Input id="mobile" type="Number" value="" placeholder="Number"></Input>
+						<Label text="{i18n>Category}"/>
+						<Input value="" placeholder="Category"/>
+						<Label text="{i18n>Product No}"/>
+						<Input id="pno" value="" placeholder="Product No"/>
+						<Label text="{i18n>Brand}"/>
+						<ComboBox id="brand" items="{data>/brands}" change="onBrandChange">
+							<items>
+								<core:Item text="{data>brand}" key="{data>brand}"/>
+							</items>
+						</ComboBox>
+						<Label text="{i18n>Model}"/>
+						<ComboBox id="model" items="{data>/mobiles}" change="onModelChange">
+							<items>
+								<core:Item text="{data>model}" key="{data>model}"/>
+							</items>
+						</ComboBox>
+						<Label text="{i18n>Price}"/>
+						<Input id="price" value="{data>/newValue}"/>
+						<Label text="{i18n>Coupon Code}"/>
+						<ComboBox id="coupon">
+							<!--<items>-->
+							<core:Item text="{i18n>Save@200}"/>
+							<core:Item text="{i18n>FestiveOffer}"/>
+							<core:Item text="{i18n>BigSale}"/>
+							<core:Item text="{i18n>Offer@300}"/>
+							<core:Item text="{i18n>FlatOffer}"/>
+							<!--</items>-->
+							<layoutData>
+								<l:GridData span="XL3 L3 M5 S12"/>
+							</layoutData>
+						</ComboBox>
+						<Button text="{i18n>Apply Coupon}" press="onCoupon"></Button>
+						<Label text="{i18n>Total Amount}"/>
+						<Input id="tprice" value="37999"/>
+						<Label text=""/>
+						<Button text="{i18n>Submit}" press="onSubmit"></Button>
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+		</Page>
 	</App>
 </mvc:View>

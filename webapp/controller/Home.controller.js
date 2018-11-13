@@ -9,11 +9,19 @@ sap.ui.define([
 	"use strict";
 	return Controller.extend("Mobile.Mobilestore.controller.Home", {
 		onInit: function () {
+			var oModel = this.getView().getModel("data");
+			// var val1 = oModel.getProperty("/count").value;
+			// var val2 = oModel.getProperty("/rech").value;
+			// var val3 = val1 + val2;
+			// oModel.setProperty("/trans", val3);
+			
+
 			var obj2 = {
 				title: {
 					text: "RECHARGE STATISTICS"
 				}
-			};	var obj1 = {
+			};
+			var obj1 = {
 				title: {
 					text: "STOCK STATISTICS"
 				}

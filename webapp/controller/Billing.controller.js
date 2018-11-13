@@ -2,12 +2,14 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History",
 	"sap/ui/model/Filter",
-	'sap/m/MessageToast'
+	'sap/m/MessageToast',
+	"sap/ui/model/json/JSONModel"
 
-], function (Controller, History, Filter, MessageToast) {
+], function (Controller, History, Filter, MessageToast, JSONModel) {
 	"use strict";
 	return Controller.extend("Mobile.Mobilestore.controller.Billing", {
 		onInit: function () {
+			this._aArray = [];
 			var rand = Math.floor((Math.random() * 100000) + 1);
 			this.getView().byId("oid").setValue(rand);
 			var currentDate = new Date();
@@ -87,6 +89,9 @@ sap.ui.define([
 		},
 
 		onSubmit: function (oevent) {
+			var mod = this._aArray;
+
+			var oModel = this.getView().getModel("data");
 
 			var doc = new jsPDF("landscape");
 			doc.setFillColor(51, 51, 51);
@@ -176,6 +181,9 @@ sap.ui.define([
 
 			// doc.setFontSize(10);
 			doc.save('a4.pdf');
+
+			mod.push(model);
+			oModel.setProperty("/count", mod.length);
 			//	console.log(this.getView().byId("name").getValue());
 		}
 
