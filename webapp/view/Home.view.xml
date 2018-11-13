@@ -6,9 +6,9 @@
 			<!--<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>-->
 			<ToolbarSpacer></ToolbarSpacer>
 			<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
-			<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+			<Title text="{i18n>Signiwis Mobiles}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 			<ToolbarSpacer></ToolbarSpacer>
-			<Button text="Logout" type="Transparent" press="onLogout"></Button>
+			<Button text="{i18n>Logout}" type="Transparent" press="onLogout"></Button>
 		</tnt:ToolHeader>
 		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 			<detailPages>
@@ -17,15 +17,15 @@
 						<l:BlockLayout background="Dashboard">
 							<l:BlockLayoutRow>
 								<l:BlockLayoutCell>
-									<Title text="Products Sold" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+									<Title text="{i18n>Products Sold}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 									<NumericContent value="45" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
-									<Title text="Recharge Done" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+									<Title text="{i18n>Recharge Done}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 									<NumericContent value="2430" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
-									<Title text="Transactions" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+									<Title text="{i18n>Transactions}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 									<NumericContent value="134430" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
@@ -81,7 +81,7 @@
 								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
 									<core:Icon src="sap-icon://sales-order" id="ib" press="OnIconPress" height="70px"/>
 									<l:titleLink>
-										<Link class="textcolor" id="ibl" text="Sales Billing" press="OnPress"/>
+										<Link class="textcolor" id="ibl" text="{i18n>Sales Billing}" press="OnPress"/>
 									</l:titleLink>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
@@ -89,7 +89,7 @@
 								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
 									<core:Icon src="sap-icon://lead" id="ir" press="OnIconPress" height="70px"/>
 									<l:titleLink>
-										<Link class="textcolor" id="irl" text="Recharge" press="OnPress"/>
+										<Link class="textcolor" id="irl" text="{i18n>Recharge}" press="OnPress"/>
 									</l:titleLink>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
@@ -97,21 +97,21 @@
 								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
 									<core:Icon src="sap-icon://crm-service-manager" id="is" press="OnIconPress" height="70px"/>
 									<l:titleLink>
-										<Link class="textcolor" id="isl" text="Service Billing" press="OnPress"/>
+										<Link class="textcolor" id="isl" text="{i18n>Service Billing}" press="OnPress"/>
 									</l:titleLink>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
 								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
 									<l:titleLink>
-										<Link class="textcolor" id="iil" text="Inventory" press="OnPress"/>
+										<Link class="textcolor" id="iil" text="{i18n>Inventory}" press="OnPress"/>
 									</l:titleLink><core:Icon src="sap-icon://product" press="OnIconPress" id="ii" height="70px"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
 								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
 									<l:titleLink>
-										<Link class="textcolor" id="itl" text="Transactions" press="OnPress"/>
+										<Link class="textcolor" id="itl" text="{i18n>Transactions}" press="OnPress"/>
 									</l:titleLink>
 									<core:Icon src="sap-icon://collections-insight" id="it" press="OnIconPress" height="70px"/>
 								</l:BlockLayoutCell>

@@ -8,9 +8,9 @@
 					<core:Icon src="sap-icon://nav-back" size="2rem" press="onNavBack"></core:Icon>
 					<ToolbarSpacer></ToolbarSpacer>
 					<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
-					<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+					<Title text="{i18n>Signiwis Mobiles}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 					<ToolbarSpacer></ToolbarSpacer>
-					<Button text="Logout" type="Transparent" press="onLogout"></Button>
+					<Button text="{i18n>Logout}" type="Transparent" press="onLogout"></Button>
 				</tnt:ToolHeader>
 				<l:FixFlex class="fixFlexHorizontal" vertical="false">
 					<l:fixContent>
@@ -23,13 +23,13 @@
 									<f:formElements>
 										<f:FormElement>
 											<f:fields>
-												<tnt:InfoLabel id="il1" text="Mobile Number" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
+												<tnt:InfoLabel id="il1" text="{i18n>Mobile Number}" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
 												<Input type="Number" editable="true" placeholder="Mobile Number"></Input>
 											</f:fields>
 										</f:FormElement>
 										<f:FormElement>
 											<f:fields>
-												<tnt:InfoLabel text="Mobile Operator" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
+												<tnt:InfoLabel text="{i18n>Mobile Operator}" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
 												<ComboBox id="i" items="{data>/recharge}" placeholder="Mobile Operator">
 													<core:Item key="{data>operator}" text="{data>operator}"/>
 												</ComboBox>
@@ -37,13 +37,13 @@
 										</f:FormElement>
 										<f:FormElement>
 											<f:fields>
-												<tnt:InfoLabel text="Amount" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
+												<tnt:InfoLabel text="{i18n>Amount}" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
 												<Input id="i1" type="Number" editable="true" placeholder="Amount"></Input>
 											</f:fields>
 										</f:FormElement>
 										<f:FormElement>
 											<f:fields>
-												<Button text="Recharge" type="Emphasized" press="onRecharge"></Button>
+												<Button text="{i18n>Recharge}" type="Emphasized" press="onRecharge"></Button>
 											</f:fields>
 										</f:FormElement>
 									</f:formElements>

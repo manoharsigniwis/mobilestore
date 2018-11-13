@@ -5,57 +5,57 @@
 			<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
 			<ToolbarSpacer></ToolbarSpacer>
 			<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
-			<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+			<Title text="{i18n>Signiwis Mobiles}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 			<ToolbarSpacer></ToolbarSpacer>
-			<Button text="Logout" type="Transparent" press="onLogout"></Button>
+			<Button text="{i18n>Logout}" type="Transparent" press="onLogout"></Button>
 		</tnt:ToolHeader>
 		<VBox class="sapUiSmallMargin">
-			<f:SimpleForm id="SimpleFormToolbar" title="Service Invoice" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+			<f:SimpleForm id="SimpleFormToolbar" title="{i18n>Service Invoice}" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
 				labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="3" emptySpanM="0" emptySpanS="0" columnsXL="2"
 				columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
 				<f:content>
-					<Label text=" Service ID"/>
+					<Label text="{i18n>Service ID}"/>
 					<Input id="sid" value="" editable="false"/>
-					<Label text="Date:"/>
+					<Label text="{i18n>Date:}"/>
 					<DatePicker id="date" displayFormat="long" editable="false"/>
-					<Label text=" Customer Name"/>
+					<Label text="{i18n>Customer Name}"/>
 					<Input id="name" value="" placeholder="Name"/>
-					<Label text="Mobile No."/>
+					<Label text="{i18n>Mobile No.}"/>
 					<Input id="mobile" type="Number" value="" placeholder="Number"></Input>
-					<Label text="Brand"/>
+					<Label text="{i18n>Brand}"/>
 					<ComboBox id="brand" items="{data>/brands}" change="onBrandChange">
 						<items>
 							<core:Item text="{data>brand}" key="{data>brand}"/>
 						</items>
 					</ComboBox>
-					<Label text="Model"/>
+					<Label text="{i18n>Model}"/>
 					<ComboBox id="model" items="{data>/mobiles}" change="onModelChange">
 						<items>
 							<core:Item text="{data>model}" key="{data>model}"/>
 						</items>
 					</ComboBox>
-					<Label text="IMEI No"/>
+					<Label text="{i18n>IMEI No}"/>
 					<Input id="imei" value="" placeholder="IMEI "/>
-					<Label text="Under Warranty"/>
+					<Label text="{i18n>Under Warranty}"/>
 					<Input id="warranty" value=""/>
-					<Label text="Issue"/>
+					<Label text="{i18n>Issue}"/>
 					<Input id="issue" value=""/>
-					<Label text="Accesories:"/>
+					<Label text="{i18n>Accesories}:"/>
 					<ComboBox id="accesories" items="{data>/accessories}" change="onaccesories">
 						<items>
 							<core:Item text="{data>model}" key="{data>model}"/>
 						</items>
 					</ComboBox>
-					<Label text="Accesories Price"/>
+					<Label text="{i18n>Accesories Price}"/>
 					<Input id="aprice" value="{data>/newPrice}"/>
-					<Label text="Service Charge"/>
+					<Label text="{i18n>Service Charge}"/>
 					<Input id="sprice" liveChange="onlivechange" value=""/>
-					<Label text="Total Amount"/>
+					<Label text="{i18n>Total Amount}"/>
 					<Input id="tprice" value=""/>
-					<Label text="Estimated Issue Date"/>
+					<Label text="{i18n>Estimated Issue Date}"/>
 					<DatePicker id="edate" displayFormat="long"/>
 					<Label text=""/>
-					<Button text="Submit" press="onSubmit"></Button>
+					<Button text="{i18n>Submit}" press="onSubmit"></Button>
 				</f:content>
 			</f:SimpleForm>
 		</VBox>

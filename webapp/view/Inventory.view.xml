@@ -2,26 +2,26 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tnt="sap.tnt">
 	<App>
 		<pages>
-			<Page title="Inventory" navButtonPress="back" showHeader="false" showNavButton="true">
+			<Page title="{i18n>Inventory}" navButtonPress="back" showHeader="false" showNavButton="true">
 				<tnt:ToolHeader class="toolhaeader">
 					<core:Icon src="sap-icon://nav-back" press="onNavBack" size="2rem"></core:Icon>
 					<ToolbarSpacer></ToolbarSpacer>
 					<Image src="https://images-na.ssl-images-amazon.com/images/I/71pw3Vc4KmL._SX355_.jpg" width="50px" height="50px"></Image>
-					<Title text="Signiwis Mobiles" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+					<Title text="{i18n>Signiwis Mobiles}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
 					<ToolbarSpacer></ToolbarSpacer>
-					<Button text="Logout" type="Transparent" press="onLogout"></Button>
+					<Button text="{i18n>Logout}" type="Transparent" press="onLogout"></Button>
 				</tnt:ToolHeader>
 				<content>
 					<Table id="idProductsTable" inset="false" items="{newModel>/mobiles}">
 						<headerToolbar>
 							<Toolbar>
 								<content>
-									<Title text="Products" level="H2"/>
+									<Title text="{i18n>Products}" level="H2"/>
 									<ToolbarSpacer/>
 									<ComboBox id="idPopinLayout" placeholder="Select" change="onPopinLayoutChanged">
 										<items>
-											<core:Item text="Mobiles" key="mobile"/>
-											<core:Item text="Accessories" key="acessories"/>
+											<core:Item text="{i18n>Mobiles}" key="mobile"/>
+											<core:Item text="{i18n>Accessories}" key="acessories"/>
 										</items>
 									</ComboBox>
 								</content>
@@ -30,22 +30,22 @@
 						</headerToolbar>
 						<columns>
 							<Column minScreenWidth="" demandPopin="false">
-								<Text text="Product"/>
+								<Text text="{i18n>Product}"/>
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="Photo"/>
+								<Text text="{i18n>Photo}"/>
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="Product Id" wrapping="true"/>
+								<Text text="{i18n>Product Id}" wrapping="true"/>
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="Stock"/>
+								<Text text="{i18n>Stock}"/>
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="Availability"/>
+								<Text text="{i18n>Availability}"/>
 							</Column>
 							<Column minScreenWidth="Small" demandPopin="true">
-								<Text text="Price"/>
+								<Text text="{i18n>Price}"/>
 							</Column>
 						</columns>
 						<items>
