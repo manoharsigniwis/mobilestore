@@ -56,7 +56,7 @@
 						</ComboBox>
 						<Button text="{i18n>Apply Coupon}" press="onCoupon"></Button>
 						<Label text="{i18n>Total Amount}"/>
-						<Input id="tprice" value="37999"/>
+						<Input id="tprice" value=""/>
 						<Label text=""/>
 						<Button text="{i18n>Submit}" press="onSubmit"></Button>
 					</f:content>

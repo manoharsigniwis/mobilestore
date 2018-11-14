@@ -79,7 +79,7 @@
 						<l:BlockLayout>
 							<l:BlockLayoutRow>
 								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
-									<core:Icon src="sap-icon://sales-order" id="ib" press="OnIconPress" height="70px"/>
+									<core:Icon src="sap-icon://sales-order" id="ib" press="OnIconPress" color="white" height="70px"/>
 									<l:titleLink>
 										<Link class="textcolor" id="ibl" text="{i18n>Sales Billing}" press="OnPress"/>
 									</l:titleLink>
@@ -87,7 +87,7 @@
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
 								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
-									<core:Icon src="sap-icon://lead" id="ir" press="OnIconPress" height="70px"/>
+									<core:Icon src="sap-icon://lead" id="ir" press="OnIconPress" color="white" height="70px"/>
 									<l:titleLink>
 										<Link class="textcolor" id="irl" text="{i18n>Recharge}" press="OnPress"/>
 									</l:titleLink>
@@ -95,7 +95,7 @@
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
 								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeB">
-									<core:Icon src="sap-icon://crm-service-manager" id="is" press="OnIconPress" height="70px"/>
+									<core:Icon src="sap-icon://crm-service-manager" color="white" id="is" press="OnIconPress" height="70px"/>
 									<l:titleLink>
 										<Link class="textcolor" id="isl" text="{i18n>Service Billing}" press="OnPress"/>
 									</l:titleLink>
@@ -105,7 +105,7 @@
 								<l:BlockLayoutCell backgroundColorSet="ColorSet7" backgroundColorShade="ShadeC">
 									<l:titleLink>
 										<Link class="textcolor" id="iil" text="{i18n>Inventory}" press="OnPress"/>
-									</l:titleLink><core:Icon src="sap-icon://product" press="OnIconPress" id="ii" height="70px"/>
+									</l:titleLink><core:Icon src="sap-icon://product" press="OnIconPress" color="white" id="ii" height="70px"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 							<l:BlockLayoutRow>
