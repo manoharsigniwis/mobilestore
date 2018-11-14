@@ -12,7 +12,7 @@
 					<ToolbarSpacer></ToolbarSpacer>
 					<Button text="{i18n>Logout}" type="Transparent" press="onLogout"></Button>
 				</tnt:ToolHeader>
-				<l:FixFlex class="fixFlexHorizontal" vertical="false">
+				<l:FixFlex vertical="false">
 					<l:fixContent>
 						<f:Form id="FormDisplay" editable="false">
 							<f:layout>
@@ -51,7 +51,7 @@
 							</f:formContainers>
 						</f:Form>
 					</l:fixContent>
-					<l:flexContent>
+					<l:flexContent class="sapUiMediumMarginBegin">
 						<FlexBox alignItems="Start">
 							<items>
 								<VBox>

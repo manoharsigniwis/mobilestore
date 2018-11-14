@@ -36,7 +36,11 @@
 									close="onItemClose" press="onListItemPress"></NotificationListItem>
 							</List>
 							<HBox>
+<<<<<<< Upstream, based on origin/master
 								<viz:VizFrame id="idVizFrame" height='500px' width='450px' class="sapUiTinyMargin" vizType='donut'>
+=======
+								<viz:VizFrame id="idVizFrame" width='450px' class="sapUiTinyMargin" vizType='donut'>
+>>>>>>> c430b73 gg
 									<viz:dataset>
 										<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">
 											<viz.data:dimensions>
