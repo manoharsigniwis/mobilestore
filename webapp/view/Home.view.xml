@@ -36,7 +36,7 @@
 									close="onItemClose" press="onListItemPress"></NotificationListItem>
 							</List>
 							<HBox>
-								<viz:VizFrame id="idVizFrame" height='500px' width='500px' class="sapUiTinyMargin" vizType='donut'>
+								<viz:VizFrame id="idVizFrame" height='500px' width='450px' class="sapUiTinyMargin" vizType='donut'>
 									<viz:dataset>
 										<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">
 											<viz.data:dimensions>
