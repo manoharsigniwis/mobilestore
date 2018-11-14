@@ -10,7 +10,7 @@
 			<ToolbarSpacer></ToolbarSpacer>
 			<Button text="{i18n>Logout}" type="Transparent" press="onLogout"></Button>
 		</tnt:ToolHeader>
-		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master">
 			<detailPages>
 				<Page id="detail" showHeader="true">
 					<content>
@@ -31,49 +31,43 @@
 							</l:BlockLayoutRow>
 						</l:BlockLayout>
 						<l:Grid defaultSpan="XL6 L5 M5 S12">
-							<List id="NotificationList" items="{data>/object}" width="400px" growing="true" growingThreshold="3">
-								<NotificationListItem title="Customer: {data>name}" description="Product: {data>model}" datetime="Date: {data>date}" showCloseButton="true" unread="false" priority="Medium"
-									close="onItemClose" press="onListItemPress"></NotificationListItem>
-							</List>
-							<HBox>
-<<<<<<< Upstream, based on origin/master
-								<viz:VizFrame id="idVizFrame" height='500px' width='450px' class="sapUiTinyMargin" vizType='donut'>
-=======
-								<viz:VizFrame id="idVizFrame" width='450px' class="sapUiTinyMargin" vizType='donut'>
->>>>>>> c430b73 gg
-									<viz:dataset>
-										<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">
-											<viz.data:dimensions>
-												<viz.data:DimensionDefinition name="operator" value="{data>operator}"/>
-											</viz.data:dimensions>
-											<viz.data:measures>
-												<viz.data:MeasureDefinition name="balance" value="{data>balance}"/>
-											</viz.data:measures>
-										</viz.data:FlattenedDataset>
-									</viz:dataset>
-									<viz:feeds>
-										<viz.feeds:FeedItem id='valueAxisFeed' uid="size" type="Measure" name="balance" values="balance"/>
-										<viz.feeds:FeedItem id='categoryAxisFeed' uid="color" type="Dimension" name="operator" values="operator"/>
-									</viz:feeds>
-								</viz:VizFrame>
-							</HBox>
+							<viz:VizFrame id="idVizFrame1" width="100%" vizType='column'>
+								<viz:dataset>
+									<viz.data:FlattenedDataset id="idGraph1" data="{data>/mobiles}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="Brand" value="{data>brand}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="In Stock" value="{data>stock}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="In Stock"/>
+									<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Brand"/>
+								</viz:feeds>
+							</viz:VizFrame>
+							<viz:VizFrame id="idVizFrame" height='500px' width='450px' class="sapUiTinyMargin" vizType='donut'>
+								<viz:dataset>
+									<viz.data:FlattenedDataset id="idGraph" data="{data>/recharge}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="operator" value="{data>operator}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="balance" value="{data>balance}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem id='valueAxisFeed' uid="size" type="Measure" name="balance" values="balance"/>
+									<viz.feeds:FeedItem id='categoryAxisFeed' uid="color" type="Dimension" name="operator" values="operator"/>
+								</viz:feeds>
+							</viz:VizFrame>
 						</l:Grid>
-						<viz:VizFrame id="idVizFrame1" width="100%" vizType='column'>
-							<viz:dataset>
-								<viz.data:FlattenedDataset id="idGraph1" data="{data>/mobiles}">
-									<viz.data:dimensions>
-										<viz.data:DimensionDefinition name="Brand" value="{data>brand}"/>
-									</viz.data:dimensions>
-									<viz.data:measures>
-										<viz.data:MeasureDefinition name="In Stock" value="{data>stock}"/>
-									</viz.data:measures>
-								</viz.data:FlattenedDataset>
-							</viz:dataset>
-							<viz:feeds>
-								<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="In Stock"/>
-								<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Brand"/>
-							</viz:feeds>
-						</viz:VizFrame>
+						<List id="NotificationList" items="{data>/object}" growing="true" growingThreshold="3">
+							<NotificationListItem title="Customer: {data>name}" description="Product: {data>model}" datetime="Date: {data>date}" showCloseButton="false"
+								unread="false" close="onItemClose" press="onListItemPress"></NotificationListItem>
+						</List>
 					</content>
 				</Page>
 			</detailPages>
@@ -117,7 +111,7 @@
 									<l:titleLink>
 										<Link class="textcolor" id="itl" text="{i18n>Transactions}" press="OnPress"/>
 									</l:titleLink>
-									<core:Icon src="sap-icon://collections-insight" id="it" press="OnIconPress" height="70px"/>
+									<core:Icon src="sap-icon://collections-insight" color="white" id="it" press="OnIconPress" height="70px"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>

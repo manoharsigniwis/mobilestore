@@ -15,12 +15,18 @@ sap.ui.define([
 			var currentDate = new Date();
 			this.byId("date").setDateValue(currentDate);
 		},
+
+		// Logout function which will navigate to the login view with a message "You Have Been Logged Out".
+
 		onLogout: function (event) {
 			MessageToast.show("You Have Been Logged Out");
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("Login");
 
 		},
+
+		//Back navigation: Function to navigate to the previous view 
+
 		onNavBack: function (oEvent) {
 			var oHistory, sPreviousHash;
 			oHistory = History.getInstance();
@@ -31,6 +37,8 @@ sap.ui.define([
 				this.getRouter().navTo("TargetView1", {}, true /*no history*/ );
 			}
 		},
+
+		//Coupon function: In which the specific coupon price is applied for a specific coupon with the use of random()
 
 		onCoupon: function (oevent) {
 			var randc = Math.floor((Math.random() * 100) + 1),
@@ -55,6 +63,9 @@ sap.ui.define([
 			this.couponPrice = couponPrice;
 
 		},
+
+		//Brand Change function: On change of specific brand the specified brand models will display in combobox
+
 		onBrandChange: function (oevent) {
 
 			var afilter = [];
@@ -68,6 +79,9 @@ sap.ui.define([
 			binding.filter(afilter);
 
 		},
+
+		//Model Change:Onselecting the particular model the model price will display in the next input field
+
 		onModelChange: function (oevent) {
 			var model = oevent.getSource().getProperty("selectedKey"),
 				odataModel = this.getView().getModel("data");
@@ -83,10 +97,8 @@ sap.ui.define([
 			}
 		},
 
-		onPress: function (oEvent) {
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("serviceBilling");
-		},
+
+//JSPDF function: Onsubmitting the form(Invoice) pdf ill generate with the help of jsPDF library
 
 		onSubmit: function (oevent) {
 			var mod = this._aArray;
