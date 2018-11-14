@@ -26,7 +26,7 @@
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
 									<Title text="{i18n>Transactions}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-									<NumericContent value="{data>/trans}" valueColor="Critical" class="sapUiTinyMargin"/>
+									<NumericContent value="{data>/count}" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>
