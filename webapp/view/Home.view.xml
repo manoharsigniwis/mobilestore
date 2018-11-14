@@ -31,8 +31,8 @@
 							</l:BlockLayoutRow>
 						</l:BlockLayout>
 						<l:Grid defaultSpan="XL6 L5 M5 S12">
-							<List id="NotificationList" items="{data>/customers}" width="400px" growing="true" growingThreshold="3">
-								<NotificationListItem title="{data>name}" description="{data>product}" showCloseButton="true" unread="false" priority="High"
+							<List id="NotificationList" items="{data>/object}" width="400px" growing="true" growingThreshold="3">
+								<NotificationListItem title="Customer: {data>name}" description="Product: {data>model}" datetime="Date: {data>date}" showCloseButton="true" unread="false" priority="Medium"
 									close="onItemClose" press="onListItemPress"></NotificationListItem>
 							</List>
 							<HBox>

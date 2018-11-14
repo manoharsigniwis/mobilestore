@@ -181,9 +181,20 @@ sap.ui.define([
 
 			// doc.setFontSize(10);
 			doc.save('a4.pdf');
-
-			mod.push(model);
+			var obj = {
+				name: name,
+				mobile: mobile,
+				order: oid,
+				productnum: pno,
+				price: price,
+				total: tprice,
+				model: model,
+				date: date
+			};
+			mod.push(obj);
+			oModel.setProperty("/object", mod);
 			oModel.setProperty("/count", mod.length);
+
 			//	console.log(this.getView().byId("name").getValue());
 		}
 
