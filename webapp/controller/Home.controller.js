@@ -23,7 +23,7 @@ sap.ui.define([
 			};
 			var obj1 = {
 				title: {
-					text: "STOCK STATISTICS"
+					text: "PRODUCT STATISTICS"
 				}
 			};
 			this.getView().byId("idVizFrame").setVizProperties(obj2);
