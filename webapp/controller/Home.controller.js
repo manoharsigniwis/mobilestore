@@ -14,7 +14,6 @@ sap.ui.define([
 			// var val2 = oModel.getProperty("/rech").value;
 			// var val3 = val1 + val2;
 			// oModel.setProperty("/trans", val3);
-			
 
 			var obj2 = {
 				title: {
@@ -30,17 +29,9 @@ sap.ui.define([
 			this.getView().byId("idVizFrame1").setVizProperties(obj1);
 
 		},
-		onPress: function (oEvent) {
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("Inventory");
-		},
-		onOrientationChange: function (oEvent) {
-			var bLandscapeOrientation = oEvent.getParameter("landscape"),
-				sMsg = "Orientation now is: " + (bLandscapeOrientation ? "Landscape" : "Portrait");
-			MessageToast.show(sMsg, {
-				duration: 5000
-			});
-		},
+
+		// Logout function which will navigate to the login view with a message "You Have Been Logged Out".
+
 		onLogout: function (event) {
 			MessageToast.show("You Have Been Logged Out");
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);

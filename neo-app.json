@@ -19,10 +19,10 @@
       "description": "Route for theme designer"
     },
      {
-      "path": "/theme1",
+      "path": "/idtheme",
       "target": {
         "type": "application",
-        "name": "theme1"
+        "name": "idtheme"
       },
       "description": "Route for theme"
     },
