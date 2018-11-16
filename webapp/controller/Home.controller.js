@@ -38,6 +38,8 @@ sap.ui.define([
 			oRouter.navTo("Login");
 
 		},
+		
+		
 		OnIconPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			var iconId = oEvent.getParameters().id.substr(12);

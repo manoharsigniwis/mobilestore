@@ -10,7 +10,7 @@
 			<ToolbarSpacer></ToolbarSpacer>
 			<Button text="{i18n>Logout}" type="Transparent" press="onLogout"></Button>
 		</tnt:ToolHeader>
-		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master">
+		<SplitApp id="SplitAppDemo" mode = "StretchCompressMode" initialDetail="detail" initialMaster="master">
 			<detailPages>
 				<Page id="detail" showHeader="true">
 					<content>
@@ -26,7 +26,7 @@
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
 									<Title text="{i18n>Transactions}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-									<NumericContent value="{data>/object/0/total}" valueColor="Critical" class="sapUiTinyMargin"/>
+									<NumericContent value="{data>/object/0/total}" truncateValueTo="6" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>
@@ -64,7 +64,7 @@
 								</viz:feeds>
 							</viz:VizFrame>
 						</l:Grid>
-						<List id="NotificationList" items="{data>/object}" growing="true" growingThreshold="3">
+						<List id="NotificationList" items="{data>/object}"  growing="true" growingThreshold="3">
 							<NotificationListItem title="Customer: {data>name}" description="Product: {data>model}" datetime="Date: {data>date}" showCloseButton="false"
 								unread="false" close="onItemClose" press="onListItemPress"></NotificationListItem>
 						</List>

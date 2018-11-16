@@ -54,8 +54,11 @@ sap.ui.define([
 				couponPrice = randc;
 			} else if (coupon === "Offer@300") {
 				couponPrice = 300;
-			} else {
+			} else if (coupon === "FlatOffer") {
 				couponPrice = randc;
+			} else {
+				couponPrice = 0;
+				alert("Invalid Coupon code");
 			}
 			var amount = this.getView().byId("price").getValue();
 			var discount = amount - couponPrice;
@@ -64,27 +67,81 @@ sap.ui.define([
 
 		},
 
-		//Brand Change function: On change of specific brand the specified brand models will display in combobox
+		onCategory: function (oevent) {
+			this.getView().setModel(new sap.ui.model.json.JSONModel(), "newModel");
+			var key = oevent.getSource().getProperty("selectedKey"),
+				oModel = this.getView().getModel("data"),
+				NewJsonModel = this.getView().getModel("newModel");
 
-		onBrandChange: function (oevent) {
-
-			var afilter = [];
-			var sQuery = oevent.getParameters().value;
-			if (sQuery && sQuery.length > 0) {
-				var filter = new Filter("model", sap.ui.model.FilterOperator.Contains, sQuery);
-				afilter.push(filter);
+			if (key === "accessories") {
+				NewJsonModel.setProperty("/values", oModel.oData.brandaccs);
+				this.getView().byId("amodel").setVisible(true);
+			} else {
+				NewJsonModel.setProperty("/values", oModel.oData.brands);
+				this.getView().byId("model").setVisible(true);
 			}
-			var otable = this.byId("model");
-			var binding = otable.getBinding("items");
-			binding.filter(afilter);
-
 		},
 
+		//Brand Change function: On change of specific brand the specified brand models will display in combobox
+
+		// onBrandChange: function (oevent) {
+
+		// 	var afilter = [];
+		// 	var sQuery = oevent.getParameters().value;
+		// 	if (sQuery && sQuery.length > 0) {
+		// 		var filter = new Filter("model", sap.ui.model.FilterOperator.Contains, sQuery);
+		// 		afilter.push(filter);
+		// 	}
+		// 	var otable = this.byId("model");
+		// 	var binding = otable.getBinding("items");
+		// 	binding.filter(afilter);
+
+		// },
+		onAccBrandchange: function (oevent) {
+			var key = this.getView().byId("category").getProperty("selectedKey");
+			if (key === "accessories") {
+				var mafilter = [];
+				var msQuery = oevent.getParameters().value;
+				if (msQuery && msQuery.length > 0) {
+					var mfilter = new Filter("model", sap.ui.model.FilterOperator.Contains, msQuery);
+					mafilter.push(mfilter);
+				}
+				var motable = this.getView().byId("amodel");
+				var mbinding = motable.getBinding("items");
+				mbinding.filter(mafilter);
+			} else {
+				var afilter = [];
+				var sQuery = oevent.getParameters().value;
+				if (sQuery && sQuery.length > 0) {
+					var filter = new Filter("model", sap.ui.model.FilterOperator.Contains, sQuery);
+					afilter.push(filter);
+				}
+				var otable = this.byId("model");
+				var binding = otable.getBinding("items");
+				binding.filter(afilter);
+			}
+		},
 		//Model Change:Onselecting the particular model the model price will display in the next input field
 
 		onModelChange: function (oevent) {
+
 			var model = oevent.getSource().getProperty("selectedKey"),
-				odataModel = this.getView().getModel("data");
+				odataModel = this.getView().getModel("newModel");
+
+			var comp = oevent.getSource().getBinding("items").oList;
+			for (var i = 0; i < comp.length; i++) {
+				if (comp[i].model === model) {
+					odataModel.setProperty("/newValue", comp[i].price);
+					// var price = comp[i].price;
+					// this.getView().byId("price").setValue = price;
+
+				}
+			}
+		},
+		onAccChange: function (oevent) {
+
+			var model = oevent.getSource().getProperty("selectedKey"),
+				odataModel = this.getView().getModel("newModel");
 
 			var comp = oevent.getSource().getBinding("items").oList;
 			for (var i = 0; i < comp.length; i++) {
@@ -97,8 +154,7 @@ sap.ui.define([
 			}
 		},
 
-
-//JSPDF function: Onsubmitting the form(Invoice) pdf ill generate with the help of jsPDF library
+		//JSPDF function: Onsubmitting the form(Invoice) pdf ill generate with the help of jsPDF library
 
 		onSubmit: function (oevent) {
 			var mod = this._aArray;

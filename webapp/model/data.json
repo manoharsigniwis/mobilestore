@@ -235,7 +235,21 @@
 	}, {
 		"brand": "LENOVO"
 	}],
-	"accessories": [{
+	"brandaccs": [{
+		"brand": "SKULLCANDY"
+	}, {
+		"brand": "MUVEACOUSTICS"
+	}, {
+		"brand": "BEATS"
+	}, {
+		"brand": "AMBRANE"
+	}, {
+		"brand": "BOAT"
+	}, {
+		"brand": "JBL"
+	}],
+	"accessories": [
+		{
 		"productid": 93,
 		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
 		"model": " Ear Phone (SKULLCANDY AP55)",
@@ -338,7 +352,7 @@
 	}, {
 		"productid": 99,
 		"model": "Data cable",
-		"brand": "Oneplus",
+		"brand": "JBL",
 		"image": "https://www.saverpoint.com/ekmps/shops/softpointmulti/images/3a-usb-type-c-braided-charging-data-cable-3.33ft-1m-66499-p.png",
 		"price": 1068,
 		"CurrencyCode": "INR",
@@ -492,7 +506,7 @@
 		"month": "Jan",
 		"amount": "45000",
 		"product": "Purchased Oneplus 6 on Jan 01 for 45000 INR"
-	}]
-	
+	}],
+	"orders": [{}]
 
 }

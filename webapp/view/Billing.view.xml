@@ -24,25 +24,36 @@
 						<Label text="{i18n>Mobile No}."/>
 						<Input id="mobile" type="Number" value="" placeholder="Number"></Input>
 						<Label text="{i18n>Category}"/>
-						<Input value="" placeholder="Category"/>
+						<ComboBox id="category" change="onCategory">
+							<items>
+								<core:Item text="{i18n>Mobiles}" key="mobile"/>
+								<core:Item text="{i18n>Accessories}" key="accessories"/>
+							</items>
+						</ComboBox>
 						<Label text="{i18n>Product No}"/>
 						<Input id="pno" value="" placeholder="Product No"/>
 						<Label text="{i18n>Brand}"/>
-						<ComboBox id="brand" items="{data>/brands}" change="onBrandChange">
+						<ComboBox id="brand" items="{newModel>/values}" change="onAccBrandchange">
 							<items>
-								<core:Item text="{data>brand}" key="{data>brand}"/>
+								<core:Item text="{newModel>brand}" key="{newModel>brand}"/>
+							</items>
+						</ComboBox>
+						<Label text="Models"/>
+						<ComboBox id="model" items="{data>/mobiles}" visible="false" change="onModelChange">
+							<items>
+								<core:Item text="{data>model}" key="{data>model}"/>
 							</items>
 						</ComboBox>
 						<Label text="{i18n>Model}"/>
-						<ComboBox id="model" items="{data>/mobiles}" change="onModelChange">
+						<ComboBox id="amodel" items="{data>/accessories}" visible="false" change="onAccChange">
 							<items>
 								<core:Item text="{data>model}" key="{data>model}"/>
 							</items>
 						</ComboBox>
 						<Label text="{i18n>Price}"/>
-						<Input id="price" value="{data>/newValue}"/>
+						<Input id="price" value="{newModel>/newValue}" editable="false"/>
 						<Label text="{i18n>Coupon Code}"/>
-						<ComboBox id="coupon">
+						<ComboBox id="coupon" >
 							<!--<items>-->
 							<core:Item text="{i18n>Save@200}"/>
 							<core:Item text="{i18n>FestiveOffer}"/>
@@ -56,7 +67,7 @@
 						</ComboBox>
 						<Button text="{i18n>Apply Coupon}" press="onCoupon"></Button>
 						<Label text="{i18n>Total Amount}"/>
-						<Input id="tprice" value=""/>
+						<Input id="tprice" value="" editable="false"/>
 						<Label text=""/>
 						<Button text="{i18n>Submit}" press="onSubmit"></Button>
 					</f:content>
