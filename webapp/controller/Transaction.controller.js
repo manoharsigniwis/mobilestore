@@ -1,7 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History",
-	'sap/m/MessageToast'
+	"sap/m/MessageToast"
 
 ], function (Controller, History, MessageToast) {
 	"use strict";
@@ -20,6 +20,15 @@ sap.ui.define([
 				}
 			};
 			this.getView().byId("idVizFrame1").setVizProperties(obj);
+		},
+
+		onItemClose: function (oEvent) {
+			var oItem = oEvent.getSource(),
+				oList = oItem.getParent();
+
+			oList.removeItem(oItem);
+
+			MessageToast.show("Item Closed: " + oEvent.getSource().getTitle());
 		},
 
 		onLogout: function (event) {

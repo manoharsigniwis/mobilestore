@@ -89,7 +89,8 @@ sap.ui.define([
 
 		},
 		onSubmit: function (oevent) {
-
+			var oModel = this.getView().getModel("data");
+			var mod = this._aArray;
 			var doc = new jsPDF("landscape");
 			doc.setFillColor(51, 51, 51);
 			doc.rect(15, 15, 265, 180, "FD");
@@ -186,6 +187,14 @@ sap.ui.define([
 
 			// doc.setFontSize(10);
 			doc.save('a4.pdf');
+			var obj = {
+				name: name,
+				mobile: mobile,
+				price: price
+					};
+			mod.push(obj);
+			oModel.setProperty("/object1", mod);
+			oModel.setProperty("/count1", mod.length);
 			//	console.log(this.getView().byId("name").getValue());
 		}
 

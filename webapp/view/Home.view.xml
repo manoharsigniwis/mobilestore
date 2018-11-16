@@ -26,7 +26,11 @@
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
 									<Title text="{i18n>Transactions}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+<<<<<<< Upstream, based on origin/master
 									<NumericContent value="{data>/object/0/total}" truncateValueTo="6" valueColor="Critical" class="sapUiTinyMargin"/>
+=======
+									<NumericContent value="{data>/trans}" valueColor="Critical" class="sapUiTinyMargin"/>
+>>>>>>> 40ea351 h
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>

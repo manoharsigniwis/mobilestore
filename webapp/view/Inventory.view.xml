@@ -17,6 +17,7 @@
 							<Toolbar>
 								<content>
 									<Title text="{i18n>Products}" level="H2"/>
+										<SearchField width="300px" class="sapUiSmallMargin" liveChange="onSearch"/>
 									<ToolbarSpacer/>
 									<ComboBox id="idPopinLayout" placeholder="Select" change="onPopinLayoutChanged">
 										<items>
@@ -25,7 +26,7 @@
 										</items>
 									</ComboBox>
 								</content>
-								<core:Icon src="sap-icon://filter" press="handleOpenDialog"></core:Icon>
+								<core:Icon src="sap-icon://sort" size="30px" press="handleOpenDialog"></core:Icon>
 							</Toolbar>
 						</headerToolbar>
 						<columns>
@@ -49,7 +50,7 @@
 							</Column>
 						</columns>
 						<items>
-							<ColumnListItem vAlign="Middle" type="Active" visible="true">
+							<ColumnListItem vAlign="Middle" type="Active" visible="true" press="movedata">
 								<cells >
 									<ObjectIdentifier title="{newModel>brand}" text="{newModel>model}"/>
 									<Image src="{newModel>image}" width="100px" height="100px"></Image>

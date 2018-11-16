@@ -5,9 +5,11 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/Fragment",
 	"sap/ui/core/routing/History",
-	"sap/m/MessageToast"
+	"sap/m/MessageToast",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
 
-], function (Controller, jQuery, Formatter, JSONModel, Fragment, History, MessageToast) {
+], function (Controller, jQuery, Formatter, JSONModel, Fragment, History, MessageToast, Filter, FilterOperator) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.Inventory", {
@@ -33,7 +35,33 @@ sap.ui.define([
 
 			}
 		},
+		onSearch: function (event) {
+			var afilter = [];
+			var sQuery = event.getSource().getValue();
+			if (sQuery && sQuery.length > 0) {
+				var filter = new Filter("model", sap.ui.model.FilterOperator.Contains, sQuery);
+				afilter.push(filter);
+			}
+			var list = this.byId("idProductsTable");
+			var binding = list.getBinding("items");
+			binding.filter(afilter);
+		},
 
+		movedata: function (oevent) {
+		alert("hi");
+
+		},
+		// onObjectMatched: function (oEvent) {
+		// 	var oModel = this.getView().getModel("data").getProperty("/Teams"),
+		// 		jsonModel = new JSONModel();
+		// 	this.getView().setModel(jsonModel, "TeamPlayer");
+		// 	for (var i = 0; i < oModel.length; i++) {
+		// 		if (oModel[i].name === oEvent.getParameters().arguments.invoicePath) {
+		// 			oModel[i].twentyeighteen.teamName = oModel[i].name;
+		// 			this.getView().getModel("TeamPlayer").setProperty("/Players", oModel[i].twentyeighteen);
+		// 		}
+		// 	}
+		// },
 		onNavBack: function (oEvent) {
 			var oHistory, sPreviousHash;
 			oHistory = History.getInstance();

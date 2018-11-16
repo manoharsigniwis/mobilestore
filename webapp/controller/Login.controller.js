@@ -44,18 +44,21 @@ sap.ui.define([
 		 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
 		 * This hook is the same one that SAPUI5 controls get after being rendered.
 		 * @memberOf Mobile.Mobilestore.view.Login
-		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
+		//  */
+		// 	onAfterRendering: function() {
+		
+		// var oModel = this.getView().getModel("data");
+		// 	},
+			
 
 		/**
 		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
 		 * @memberOf Mobile.Mobilestore.view.Login
 		 */
-		//	onExit: function() {
-		//
-		//	}
+			// onExit: function() {
+			// 		var oModel = this.getView().getModel("data");
+		
+			// }
 
 	});
 

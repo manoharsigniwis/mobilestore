@@ -507,6 +507,13 @@
 		"amount": "45000",
 		"product": "Purchased Oneplus 6 on Jan 01 for 45000 INR"
 	}],
+<<<<<<< Upstream, based on origin/master
 	"orders": [{}]
+=======
+	"count": 0,
+	"count1": 0,
+	"rech": 0,
+	"trans":0
+>>>>>>> 40ea351 h
 
 }

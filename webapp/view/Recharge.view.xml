@@ -23,13 +23,13 @@
 									<f:formElements>
 										<f:FormElement>
 											<f:fields>
-												<tnt:InfoLabel id="il1" text="{i18n>Mobile Number}" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
-												<Input type="Number" editable="true" placeholder="Mobile Number"></Input>
+												<Label text="{i18n>Mobile Number}:" displayOnly="true"/>
+												<Input type="Number" id="mob" editable="true" placeholder="Mobile Number" change="phonenumber"></Input>
 											</f:fields>
 										</f:FormElement>
 										<f:FormElement>
 											<f:fields>
-												<tnt:InfoLabel text="{i18n>Mobile Operator}" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
+												<Label text="{i18n>Mobile Operator}:" displayOnly="true"/>
 												<ComboBox id="i" items="{data>/recharge}" placeholder="Mobile Operator">
 													<core:Item key="{data>operator}" text="{data>operator}"/>
 												</ComboBox>
@@ -37,7 +37,7 @@
 										</f:FormElement>
 										<f:FormElement>
 											<f:fields>
-												<tnt:InfoLabel text="{i18n>Amount}" renderMode="Narrow" colorScheme="5" displayOnly="true"/>
+												<Label text="{i18n>Amount}:" displayOnly="true"/>
 												<Input id="i1" type="Number" editable="true" placeholder="Amount"></Input>
 											</f:fields>
 										</f:FormElement>
