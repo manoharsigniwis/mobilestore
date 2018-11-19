@@ -25,8 +25,8 @@
 									<NumericContent value="{data>/rech}" valueColor="Critical" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 								<l:BlockLayoutCell>
-									<Title text="{i18n>Transactions}" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
-									<NumericContent value="{data>/trans}" valueColor="Critical" class="sapUiTinyMargin"/>
+									<Title text="Amount Transactions" wrapping="true" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+									<NumericContent value="{data>/trans}" valueColor="Critical" truncateValueTo="13" class="sapUiTinyMargin"/>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>

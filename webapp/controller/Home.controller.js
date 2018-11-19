@@ -9,12 +9,12 @@ sap.ui.define([
 	"use strict";
 	return Controller.extend("Mobile.Mobilestore.controller.Home", {
 		onInit: function () {
-			var oModel = this.getOwnerComponent().getModel("data");
-			var val1 = oModel.getProperty("/count");
-			var val2 = oModel.getProperty("/count1");
-			var val4 = oModel.getProperty("/rech");
-			var val3 = val1 + val2 + val4;
-			oModel.setProperty("/trans", val3);
+			// var oModel = this.getOwnerComponent().getModel("data");
+			// var val1 = oModel.getProperty("/count");
+			// var val2 = oModel.getProperty("/count1");
+			// var val4 = oModel.getProperty("/rech");
+			// var val3 = val1 + val2 + val4;
+			// oModel.setProperty("/trans", val3);
 
 			var obj2 = {
 				title: {
