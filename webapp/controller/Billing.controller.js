@@ -502,12 +502,29 @@ sap.ui.define([
 				}
 			}
 		},
+		clearform: function () {
+			this.getView().byId("oid").setValue(" ");
+			this.getView().byId("date").setValue(" ");
+			this.getView().byId("name").setValue(" ");
+			this.getView().byId("mobile").setValue(" ");
+			this.getView().byId("category").setValue(" ");
+			this.getView().byId("pno").setValue(" ");
+			this.getView().byId("brand").setValue(" ");
+			this.getView().byId("model").setValue(" ");
+			this.getView().byId("category").setValue(" ");
+			this.getView().byId("amodel").setValue(" ");
+			this.getView().byId("price").setValue(" ");
+			this.getView().byId("coupon").setValue(" ");
+			this.getView().byId("category").setValue(" ");
+			this.getView().byId("tprice").setValue(" ");
+
+		},
 
 		//JSPDF function: Onsubmitting the form(Invoice) pdf ill generate with the help of jsPDF library
 
 		onSubmit: function (oevent) {
 			var mod = this._aArray;
-
+			var tra = [];
 			var oModel = this.getView().getModel("data");
 
 			var doc = new jsPDF("landscape");
@@ -603,8 +620,13 @@ sap.ui.define([
 
 			// doc.setFontSize(10);
 			doc.save('a4.pdf');
-			// console.log(model);
-			// console.log(this.priceArr);
+			tra.push(tprice);
+			// for (var i = 0; i < tra["length"]; i++) {
+			//       // tra.reduce(this.getSum(tra[i]));
+			//       tra.reduce((this.add()), 0);
+
+			// }
+
 			var obj = {
 				name: name,
 				mobile: mobile,
@@ -616,10 +638,14 @@ sap.ui.define([
 				date: date
 			};
 			mod.push(obj);
+
 			oModel.setProperty("/object", mod);
 			oModel.setProperty("/count", mod.length);
+			oModel.setProperty("/trans", obj.total);
+			this.clearform();
+			this.onInit();
 
-			//	console.log(this.getView().byId("name").getValue());
+			//       console.log(this.getView().byId("name").getValue());
 		}
 
 	});
