@@ -1,25 +1,27 @@
+
 <!DOCTYPE HTML>
 <html>
 
-	<head>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+            <head>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta charset="UTF-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                        <meta charset="UTF-8">
 
-		<title>Mobilestore</title>
+                        <title>Mobilestore</title>
 
-		<script id="sap-ui-bootstrap"
-			src="../../resources/sap-ui-core.js"
-			data-sap-ui-libs="sap.m"
-			data-sap-ui-theme="idtheme"
-			data-sap-ui-compatVersion="edge"
-			data-sap-ui-resourceroots='{"Mobile.Mobilestore": "./"}'
-			data-sap-ui-theme-roots='{"idtheme":"/idtheme/UI5"}'>
-		</script>
+                        <script id="sap-ui-bootstrap"
+                                    src="../../resources/sap-ui-core.js"
+                                    data-sap-ui-libs="sap.m"
+                                    data-sap-ui-theme="idtheme"
+                                    data-sap-ui-compatVersion="edge"
+                                    data-sap-ui-resourceroots='{"Mobile.Mobilestore": "./"}'
+                                    data-sap-ui-theme-roots='{"idtheme":"/idtheme/UI5"}'>
+                        </script>
 
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+                        <link rel="stylesheet" type="text/css" href="css/style.css">
 
+<<<<<<< Upstream, based on origin/master
 		<script>
 			sap.ui.getCore().attachInit(function() {
 				new sap.m.Shell({
@@ -31,8 +33,21 @@
 			});
 		</script>
 	</head>
+=======
+                        <script>
+                                    sap.ui.getCore().attachInit(function() {
+                                                new sap.m.Shell({
+                                                            app: new sap.ui.core.ComponentContainer({
+                                                                        height : "100%",
+                                                                        name : "Mobile.Mobilestore"
+                                                            })
+                                                }).placeAt("content");
+                                    });
+                        </script>
+            </head>
+>>>>>>> 0ef75a8 hh
 
-	<body class="sapUiBody" id="content">
-	</body>
+            <body class="sapUiBody" id="content">
+            </body>
 
 </html>
