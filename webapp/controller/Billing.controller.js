@@ -85,6 +85,21 @@ sap.ui.define([
 			}
 		},
 
+		//Brand Change function: On change of specific brand the specified brand models will display in combobox
+
+		// onBrandChange: function (oevent) {
+
+		//            var afilter = [];
+		//            var sQuery = oevent.getParameters().value;
+		//            if (sQuery && sQuery.length > 0) {
+		//                            var filter = new Filter("model", sap.ui.model.FilterOperator.Contains, sQuery);
+		//                            afilter.push(filter);
+		//            }
+		//            var otable = this.byId("model");
+		//            var binding = otable.getBinding("items");
+		//            binding.filter(afilter);
+
+		// },
 		onAccBrandchange: function (oevent) {
 			var key = this.getView().byId("category").getProperty("selectedKey");
 			if (key === "accessories") {
@@ -300,6 +315,7 @@ sap.ui.define([
 			oModel.setProperty("/object", mod);
 			oModel.setProperty("/count", mod.length);
 			oModel.setProperty("/trans", obj.total);
+			localStorage.setItem("array", mod);
 			this.clearform();
 			this.onInit();
 
@@ -307,4 +323,5 @@ sap.ui.define([
 		}
 
 	});
+
 });

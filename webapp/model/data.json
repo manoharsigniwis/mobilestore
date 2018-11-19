@@ -251,7 +251,7 @@
 	"accessories": [{
 		"productid": 93,
 		"image": "http://www.purplebase.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/k/skullcandy-mix-master-1.png",
-		"model": " Ear Phone (SKULLCANDY)",
+		"model": " Ear Phone (SKULLCANDY AP55)",
 		"brand": "SKULLCANDY",
 		"price": 1072,
 		"stock": 29,
@@ -260,9 +260,9 @@
 		"Status": "Fast Selling"
 	}, {
 		"productid": 82,
-		"model": "Ear Phone(MUVEA AP50)",
+		"model": "Ear Phone(MUVEACOUSTICS AP50)",
 		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
-		"brand": "MUVEA",
+		"brand": "MUVEACOUSTICS",
 		"price": 4923,
 		"stock": 59,
 		"imei": 8859,
@@ -270,9 +270,9 @@
 		"Status": "Fast Selling"
 	}, {
 		"productid": 92,
-		"model": "Ear Phone(MUVEA AP96)",
+		"model": "Ear Phone(MUVEACOUSTICS AP96)",
 		"image": "https://www.muveacoustics.com/images/About%20Us/about-us.png",
-		"brand": "MUVEA",
+		"brand": "MUVEACOUSTICS",
 		"price": 9337,
 		"stock": 4,
 		"imei": 4557,
@@ -323,7 +323,7 @@
 		"model": "Display",
 		"CurrencyCode": "INR",
 		"image": "http://smartphoneservicecenter.in/images/mobile-display.png",
-		"brand": "MUVEA",
+		"brand": "MUVEACOUSTICS",
 		"price": 4106,
 		"stock": 20,
 		"imei": 8752,

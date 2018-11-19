@@ -8,8 +8,7 @@ sap.ui.define([
 	return UIComponent.extend("Mobile.Mobilestore.Component", {
 
 		metadata: {
-			manifest: "json",
-			config:{fullWidth:"true"}
+			manifest: "json"
 		},
 
 		/**
