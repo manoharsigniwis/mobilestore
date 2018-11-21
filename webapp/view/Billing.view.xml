@@ -50,7 +50,11 @@
 						</MultiComboBox>
 						<Label text="{i18n>Price}"/>
 						<!--<Input id="parr" value=""  editable="false"/>-->
+<<<<<<< HEAD
 						<Input id="price" value="" editable="false"/>
+=======
+						<Input id="price" value="{newModel>/newValue}" editable="false"/>
+>>>>>>> refs/remotes/origin/master
 						<Label text="No. of Products"/>
 						<Input id="pno" value="" editable="false"/>
 						<Label text="{i18n>Coupon Code}"/>
