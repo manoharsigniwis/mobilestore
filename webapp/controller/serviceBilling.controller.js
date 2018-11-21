@@ -2,8 +2,9 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/Filter",
 	"sap/ui/core/routing/History",
-	'sap/m/MessageToast'
-], function (Controller, Filter, History, MessageToast) {
+	"sap/m/MessageToast",
+	"sap/m/MessageStrip"
+], function (Controller, Filter, History, MessageToast, MessageStrip) {
 	"use strict";
 
 	return Controller.extend("Mobile.Mobilestore.controller.serviceBilling", {
@@ -33,6 +34,74 @@ sap.ui.define([
 				}
 			}
 		},
+		showSuccessMsgStrip: function () {
+			var oMs = sap.ui.getCore().byId("msgStrip");
+
+			if (oMs) {
+				oMs.destroy();
+			}
+
+			var oVC = this.byId("oVerticalContent"),
+
+				oMsgStrip = new MessageStrip("msgStrip", {
+					text: "Under Warranty",
+					showCloseButton: false,
+					showIcon: true,
+					type: "Success",
+					width: "258px"
+				});
+
+			oVC.addContent(oMsgStrip);
+		},
+		showErrorMsgStrip: function () {
+			var oMs = sap.ui.getCore().byId("msgStrip");
+
+			if (oMs) {
+				oMs.destroy();
+			}
+
+			var oVC = this.byId("oVerticalContent"),
+
+				oMsgStrip = new MessageStrip("msgStrip", {
+					text: "Warranty Expired",
+					showCloseButton: false,
+					showIcon: true,
+					type: "Error",
+					width: "258px"
+				});
+
+			oVC.addContent(oMsgStrip);
+		},
+
+		validateorder: function (oevent) {
+			var bb = this.getView().byId("ord").getValue();
+			var oModel = this.getOwnerComponent().getModel("data");
+			for (var i = 0; i < oModel.oData.object.length; i++) {
+				if (bb === oModel.oData.object[i].order) {
+
+					var ord = oModel.oData.object[i].order,
+						name = oModel.oData.object[i].name,
+						mobile = oModel.oData.object[i].mobile,
+						model = oModel.oData.object[i].model,
+						brand = oModel.oData.object[i].brand;
+
+					this.showSuccessMsgStrip();
+					this.getView().byId("name").setValue(name);
+					this.getView().byId("name").setProperty("editable", false);
+					this.getView().byId("mobile").setValue(mobile);
+					this.getView().byId("mobile").setProperty("editable", false);
+					this.getView().byId("br").setValue(brand);
+					this.getView().byId("br").setProperty("editable", false);
+					this.getView().byId("mode").setValue(model);
+					this.getView().byId("mode").setProperty("editable", false);
+				} else if (bb !== ord) {
+
+					this.showErrorMsgStrip();
+				}
+			}
+
+		},
+
 		onPress: function (oEvent) {
 			// var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			// oRouter.navTo("Transaction");
@@ -191,7 +260,7 @@ sap.ui.define([
 				name: name,
 				mobile: mobile,
 				price: price
-					};
+			};
 			mod.push(obj);
 			oModel.setProperty("/object1", mod);
 			oModel.setProperty("/count1", mod.length);

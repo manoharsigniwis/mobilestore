@@ -30,8 +30,6 @@
 								<core:Item text="{i18n>Accessories}" key="accessories"/>
 							</items>
 						</ComboBox>
-						<Label text="{i18n>Product No}"/>
-						<Input id="pno" value="" placeholder="Product No"/>
 						<Label text="{i18n>Brand}"/>
 						<ComboBox id="brand" items="{newModel>/values}" change="onAccBrandchange">
 							<items>
@@ -39,21 +37,24 @@
 							</items>
 						</ComboBox>
 						<Label text="Models"/>
-						<ComboBox id="model" items="{data>/mobiles}" visible="false" change="onModelChange">
+						<MultiComboBox id="model" items="{data>/mobiles}" visible="false" selectionFinish="onModelChange">
 							<items>
 								<core:Item text="{data>model}" key="{data>model}"/>
 							</items>
-						</ComboBox>
+						</MultiComboBox>
 						<Label text="{i18n>Model}"/>
-						<ComboBox id="amodel" items="{data>/accessories}" visible="false" change="onAccChange">
+						<MultiComboBox id="amodel" items="{data>/accessories}" visible="false" selectionFinish="onAccChange">
 							<items>
 								<core:Item text="{data>model}" key="{data>model}"/>
 							</items>
-						</ComboBox>
+						</MultiComboBox>
 						<Label text="{i18n>Price}"/>
-						<Input id="price" value="{newModel>/newValue}" editable="false"/>
+						<!--<Input id="parr" value=""  editable="false"/>-->
+						<Input id="price" value="" editable="false"/>
+						<Label text="No. of Products"/>
+						<Input id="pno" value="" editable="false"/>
 						<Label text="{i18n>Coupon Code}"/>
-						<ComboBox id="coupon" >
+						<ComboBox id="coupon">
 							<!--<items>-->
 							<core:Item text="{i18n>Save@200}"/>
 							<core:Item text="{i18n>FestiveOffer}"/>
@@ -67,7 +68,7 @@
 						</ComboBox>
 						<Button text="{i18n>Apply Coupon}" press="onCoupon"></Button>
 						<Label text="{i18n>Total Amount}"/>
-						<Input id="tprice" value="" editable="false"/>
+						<Input id="tprice" value="{newModel>/newValue}" editable="false"/>
 						<Label text=""/>
 						<Button text="{i18n>Submit}" press="onSubmit"></Button>
 					</f:content>

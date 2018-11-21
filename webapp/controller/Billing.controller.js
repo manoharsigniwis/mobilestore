@@ -16,6 +16,13 @@ sap.ui.define([
 			this.byId("date").setDateValue(currentDate);
 		},
 
+		rand: function () {
+			var rand = Math.floor((Math.random() * 100000) + 1);
+			this.getView().byId("oid").setValue(rand);
+			var currentDate = new Date();
+			this.byId("date").setDateValue(currentDate);
+		},
+
 		// Logout function which will navigate to the login view with a message "You Have Been Logged Out".
 
 		onLogout: function (event) {
@@ -85,21 +92,6 @@ sap.ui.define([
 			}
 		},
 
-		//Brand Change function: On change of specific brand the specified brand models will display in combobox
-
-		// onBrandChange: function (oevent) {
-
-		//            var afilter = [];
-		//            var sQuery = oevent.getParameters().value;
-		//            if (sQuery && sQuery.length > 0) {
-		//                            var filter = new Filter("model", sap.ui.model.FilterOperator.Contains, sQuery);
-		//                            afilter.push(filter);
-		//            }
-		//            var otable = this.byId("model");
-		//            var binding = otable.getBinding("items");
-		//            binding.filter(afilter);
-
-		// },
 		onAccBrandchange: function (oevent) {
 			var key = this.getView().byId("category").getProperty("selectedKey");
 			if (key === "accessories") {
@@ -143,7 +135,7 @@ sap.ui.define([
 						totalPrice = totalPrice + comp[i].price;
 						this.priceArr.push(comp[i].price.toString());
 						odataModel.setProperty("/newValue", totalPrice);
-						odataModel.setProperty("/newValue", totalPrice);
+						this.getView().byId("price").setValue(totalPrice);
 						this.getView().byId("pno").setValue(j + 1);
 						this.jArr.push((j + 1).toString());
 					}
@@ -168,7 +160,7 @@ sap.ui.define([
 						totalPrice = totalPrice + comp[i].price;
 						this.priceArr.push(comp[i].price.toString());
 						odataModel.setProperty("/newValue", totalPrice);
-						odataModel.setProperty("/newValue", totalPrice);
+						this.getView().byId("price").setValue(totalPrice);
 						this.getView().byId("pno").setValue(j + 1);
 						this.jArr.push((j + 1).toString());
 					}
@@ -197,7 +189,7 @@ sap.ui.define([
 
 		onSubmit: function (oevent) {
 			var mod = this._aArray;
-			var tra = [];
+			var tra = this._aArray;
 			var oModel = this.getView().getModel("data");
 
 			var doc = new jsPDF("landscape");
@@ -214,7 +206,7 @@ sap.ui.define([
 			var mobile = this.getView().byId("mobile").getValue();
 			var oid = this.getView().byId("oid").getValue();
 			var pno = this.getView().byId("pno").getValue();
-			// var price = this.getView().byId("parr").getProperty("value");
+			var bbr = this.getView().byId("brand").getProperty("value");
 			var tprice = this.getView().byId("tprice").getValue();
 			var date = this.getView().byId("date").getValue();
 			var coupon = this.couponPrice.toString();
@@ -293,7 +285,7 @@ sap.ui.define([
 
 			// doc.setFontSize(10);
 			doc.save('a4.pdf');
-			tra.push(tprice);
+			
 			// for (var i = 0; i < tra["length"]; i++) {
 			//       // tra.reduce(this.getSum(tra[i]));
 			//       tra.reduce((this.add()), 0);
@@ -305,23 +297,21 @@ sap.ui.define([
 				mobile: mobile,
 				order: oid,
 				productnum: pno,
-				// price: price,
+				brand: bbr,
 				total: tprice,
 				model: model,
 				date: date
 			};
 			mod.push(obj);
-
+			
 			oModel.setProperty("/object", mod);
 			oModel.setProperty("/count", mod.length);
-			oModel.setProperty("/trans", obj.total);
-			localStorage.setItem("array", mod);
+			
 			this.clearform();
-			this.onInit();
+			this.rand();
 
 			//       console.log(this.getView().byId("name").getValue());
 		}
 
 	});
-
 });
